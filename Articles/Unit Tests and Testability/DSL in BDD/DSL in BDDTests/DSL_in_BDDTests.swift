@@ -1,4 +1,4 @@
-@testable import iOS_Good_Practices
+@testable import DSL_in_BDD
 import XCTest
 
 final class WinnersViewControllerTests: XCTestCase {

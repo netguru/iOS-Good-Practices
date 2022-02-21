@@ -7,47 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8ABDEDF127C38DA300740204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABDEDF027C38DA300740204 /* AppDelegate.swift */; };
-		8ABDEDF327C38DA300740204 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABDEDF227C38DA300740204 /* SceneDelegate.swift */; };
-		8ABDEDF527C38DA300740204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABDEDF427C38DA300740204 /* ViewController.swift */; };
-		8ABDEDFA27C38DAA00740204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ABDEDF927C38DAA00740204 /* Assets.xcassets */; };
-		8ABDEDFD27C38DAA00740204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABDEDFB27C38DAA00740204 /* LaunchScreen.storyboard */; };
-		8ABDEE2727C3940200740204 /* Winners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABDEE2627C3940200740204 /* Winners.swift */; };
-		8ABDEE2B27C3946F00740204 /* WinnersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABDEE2A27C3946F00740204 /* WinnersTests.swift */; };
+		8ABC4BA227C3A3490052303F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC4BA127C3A3490052303F /* AppDelegate.swift */; };
+		8ABC4BA427C3A3490052303F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC4BA327C3A3490052303F /* SceneDelegate.swift */; };
+		8ABC4BA627C3A3490052303F /* WinnersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC4BA527C3A3490052303F /* WinnersViewController.swift */; };
+		8ABC4BA927C3A3490052303F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABC4BA727C3A3490052303F /* Main.storyboard */; };
+		8ABC4BAB27C3A34C0052303F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ABC4BAA27C3A34C0052303F /* Assets.xcassets */; };
+		8ABC4BAE27C3A34C0052303F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABC4BAC27C3A34C0052303F /* LaunchScreen.storyboard */; };
+		8ABC4BBC27C3A35C0052303F /* DSL_in_BDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC4BBB27C3A35C0052303F /* DSL_in_BDDTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8ABDEE0427C38DAA00740204 /* PBXContainerItemProxy */ = {
+		8ABC4BBD27C3A35C0052303F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8ABDEDE527C38DA300740204 /* Project object */;
+			containerPortal = 8ABC4B9627C3A3490052303F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8ABDEDEC27C38DA300740204;
-			remoteInfo = "iOS Good Practices";
+			remoteGlobalIDString = 8ABC4B9D27C3A3490052303F;
+			remoteInfo = "DSL in BDD";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8ABDEDED27C38DA300740204 /* iOS Good Practices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Good Practices.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8ABDEDF027C38DA300740204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8ABDEDF227C38DA300740204 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8ABDEDF427C38DA300740204 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8ABDEDF927C38DAA00740204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8ABDEDFC27C38DAA00740204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8ABDEDFE27C38DAA00740204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8ABDEE0327C38DAA00740204 /* iOS Good PracticesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Good PracticesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8ABDEE2627C3940200740204 /* Winners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Winners.swift; sourceTree = "<group>"; };
-		8ABDEE2A27C3946F00740204 /* WinnersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersTests.swift; sourceTree = "<group>"; };
+		8ABC4B9E27C3A3490052303F /* DSL in BDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DSL in BDD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ABC4BA127C3A3490052303F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8ABC4BA327C3A3490052303F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8ABC4BA527C3A3490052303F /* WinnersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersViewController.swift; sourceTree = "<group>"; };
+		8ABC4BA827C3A3490052303F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8ABC4BAA27C3A34C0052303F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8ABC4BAD27C3A34C0052303F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8ABC4BAF27C3A34C0052303F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ABC4BB927C3A35C0052303F /* DSL in BDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DSL in BDDTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ABC4BBB27C3A35C0052303F /* DSL_in_BDDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSL_in_BDDTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8ABDEDEA27C38DA300740204 /* Frameworks */ = {
+		8ABC4B9B27C3A3490052303F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8ABDEE0027C38DAA00740204 /* Frameworks */ = {
+		8ABC4BB627C3A35C0052303F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,161 +57,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8ABDEDE427C38DA300740204 = {
+		8ABC4B9527C3A3490052303F = {
 			isa = PBXGroup;
 			children = (
-				8ABDEDEF27C38DA300740204 /* iOS Good Practices */,
-				8ABDEE0627C38DAA00740204 /* iOS Good PracticesTests */,
-				8ABDEDEE27C38DA300740204 /* Products */,
+				8ABC4BA027C3A3490052303F /* DSL in BDD */,
+				8ABC4BBA27C3A35C0052303F /* DSL in BDDTests */,
+				8ABC4B9F27C3A3490052303F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8ABDEDEE27C38DA300740204 /* Products */ = {
+		8ABC4B9F27C3A3490052303F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8ABDEDED27C38DA300740204 /* iOS Good Practices.app */,
-				8ABDEE0327C38DAA00740204 /* iOS Good PracticesTests.xctest */,
+				8ABC4B9E27C3A3490052303F /* DSL in BDD.app */,
+				8ABC4BB927C3A35C0052303F /* DSL in BDDTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8ABDEDEF27C38DA300740204 /* iOS Good Practices */ = {
+		8ABC4BA027C3A3490052303F /* DSL in BDD */ = {
 			isa = PBXGroup;
 			children = (
-				8ABDEE2327C38E0500740204 /* Main */,
-				8ABDEE2227C38DF800740204 /* Articles */,
-				8ABDEE2127C38DED00740204 /* Resources */,
-				8ABDEE2027C38DE000740204 /* Utils */,
+				8ABC4BA127C3A3490052303F /* AppDelegate.swift */,
+				8ABC4BA327C3A3490052303F /* SceneDelegate.swift */,
+				8ABC4BA527C3A3490052303F /* WinnersViewController.swift */,
+				8ABC4BA727C3A3490052303F /* Main.storyboard */,
+				8ABC4BAA27C3A34C0052303F /* Assets.xcassets */,
+				8ABC4BAC27C3A34C0052303F /* LaunchScreen.storyboard */,
+				8ABC4BAF27C3A34C0052303F /* Info.plist */,
 			);
-			path = "iOS Good Practices";
+			path = "DSL in BDD";
 			sourceTree = "<group>";
 		};
-		8ABDEE0627C38DAA00740204 /* iOS Good PracticesTests */ = {
+		8ABC4BBA27C3A35C0052303F /* DSL in BDDTests */ = {
 			isa = PBXGroup;
 			children = (
-				8ABDEE2827C3943900740204 /* Articles */,
+				8ABC4BBB27C3A35C0052303F /* DSL_in_BDDTests.swift */,
 			);
-			path = "iOS Good PracticesTests";
-			sourceTree = "<group>";
-		};
-		8ABDEE2027C38DE000740204 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				8ABDEDFE27C38DAA00740204 /* Info.plist */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		8ABDEE2127C38DED00740204 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8ABDEDF927C38DAA00740204 /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		8ABDEE2227C38DF800740204 /* Articles */ = {
-			isa = PBXGroup;
-			children = (
-				8ABDEE2527C393B800740204 /* Creating DSL in tests */,
-			);
-			path = Articles;
-			sourceTree = "<group>";
-		};
-		8ABDEE2327C38E0500740204 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				8ABDEDF027C38DA300740204 /* AppDelegate.swift */,
-				8ABDEDF227C38DA300740204 /* SceneDelegate.swift */,
-				8ABDEDF427C38DA300740204 /* ViewController.swift */,
-				8ABDEDFB27C38DAA00740204 /* LaunchScreen.storyboard */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		8ABDEE2527C393B800740204 /* Creating DSL in tests */ = {
-			isa = PBXGroup;
-			children = (
-				8ABDEE2627C3940200740204 /* Winners.swift */,
-			);
-			path = "Creating DSL in tests";
-			sourceTree = "<group>";
-		};
-		8ABDEE2827C3943900740204 /* Articles */ = {
-			isa = PBXGroup;
-			children = (
-				8ABDEE2927C3943E00740204 /* Creating DSL in tests */,
-			);
-			path = Articles;
-			sourceTree = "<group>";
-		};
-		8ABDEE2927C3943E00740204 /* Creating DSL in tests */ = {
-			isa = PBXGroup;
-			children = (
-				8ABDEE2A27C3946F00740204 /* WinnersTests.swift */,
-			);
-			path = "Creating DSL in tests";
+			path = "DSL in BDDTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8ABDEDEC27C38DA300740204 /* iOS Good Practices */ = {
+		8ABC4B9D27C3A3490052303F /* DSL in BDD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8ABDEE1727C38DAA00740204 /* Build configuration list for PBXNativeTarget "iOS Good Practices" */;
+			buildConfigurationList = 8ABC4BB227C3A34C0052303F /* Build configuration list for PBXNativeTarget "DSL in BDD" */;
 			buildPhases = (
-				8ABDEDE927C38DA300740204 /* Sources */,
-				8ABDEDEA27C38DA300740204 /* Frameworks */,
-				8ABDEDEB27C38DA300740204 /* Resources */,
+				8ABC4B9A27C3A3490052303F /* Sources */,
+				8ABC4B9B27C3A3490052303F /* Frameworks */,
+				8ABC4B9C27C3A3490052303F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "iOS Good Practices";
-			productName = "iOS Good Practices";
-			productReference = 8ABDEDED27C38DA300740204 /* iOS Good Practices.app */;
+			name = "DSL in BDD";
+			productName = "DSL in BDD";
+			productReference = 8ABC4B9E27C3A3490052303F /* DSL in BDD.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8ABDEE0227C38DAA00740204 /* iOS Good PracticesTests */ = {
+		8ABC4BB827C3A35C0052303F /* DSL in BDDTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8ABDEE1A27C38DAA00740204 /* Build configuration list for PBXNativeTarget "iOS Good PracticesTests" */;
+			buildConfigurationList = 8ABC4BBF27C3A35C0052303F /* Build configuration list for PBXNativeTarget "DSL in BDDTests" */;
 			buildPhases = (
-				8ABDEDFF27C38DAA00740204 /* Sources */,
-				8ABDEE0027C38DAA00740204 /* Frameworks */,
-				8ABDEE0127C38DAA00740204 /* Resources */,
+				8ABC4BB527C3A35C0052303F /* Sources */,
+				8ABC4BB627C3A35C0052303F /* Frameworks */,
+				8ABC4BB727C3A35C0052303F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8ABDEE0527C38DAA00740204 /* PBXTargetDependency */,
+				8ABC4BBE27C3A35C0052303F /* PBXTargetDependency */,
 			);
-			name = "iOS Good PracticesTests";
-			productName = "iOS Good PracticesTests";
-			productReference = 8ABDEE0327C38DAA00740204 /* iOS Good PracticesTests.xctest */;
+			name = "DSL in BDDTests";
+			productName = "DSL in BDDTests";
+			productReference = 8ABC4BB927C3A35C0052303F /* DSL in BDDTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8ABDEDE527C38DA300740204 /* Project object */ = {
+		8ABC4B9627C3A3490052303F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					8ABDEDEC27C38DA300740204 = {
+					8ABC4B9D27C3A3490052303F = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
-					8ABDEE0227C38DAA00740204 = {
+					8ABC4BB827C3A35C0052303F = {
 						CreatedOnToolsVersion = 13.2.1;
-						LastSwiftMigration = 1320;
-						TestTargetID = 8ABDEDEC27C38DA300740204;
+						TestTargetID = 8ABC4B9D27C3A3490052303F;
 					};
 				};
 			};
-			buildConfigurationList = 8ABDEDE827C38DA300740204 /* Build configuration list for PBXProject "iOS Good Practices" */;
+			buildConfigurationList = 8ABC4B9927C3A3490052303F /* Build configuration list for PBXProject "DSL in BDD" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,28 +162,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 8ABDEDE427C38DA300740204;
-			productRefGroup = 8ABDEDEE27C38DA300740204 /* Products */;
+			mainGroup = 8ABC4B9527C3A3490052303F;
+			productRefGroup = 8ABC4B9F27C3A3490052303F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8ABDEDEC27C38DA300740204 /* iOS Good Practices */,
-				8ABDEE0227C38DAA00740204 /* iOS Good PracticesTests */,
+				8ABC4B9D27C3A3490052303F /* DSL in BDD */,
+				8ABC4BB827C3A35C0052303F /* DSL in BDDTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8ABDEDEB27C38DA300740204 /* Resources */ = {
+		8ABC4B9C27C3A3490052303F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ABDEDFD27C38DAA00740204 /* LaunchScreen.storyboard in Resources */,
-				8ABDEDFA27C38DAA00740204 /* Assets.xcassets in Resources */,
+				8ABC4BAE27C3A34C0052303F /* LaunchScreen.storyboard in Resources */,
+				8ABC4BAB27C3A34C0052303F /* Assets.xcassets in Resources */,
+				8ABC4BA927C3A3490052303F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8ABDEE0127C38DAA00740204 /* Resources */ = {
+		8ABC4BB727C3A35C0052303F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -250,40 +194,47 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8ABDEDE927C38DA300740204 /* Sources */ = {
+		8ABC4B9A27C3A3490052303F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ABDEDF527C38DA300740204 /* ViewController.swift in Sources */,
-				8ABDEDF127C38DA300740204 /* AppDelegate.swift in Sources */,
-				8ABDEE2727C3940200740204 /* Winners.swift in Sources */,
-				8ABDEDF327C38DA300740204 /* SceneDelegate.swift in Sources */,
+				8ABC4BA627C3A3490052303F /* WinnersViewController.swift in Sources */,
+				8ABC4BA227C3A3490052303F /* AppDelegate.swift in Sources */,
+				8ABC4BA427C3A3490052303F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8ABDEDFF27C38DAA00740204 /* Sources */ = {
+		8ABC4BB527C3A35C0052303F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ABDEE2B27C3946F00740204 /* WinnersTests.swift in Sources */,
+				8ABC4BBC27C3A35C0052303F /* DSL_in_BDDTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8ABDEE0527C38DAA00740204 /* PBXTargetDependency */ = {
+		8ABC4BBE27C3A35C0052303F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8ABDEDEC27C38DA300740204 /* iOS Good Practices */;
-			targetProxy = 8ABDEE0427C38DAA00740204 /* PBXContainerItemProxy */;
+			target = 8ABC4B9D27C3A3490052303F /* DSL in BDD */;
+			targetProxy = 8ABC4BBD27C3A35C0052303F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8ABDEDFB27C38DAA00740204 /* LaunchScreen.storyboard */ = {
+		8ABC4BA727C3A3490052303F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8ABDEDFC27C38DAA00740204 /* Base */,
+				8ABC4BA827C3A3490052303F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8ABC4BAC27C3A34C0052303F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ABC4BAD27C3A34C0052303F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -291,7 +242,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8ABDEE1527C38DAA00740204 /* Debug */ = {
+		8ABC4BB027C3A34C0052303F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -352,7 +303,7 @@
 			};
 			name = Debug;
 		};
-		8ABDEE1627C38DAA00740204 /* Release */ = {
+		8ABC4BB127C3A34C0052303F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -407,7 +358,7 @@
 			};
 			name = Release;
 		};
-		8ABDEE1827C38DAA00740204 /* Debug */ = {
+		8ABC4BB327C3A34C0052303F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -416,9 +367,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P5D9H599Z3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS Good Practices/Utils/Info.plist";
+				INFOPLIST_FILE = "DSL in BDD/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -426,7 +378,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.iOS-Good-Practices";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.DSL-in-BDD";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -434,7 +386,7 @@
 			};
 			name = Debug;
 		};
-		8ABDEE1927C38DAA00740204 /* Release */ = {
+		8ABC4BB427C3A34C0052303F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -443,9 +395,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P5D9H599Z3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS Good Practices/Utils/Info.plist";
+				INFOPLIST_FILE = "DSL in BDD/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -453,7 +406,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.iOS-Good-Practices";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.DSL-in-BDD";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -461,90 +414,73 @@
 			};
 			name = Release;
 		};
-		8ABDEE1B27C38DAA00740204 /* Debug */ = {
+		8ABC4BC027C3A35C0052303F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P5D9H599Z3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.iOS-Good-PracticesTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.DSL-in-BDDTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS Good Practices.app/iOS Good Practices";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DSL in BDD.app/DSL in BDD";
 			};
 			name = Debug;
 		};
-		8ABDEE1C27C38DAA00740204 /* Release */ = {
+		8ABC4BC127C3A35C0052303F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P5D9H599Z3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.iOS-Good-PracticesTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.DSL-in-BDDTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS Good Practices.app/iOS Good Practices";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DSL in BDD.app/DSL in BDD";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8ABDEDE827C38DA300740204 /* Build configuration list for PBXProject "iOS Good Practices" */ = {
+		8ABC4B9927C3A3490052303F /* Build configuration list for PBXProject "DSL in BDD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8ABDEE1527C38DAA00740204 /* Debug */,
-				8ABDEE1627C38DAA00740204 /* Release */,
+				8ABC4BB027C3A34C0052303F /* Debug */,
+				8ABC4BB127C3A34C0052303F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8ABDEE1727C38DAA00740204 /* Build configuration list for PBXNativeTarget "iOS Good Practices" */ = {
+		8ABC4BB227C3A34C0052303F /* Build configuration list for PBXNativeTarget "DSL in BDD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8ABDEE1827C38DAA00740204 /* Debug */,
-				8ABDEE1927C38DAA00740204 /* Release */,
+				8ABC4BB327C3A34C0052303F /* Debug */,
+				8ABC4BB427C3A34C0052303F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8ABDEE1A27C38DAA00740204 /* Build configuration list for PBXNativeTarget "iOS Good PracticesTests" */ = {
+		8ABC4BBF27C3A35C0052303F /* Build configuration list for PBXNativeTarget "DSL in BDDTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8ABDEE1B27C38DAA00740204 /* Debug */,
-				8ABDEE1C27C38DAA00740204 /* Release */,
+				8ABC4BC027C3A35C0052303F /* Debug */,
+				8ABC4BC127C3A35C0052303F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8ABDEDE527C38DA300740204 /* Project object */;
+	rootObject = 8ABC4B9627C3A3490052303F /* Project object */;
 }
