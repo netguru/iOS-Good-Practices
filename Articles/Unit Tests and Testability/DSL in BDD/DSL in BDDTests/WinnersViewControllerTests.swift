@@ -3,12 +3,24 @@ import XCTest
 
 final class WinnersViewControllerTests: XCTestCase {
     
+    // MARK: Beginning example
+    
     func test_onLoad_showsAllWinners() {
         let sut = makeSUT(for: [winnerOne, winnerTwo, winnerThree])
         
         sut.loadViewIfNeeded()
         
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 3)
+    }
+    
+    // MARK: Final example
+    
+    func test_onLoad_showsAllWinners_final() {
+        let sut = makeSUT(for: [winnerOne, winnerTwo, winnerThree])
+        
+        sut.loadViewIfNeeded()
+        
+        XCTAssertEqual(sut.winnersDisplayed, 3)
     }
     
     // MARK: Helpers
