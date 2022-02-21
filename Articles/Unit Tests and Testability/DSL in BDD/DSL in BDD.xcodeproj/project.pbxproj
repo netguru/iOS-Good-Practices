@@ -13,7 +13,7 @@
 		8ABC4BA927C3A3490052303F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABC4BA727C3A3490052303F /* Main.storyboard */; };
 		8ABC4BAB27C3A34C0052303F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ABC4BAA27C3A34C0052303F /* Assets.xcassets */; };
 		8ABC4BAE27C3A34C0052303F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABC4BAC27C3A34C0052303F /* LaunchScreen.storyboard */; };
-		8ABC4BBC27C3A35C0052303F /* DSL_in_BDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC4BBB27C3A35C0052303F /* DSL_in_BDDTests.swift */; };
+		8ABC4BBC27C3A35C0052303F /* WinnersViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABC4BBB27C3A35C0052303F /* WinnersViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,7 @@
 		8ABC4BAD27C3A34C0052303F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8ABC4BAF27C3A34C0052303F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ABC4BB927C3A35C0052303F /* DSL in BDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DSL in BDDTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8ABC4BBB27C3A35C0052303F /* DSL_in_BDDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSL_in_BDDTests.swift; sourceTree = "<group>"; };
+		8ABC4BBB27C3A35C0052303F /* WinnersViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 		8ABC4BBA27C3A35C0052303F /* DSL in BDDTests */ = {
 			isa = PBXGroup;
 			children = (
-				8ABC4BBB27C3A35C0052303F /* DSL_in_BDDTests.swift */,
+				8ABC4BBB27C3A35C0052303F /* WinnersViewControllerTests.swift */,
 			);
 			path = "DSL in BDDTests";
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ABC4BBC27C3A35C0052303F /* DSL_in_BDDTests.swift in Sources */,
+				8ABC4BBC27C3A35C0052303F /* WinnersViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
