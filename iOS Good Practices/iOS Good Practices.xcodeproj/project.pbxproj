@@ -12,8 +12,8 @@
 		8ABDEDF527C38DA300740204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABDEDF427C38DA300740204 /* ViewController.swift */; };
 		8ABDEDFA27C38DAA00740204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ABDEDF927C38DAA00740204 /* Assets.xcassets */; };
 		8ABDEDFD27C38DAA00740204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABDEDFB27C38DAA00740204 /* LaunchScreen.storyboard */; };
-		8ABDEE0827C38DAA00740204 /* iOS_Good_PracticesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABDEE0727C38DAA00740204 /* iOS_Good_PracticesTests.swift */; };
 		8ABDEE2727C3940200740204 /* Winners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABDEE2627C3940200740204 /* Winners.swift */; };
+		8ABDEE2B27C3946F00740204 /* WinnersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABDEE2A27C3946F00740204 /* WinnersTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +35,8 @@
 		8ABDEDFC27C38DAA00740204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8ABDEDFE27C38DAA00740204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ABDEE0327C38DAA00740204 /* iOS Good PracticesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Good PracticesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8ABDEE0727C38DAA00740204 /* iOS_Good_PracticesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Good_PracticesTests.swift; sourceTree = "<group>"; };
 		8ABDEE2627C3940200740204 /* Winners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Winners.swift; sourceTree = "<group>"; };
+		8ABDEE2A27C3946F00740204 /* WinnersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,7 @@
 		8ABDEE0627C38DAA00740204 /* iOS Good PracticesTests */ = {
 			isa = PBXGroup;
 			children = (
-				8ABDEE0727C38DAA00740204 /* iOS_Good_PracticesTests.swift */,
+				8ABDEE2827C3943900740204 /* Articles */,
 			);
 			path = "iOS Good PracticesTests";
 			sourceTree = "<group>";
@@ -133,6 +133,22 @@
 			isa = PBXGroup;
 			children = (
 				8ABDEE2627C3940200740204 /* Winners.swift */,
+			);
+			path = "Creating DSL in tests";
+			sourceTree = "<group>";
+		};
+		8ABDEE2827C3943900740204 /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				8ABDEE2927C3943E00740204 /* Creating DSL in tests */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		8ABDEE2927C3943E00740204 /* Creating DSL in tests */ = {
+			isa = PBXGroup;
+			children = (
+				8ABDEE2A27C3946F00740204 /* WinnersTests.swift */,
 			);
 			path = "Creating DSL in tests";
 			sourceTree = "<group>";
@@ -190,6 +206,7 @@
 					};
 					8ABDEE0227C38DAA00740204 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = 8ABDEDEC27C38DA300740204;
 					};
 				};
@@ -248,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ABDEE0827C38DAA00740204 /* iOS_Good_PracticesTests.swift in Sources */,
+				8ABDEE2B27C3946F00740204 /* WinnersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,15 +466,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P5D9H599Z3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.iOS-Good-PracticesTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS Good Practices.app/iOS Good Practices";
@@ -469,11 +493,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P5D9H599Z3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.iOS-Good-PracticesTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
