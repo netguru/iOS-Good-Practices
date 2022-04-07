@@ -57,7 +57,6 @@ opt_in_rules:
   - legacy_nsgeometry_functions
   - legacy_random
   - no_fallthrough_only
-#  - no_space_in_method_call - does not work well with SwiftUI views...
   - nslocalizedstring_key
   - nsobject_prefer_isequal
   - operator_usage_whitespace
@@ -217,5 +216,6 @@ disabled_rules:
   - line_length
   - todo
   - indentation_width
+  - no_space_in_method_call # does not work well with SwiftUI views...
 
 # Remember that you can customize this configuration file as much as you want.

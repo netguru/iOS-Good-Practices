@@ -7,6 +7,7 @@ import Foundation
 
 enum CacheKey: String {
     case selectedAuthenticationFlow
+    case selectedEmail
 }
 
 /// An abstraction defining data cache for the app.

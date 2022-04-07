@@ -7,7 +7,7 @@ import UIKit
 
 // MARK: OnboardingFlowCoordinator
 
-/// An abstraction describing app Welcome flow.
+/// An abstraction describing app Onboarding / Welcome flow.
 protocol OnboardingFlowCoordinatorDelegate: AnyObject {
 
     /// Triggered when user requested the log in flow.

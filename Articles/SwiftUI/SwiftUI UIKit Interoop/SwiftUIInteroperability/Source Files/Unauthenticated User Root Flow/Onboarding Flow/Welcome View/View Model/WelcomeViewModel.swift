@@ -24,9 +24,12 @@ final class DefaultWelcomeViewModel: ObservableObject, WelcomeViewModel {
 
     // MARK: Public Properties
 
-    let temporaryStorage: AppDataCache
-
+    /// - SeeAlso: NavigableViewModel.onNavigationAwayFromViewRequested
     var onNavigationAwayFromViewRequested: (() -> Void)?
+
+    // MARK: Private Properties
+
+    private let temporaryStorage: AppDataCache
 
     // MARK: Initializer:
 

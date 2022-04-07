@@ -64,7 +64,7 @@ final class UnauthenticatedUserRootFlowCoordinator: RootFlowCoordinator {
     }
 }
 
-// MARK: DefaultUnauthenticatedUserRootFlowCoordinator
+// MARK: OnboardingFlowCoordinatorDelegate
 
 extension UnauthenticatedUserRootFlowCoordinator: OnboardingFlowCoordinatorDelegate {
 
@@ -73,7 +73,16 @@ extension UnauthenticatedUserRootFlowCoordinator: OnboardingFlowCoordinatorDeleg
     }
 
     func onboardingFlowCoordinatorDidTriggerSignUp(_ coordinator: OnboardingFlowCoordinator) {
-        // TODO: Start Registration Flow
+        startRegistrationFlow()
+    }
+}
+
+// MARK: RegistrationFlowCoordinatorDelegate
+
+extension UnauthenticatedUserRootFlowCoordinator: RegistrationFlowCoordinatorDelegate {
+
+    func registrationFlowCoordinatorDidFinish(_ coordinator: RegistrationFlowCoordinator) {
+        finish()
     }
 }
 
@@ -88,6 +97,15 @@ private extension UnauthenticatedUserRootFlowCoordinator {
         )
         coordinator.delegate = self
         start(coordinator, animated: false)
+    }
+
+    func startRegistrationFlow() {
+        let coordinator = RegistrationFlowCoordinator(
+            presentingNavigationController: navigationController,
+            dependencyProvider: dependencyProvider
+        )
+        coordinator.delegate = self
+        start(coordinator, animated: true)
     }
 
     func start(_ coordinator: FlowCoordinator, animated: Bool) {
