@@ -10,7 +10,7 @@ import Foundation
 /// An abstraction describing a View Model for an application initial view.
 protocol EmailEntryViewModel: NavigableViewModel {
 
-    /// A callback to be called when
+    /// A callback to be called when user requested signing in.
     var onSignInFlowRequested: (() -> Void)? { get set }
 
     /// Called when user requested registering an email.
@@ -80,7 +80,9 @@ private extension DefaultEmailEntryViewModel {
             .dropFirst()
             .debounce(for: 0.1, scheduler: RunLoop.main)
             .removeDuplicates()
-            .map { self.emailValidator.validate(value: $0) }
+            .map {
+                self.emailValidator.validate(value: $0)
+            }
             .assign(to: &$currentValidationError)
     }
 }

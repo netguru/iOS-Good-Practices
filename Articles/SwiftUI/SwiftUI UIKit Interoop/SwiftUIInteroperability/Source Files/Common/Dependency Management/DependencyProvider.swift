@@ -15,6 +15,9 @@ protocol DependencyProvider: AnyObject {
 
     /// An app temporary storage.
     var temporaryStorage: AppDataCache { get }
+
+    /// An authentication service.
+    var authenticationService: AuthenticationService { get }
 }
 
 // MARK: DefaultDependencyProvider
@@ -23,6 +26,7 @@ final class DefaultDependencyProvider {
 
     let defaultLocalDataService: DefaultLocalDataService
     let defaultAppDataCache: DefaultAppDataCache
+    let defaultAuthenticationService: DefaultAuthenticationService
 
     private unowned var windowController: WindowController?
 
@@ -30,6 +34,7 @@ final class DefaultDependencyProvider {
     init() {
         defaultLocalDataService = DefaultLocalDataService(localStorage: UserDefaults.standard)
         defaultAppDataCache = DefaultAppDataCache()
+        defaultAuthenticationService = DefaultAuthenticationService(localStorage: defaultLocalDataService)
     }
 
     /// Sets up the provider with data that cannot be obtained at app start.
@@ -50,5 +55,9 @@ extension DefaultDependencyProvider: DependencyProvider {
 
     var temporaryStorage: AppDataCache {
         defaultAppDataCache
+    }
+
+    var authenticationService: AuthenticationService {
+        defaultAuthenticationService
     }
 }

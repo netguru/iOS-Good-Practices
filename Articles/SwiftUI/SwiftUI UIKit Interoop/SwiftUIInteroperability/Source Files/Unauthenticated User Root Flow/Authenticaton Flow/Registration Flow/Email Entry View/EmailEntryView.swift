@@ -9,7 +9,7 @@ struct EmailEntryView: View {
 
     @StateObject var viewModel: DefaultEmailEntryViewModel
 
-    @FocusState private var focusedField: FocusField?
+    @FocusState private var focusedField: String?
 
     var body: some View {
         ZStack {
@@ -26,31 +26,19 @@ struct EmailEntryView: View {
                     resignFirstResponder()
                     viewModel.navigateToLogIn()
                 } label: {
-                    Text("LOG IN")
-                        .font(.footnote)
+                    Text("LOG IN").font(.footnote)
                 }
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            VStack {
-                TextField(
-                    "Enter email",
-                    text: $viewModel.currentEmail
-                )
-                .onSubmit(resignFirstResponder)
-                .focused($focusedField, equals: .emailEntry)
-                .textInputAutocapitalization(.never)
-                .disableAutocorrection(true)
-                .keyboardType(.emailAddress)
-                .padding()
-                .overlay(
-                    RoundedRectangle(cornerRadius: 14)
-                        .stroke(Color.blue, lineWidth: 2)
-                )
-                Text(viewModel.currentValidationError?.localizedDescription ?? " ")
-                    .font(.caption)
-                    .foregroundColor(.red)
-            }
+            TextInput(
+                value: $viewModel.currentEmail,
+                focusedField: _focusedField,
+                error: viewModel.currentValidationError,
+                prompt: FieldName.emailEntry.prompt,
+                fieldName: FieldName.emailEntry.rawValue,
+                keyboardType: .emailAddress
+            )
             .padding()
         }
         .onAppear {
@@ -62,8 +50,15 @@ struct EmailEntryView: View {
 private extension EmailEntryView {
 
     /// Currently focused field.
-    enum FocusField: Hashable {
+    enum FieldName: String {
         case emailEntry
+
+        var prompt: String {
+            switch self {
+            case .emailEntry:
+                return "Enter email"
+            }
+        }
     }
 
     var canSubmit: Bool {
@@ -74,9 +69,9 @@ private extension EmailEntryView {
         focusedField = nil
     }
 
-    func setFocusDelayed(to field: FocusField) {
+    func setFocusDelayed(to field: FieldName) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.focusedField = field
+            self.focusedField = field.rawValue
         }
     }
 }

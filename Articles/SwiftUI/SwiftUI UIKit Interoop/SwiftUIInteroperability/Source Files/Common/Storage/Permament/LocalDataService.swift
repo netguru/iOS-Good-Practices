@@ -22,6 +22,7 @@ final class DefaultLocalDataService: LocalDataService {
     /// Keys for saving the data.
     enum Keys: String {
         case hasFinishedOnboardingKey
+        case currentUser
     }
 
     /// UserDefaults used for storing data.
@@ -36,6 +37,19 @@ final class DefaultLocalDataService: LocalDataService {
         }
         set {
             localStorage.set(newValue, forKey: Keys.hasFinishedOnboardingKey.rawValue)
+        }
+    }
+
+    /// A user that has currently signed up.
+    var currentUser: UserAuthenticationInfo? {
+        get {
+            if let userData = localStorage.data(forKey: Keys.currentUser.rawValue) {
+                return try? UserAuthenticationInfo(from: userData)
+            }
+            return nil
+        }
+        set {
+            localStorage.set(newValue, forKey: Keys.currentUser.rawValue)
         }
     }
 

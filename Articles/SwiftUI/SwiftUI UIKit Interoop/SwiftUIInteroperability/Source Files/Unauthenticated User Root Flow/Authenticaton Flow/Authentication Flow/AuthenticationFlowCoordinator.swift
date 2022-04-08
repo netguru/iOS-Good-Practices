@@ -1,36 +1,36 @@
 //
-//  RegistrationFlowCoordinator.swift
+//  AuthenticationFlowCoordinator.swift
 //  SwiftUI Interoperability
 //
 
 import UIKit
 
-// MARK: RegistrationFlowCoordinator
+// MARK: AuthenticationFlowCoordinator
 
-/// An abstraction describing app Registration flow.
-protocol RegistrationFlowCoordinatorDelegate: AnyObject {
+/// An abstraction describing app Authentication flow.
+protocol AuthenticationFlowCoordinatorDelegate: AnyObject {
 
-    /// Triggered when user successfully completed registration flow.
+    /// Triggered when user successfully completed authentication.
     ///
     /// - Parameter coordinator: a coordinator.
-    func registrationFlowCoordinatorDidFinish(_ coordinator: RegistrationFlowCoordinator)
+    func authenticationFlowCoordinatorDidFinish(_ coordinator: AuthenticationFlowCoordinator)
 
-    /// Triggered when user requested the authentication flow.
+    /// Triggered when user requested the registration flow.
     ///
     /// - Parameter coordinator: a coordinator.
-    func registrationFlowCoordinatorDidTriggerAuthenticationFlow(_ coordinator: RegistrationFlowCoordinator)
+    func authenticationFlowCoordinatorDidTriggerRegistrationFlow(_ coordinator: RegistrationFlowCoordinator)
 }
 
 /// A flow coordinator for registration screen flow.
-final class RegistrationFlowCoordinator: FlowCoordinator {
+final class AuthenticationFlowCoordinator: FlowCoordinator {
 
     // MARK: Properties
 
     /// A flow coordinator name.
-    let name = UnauthenticatedUserFlowCoordinatorName.registration.rawValue
+    let name = UnauthenticatedUserFlowCoordinatorName.authentication.rawValue
 
     /// A flow coordinator delegate.
-    weak var delegate: RegistrationFlowCoordinatorDelegate?
+    weak var delegate: AuthenticationFlowCoordinatorDelegate?
 
     /// A navigation controller to present the flow on.
     private(set) var presentingNavigationController: UINavigationController?
@@ -40,7 +40,7 @@ final class RegistrationFlowCoordinator: FlowCoordinator {
 
     // MARK: Initializers
 
-    /// A default initializer for RegistrationFlowCoordinator.
+    /// A default initializer for AuthenticationFlowCoordinator.
     ///
     /// - Parameters:
     ///   - presentingNavigationController: a navigation controller to present the flow on.
@@ -66,27 +66,23 @@ final class RegistrationFlowCoordinator: FlowCoordinator {
 
 // MARK: EmailEntryViewControllerDelegate
 
-extension RegistrationFlowCoordinator: EmailEntryViewControllerDelegate {
+extension AuthenticationFlowCoordinator: EmailLoginViewControllerDelegate {
 
-    func emailEntryViewControllerDidFinish(_ viewController: UIViewController) {
-        // TODO: Show password entry view.
-    }
+    func emailLoginViewControllerDidFinish(_ viewController: UIViewController) {}
 
-    func emailEntryViewControllerDidRequestNavigatingToLogIn(_ viewController: UIViewController) {
-        delegate?.registrationFlowCoordinatorDidTriggerAuthenticationFlow(self)
-    }
+    func emailLoginViewControllerDidRequestNavigatingToRegistration(_ viewController: UIViewController) {}
 }
 
 // MARK: Private Extension
 
-private extension RegistrationFlowCoordinator {
+private extension AuthenticationFlowCoordinator {
 
     func showInitialViewController(animated: Bool = true) {
-        let viewModel = DefaultEmailEntryViewModel(
-            temporaryStorage: dependencyProvider.temporaryStorage
+        let viewModel = DefaultEmailLoginViewModel(
+            authenticationService: dependencyProvider.authenticationService
         )
-        let view = EmailEntryView(viewModel: viewModel)
-        let viewController = EmailEntryViewController(view: view, viewModel: viewModel)
+        let view = EmailLoginView(viewModel: viewModel)
+        let viewController = EmailLoginViewController(view: view, viewModel: viewModel)
         viewController.delegate = self
         presentingNavigationController?.pushViewController(viewController, animated: animated)
     }
