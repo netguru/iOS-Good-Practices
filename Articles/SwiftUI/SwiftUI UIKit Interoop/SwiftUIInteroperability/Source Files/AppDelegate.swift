@@ -29,6 +29,7 @@ class AppDelegate: UIResponder {
             viewControllersTransitionsCoordinator: viewControllersTransitionsCoordinator,
             rootViewController: rootViewController
         )
+        dependencyProvider.setup(windowController: windowController)
     }
 }
 

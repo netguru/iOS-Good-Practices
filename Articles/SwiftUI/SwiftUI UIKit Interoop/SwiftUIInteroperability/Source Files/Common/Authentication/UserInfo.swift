@@ -7,11 +7,11 @@ import Foundation
 
 struct UserInfo: Codable {
 
-    let id: Int
+    let id: String
     let email: String
 }
 
-struct UserAuthenticationInfo: Codable {
+struct UserAuthenticationInfo: Codable, Equatable {
 
     let email: String
     let password: String

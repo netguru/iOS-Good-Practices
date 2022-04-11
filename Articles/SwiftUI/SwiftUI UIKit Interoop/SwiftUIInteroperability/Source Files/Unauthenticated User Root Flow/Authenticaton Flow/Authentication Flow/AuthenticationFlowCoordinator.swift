@@ -18,7 +18,7 @@ protocol AuthenticationFlowCoordinatorDelegate: AnyObject {
     /// Triggered when user requested the registration flow.
     ///
     /// - Parameter coordinator: a coordinator.
-    func authenticationFlowCoordinatorDidTriggerRegistrationFlow(_ coordinator: RegistrationFlowCoordinator)
+    func authenticationFlowCoordinatorDidTriggerRegistrationFlow(_ coordinator: AuthenticationFlowCoordinator)
 }
 
 /// A flow coordinator for registration screen flow.
@@ -61,16 +61,22 @@ final class AuthenticationFlowCoordinator: FlowCoordinator {
     }
 
     /// SeeAlso: FlowCoordinator.finish()
-    func finish() {}
+    func finish() {
+        delegate?.authenticationFlowCoordinatorDidFinish(self)
+    }
 }
 
 // MARK: EmailEntryViewControllerDelegate
 
 extension AuthenticationFlowCoordinator: EmailLoginViewControllerDelegate {
 
-    func emailLoginViewControllerDidFinish(_ viewController: UIViewController) {}
+    func emailLoginViewControllerDidFinish(_ viewController: UIViewController) {
+        finish()
+    }
 
-    func emailLoginViewControllerDidRequestNavigatingToRegistration(_ viewController: UIViewController) {}
+    func emailLoginViewControllerDidRequestNavigatingToRegistration(_ viewController: UIViewController) {
+        delegate?.authenticationFlowCoordinatorDidTriggerRegistrationFlow(self)
+    }
 }
 
 // MARK: Private Extension
@@ -79,7 +85,10 @@ private extension AuthenticationFlowCoordinator {
 
     func showInitialViewController(animated: Bool = true) {
         let viewModel = DefaultEmailLoginViewModel(
-            authenticationService: dependencyProvider.authenticationService
+            authenticationService: dependencyProvider.authenticationService,
+            appDataCache: dependencyProvider.temporaryStorage,
+            presentableHUD: dependencyProvider.presentableHUD,
+            infoAlert: dependencyProvider.infoAlert
         )
         let view = EmailLoginView(viewModel: viewModel)
         let viewController = EmailLoginViewController(view: view, viewModel: viewModel)

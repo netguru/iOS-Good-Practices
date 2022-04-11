@@ -7,7 +7,7 @@ import UIKit
 import SwiftUI
 
 /// Describes an object handling main application Window.
-protocol WindowController: AnyObject {
+protocol WindowController: VisibleViewControllerProvider {
 
     /// App Dependencies Provider
     var dependencyProvider: DependencyProvider { get }
@@ -37,6 +37,16 @@ final class DefaultWindowController: WindowController {
 
     /// A root view controller.
     let rootViewController: UIViewController
+
+    /// - SeeAlso: VisibleViewProvider.visibleViewController
+    var visibleViewController: UIViewController {
+        currentRootFlowCoordinator?.rootViewController ?? rootViewController
+    }
+
+    /// - SeeAlso: VisibleViewProvider.visibleView
+    var visibleView: UIView {
+        visibleViewController.view
+    }
 
     /// Current application window.
     private(set) var window: UIWindow?

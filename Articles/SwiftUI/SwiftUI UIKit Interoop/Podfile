@@ -6,6 +6,8 @@ target 'SwiftUIInteroperability' do
 
   pod 'SwiftLint', '~> 0.46.5'
   pod 'SwiftFormat/CLI', '~> 0.49'
+  pod 'MBProgressHUD'
+  pod 'SwiftGen', '~> 6.0'
   
   target 'SwiftUIInteroperabilityTests' do
     inherit! :search_paths

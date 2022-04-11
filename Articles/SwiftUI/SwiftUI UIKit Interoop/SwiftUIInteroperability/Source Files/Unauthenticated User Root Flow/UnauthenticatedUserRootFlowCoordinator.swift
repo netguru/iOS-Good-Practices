@@ -98,7 +98,7 @@ extension UnauthenticatedUserRootFlowCoordinator: AuthenticationFlowCoordinatorD
         finish()
     }
 
-    func authenticationFlowCoordinatorDidTriggerRegistrationFlow(_ coordinator: RegistrationFlowCoordinator) {
+    func authenticationFlowCoordinatorDidTriggerRegistrationFlow(_ coordinator: AuthenticationFlowCoordinator) {
         startRegistrationFlow()
     }
 }

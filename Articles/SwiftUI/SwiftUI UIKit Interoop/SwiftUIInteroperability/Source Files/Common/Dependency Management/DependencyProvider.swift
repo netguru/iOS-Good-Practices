@@ -18,6 +18,12 @@ protocol DependencyProvider: AnyObject {
 
     /// An authentication service.
     var authenticationService: AuthenticationService { get }
+
+    /// A presentable HUD.
+    var presentableHUD: PresentableHud { get }
+
+    /// An information alert.
+    var infoAlert: InfoAlert { get }
 }
 
 // MARK: DefaultDependencyProvider
@@ -29,6 +35,8 @@ final class DefaultDependencyProvider {
     let defaultAuthenticationService: DefaultAuthenticationService
 
     private unowned var windowController: WindowController?
+    private var defaultPresentableHUD: DefaultPresentableHud?
+    private var defaultInfoAlert: DefaultInfoAlert?
 
     /// A default initializer.
     init() {
@@ -42,6 +50,8 @@ final class DefaultDependencyProvider {
     /// - Parameter windowController: an application main window controller.
     func setup(windowController: WindowController) {
         self.windowController = windowController
+        defaultPresentableHUD = DefaultPresentableHud(viewProvider: windowController)
+        defaultInfoAlert = DefaultInfoAlert(viewControllerProvider: windowController)
     }
 }
 
@@ -59,5 +69,13 @@ extension DefaultDependencyProvider: DependencyProvider {
 
     var authenticationService: AuthenticationService {
         defaultAuthenticationService
+    }
+
+    var presentableHUD: PresentableHud {
+        defaultPresentableHUD!
+    }
+
+    var infoAlert: InfoAlert {
+        defaultInfoAlert!
     }
 }

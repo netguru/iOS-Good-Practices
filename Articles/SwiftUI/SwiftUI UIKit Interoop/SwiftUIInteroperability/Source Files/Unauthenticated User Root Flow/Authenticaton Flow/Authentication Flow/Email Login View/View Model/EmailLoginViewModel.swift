@@ -45,22 +45,49 @@ class DefaultEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
     // MARK: Private Properties
 
     private let authenticationService: AuthenticationService
+    private let presentableHUD: PresentableHud
+    private let infoAlert: InfoAlert
+    private let appDataCache: AppDataCache
 
     // MARK: Initializers
 
     /// A default EmailLoginViewModel initializer.
     ///
     /// - Parameter authenticationService: an authentication service.
-    init(authenticationService: AuthenticationService) {
+    /// - Parameter appDataCache: an application data cache.
+    /// - Parameter presentableHUD: a presentable HUD.
+    /// - Parameter infoAlert: an information alert.
+    init(
+        authenticationService: AuthenticationService,
+        appDataCache: AppDataCache,
+        presentableHUD: PresentableHud,
+        infoAlert: InfoAlert
+    ) {
         self.authenticationService = authenticationService
+        self.presentableHUD = presentableHUD
+        self.appDataCache = appDataCache
+        self.infoAlert = infoAlert
     }
 
     // MARK: Public methods
 
     /// SeeAlso: EmailLoginViewModel.commit()
     func logIn() {
-        //  TODO: Check logging in
-        requestNavigatingAwayFromView()
+        presentableHUD.show(animated: true)
+        let info = UserAuthenticationInfo(email: email, password: password)
+        authenticationService.authenticate(userAuthenticationInfo: info) { [weak self] result in
+            self?.presentableHUD.hide(animated: true)
+            switch result {
+            case let .success(user):
+                self?.storeInSession(user: user)
+                self?.requestNavigatingAwayFromView()
+            case let .failure(error):
+                self?.infoAlert.show(
+                    title: "An error has occurred",
+                    message: error.localizedDescription
+                )
+            }
+        }
     }
 
     /// SeeAlso: EmailLoginViewModel.navigateToLogIn()
@@ -71,4 +98,9 @@ class DefaultEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
 
 // MARK: Implementation details
 
-private extension DefaultEmailLoginViewModel {}
+private extension DefaultEmailLoginViewModel {
+
+    func storeInSession(user: UserInfo) {
+        appDataCache.store(user, forKey: .authenticatedUser)
+    }
+}
