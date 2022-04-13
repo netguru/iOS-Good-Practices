@@ -61,7 +61,9 @@ final class RegistrationFlowCoordinator: FlowCoordinator {
     }
 
     /// SeeAlso: FlowCoordinator.finish()
-    func finish() {}
+    func finish() {
+        delegate?.registrationFlowCoordinatorDidFinish(self)
+    }
 }
 
 // MARK: EmailEntryViewControllerDelegate
@@ -69,11 +71,33 @@ final class RegistrationFlowCoordinator: FlowCoordinator {
 extension RegistrationFlowCoordinator: EmailEntryViewControllerDelegate {
 
     func emailEntryViewControllerDidFinish(_ viewController: UIViewController) {
-        // TODO: Show password entry view.
+        showPasswordRegistrationViewController()
     }
 
     func emailEntryViewControllerDidRequestNavigatingToLogIn(_ viewController: UIViewController) {
         delegate?.registrationFlowCoordinatorDidTriggerAuthenticationFlow(self)
+    }
+}
+
+// MARK: PasswordRegistrationViewControllerDelegate
+
+extension RegistrationFlowCoordinator: PasswordRegistrationViewControllerDelegate {
+
+    func passwordRegistrationViewControllerDidFinish(_ viewController: UIViewController) {
+        showRegistrationSuccessfulViewController()
+    }
+
+    func passwordRegistrationViewControllerDidRequestBackwardsNavigation(_ viewController: UIViewController) {
+        presentingNavigationController?.popViewController(animated: true)
+    }
+}
+
+// MARK: UserRegistrationConfirmationViewControllerDelegate
+
+extension RegistrationFlowCoordinator: UserRegistrationConfirmationViewControllerDelegate {
+
+    func userRegistrationConfirmationViewControllerDidFinish(_ viewController: UIViewController) {
+        finish()
     }
 }
 
@@ -87,6 +111,29 @@ private extension RegistrationFlowCoordinator {
         )
         let view = EmailEntryView(viewModel: viewModel)
         let viewController = EmailEntryViewController(view: view, viewModel: viewModel)
+        viewController.delegate = self
+        presentingNavigationController?.pushViewController(viewController, animated: animated)
+    }
+
+    func showPasswordRegistrationViewController(animated: Bool = true) {
+        let viewModel = DefaultPasswordRegistrationViewModel(
+            registrationService: dependencyProvider.registrationService,
+            appDataCache: dependencyProvider.temporaryStorage,
+            presentableHUD: dependencyProvider.presentableHUD,
+            infoAlert: dependencyProvider.infoAlert
+        )
+        let view = PasswordRegistrationView(viewModel: viewModel)
+        let viewController = PasswordRegistrationViewController(view: view, viewModel: viewModel)
+        viewController.delegate = self
+        presentingNavigationController?.pushViewController(viewController, animated: animated)
+    }
+
+    func showRegistrationSuccessfulViewController(animated: Bool = true) {
+        let viewModel = DefaultUserRegistrationConfirmationViewModel(
+            appDataCache: dependencyProvider.temporaryStorage
+        )
+        let view = UserRegistrationConfirmationView(viewModel: viewModel)
+        let viewController = UserRegistrationConfirmationViewController(view: view, viewModel: viewModel)
         viewController.delegate = self
         presentingNavigationController?.pushViewController(viewController, animated: animated)
     }

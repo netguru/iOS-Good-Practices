@@ -19,6 +19,9 @@ protocol DependencyProvider: AnyObject {
     /// An authentication service.
     var authenticationService: AuthenticationService { get }
 
+    /// A registration service.
+    var registrationService: RegistrationService { get }
+
     /// A presentable HUD.
     var presentableHUD: PresentableHud { get }
 
@@ -33,6 +36,7 @@ final class DefaultDependencyProvider {
     let defaultLocalDataService: DefaultLocalDataService
     let defaultAppDataCache: DefaultAppDataCache
     let defaultAuthenticationService: DefaultAuthenticationService
+    let defaultRegistrationService: DefaultRegistrationService
 
     private unowned var windowController: WindowController?
     private var defaultPresentableHUD: DefaultPresentableHud?
@@ -43,6 +47,7 @@ final class DefaultDependencyProvider {
         defaultLocalDataService = DefaultLocalDataService(localStorage: UserDefaults.standard)
         defaultAppDataCache = DefaultAppDataCache()
         defaultAuthenticationService = DefaultAuthenticationService(localStorage: defaultLocalDataService)
+        defaultRegistrationService = DefaultRegistrationService(localStorage: defaultLocalDataService)
     }
 
     /// Sets up the provider with data that cannot be obtained at app start.
@@ -69,6 +74,10 @@ extension DefaultDependencyProvider: DependencyProvider {
 
     var authenticationService: AuthenticationService {
         defaultAuthenticationService
+    }
+
+    var registrationService: RegistrationService {
+        defaultRegistrationService
     }
 
     var presentableHUD: PresentableHud {

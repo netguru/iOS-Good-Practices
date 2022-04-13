@@ -50,7 +50,7 @@ class WelcomeViewController<Content>: UIHostingController<Content> where Content
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.navigationBar.isHidden = true
     }
 }
 

@@ -33,6 +33,15 @@ extension InfoAlert {
     ) {
         show(title: title, message: message, buttonTitle: "OK", acceptanceCompletion: nil)
     }
+
+    /// - SeeAlso: `InfoAlert.show`
+    func show(
+        title: String,
+        message: String?,
+        acceptanceCompletion: (() -> Void)?
+    ) {
+        show(title: title, message: message, buttonTitle: "OK", acceptanceCompletion: acceptanceCompletion)
+    }
 }
 
 /// Constructing and presenting informational alert.

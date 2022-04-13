@@ -11,17 +11,17 @@ import Foundation
 enum EmailValidationError: LocalizableError, Equatable {
 
     /// Invalid text length error.
-    case empty
+    case tooShort
 
     /// Invalid email error.
-    case invalidEmail
+    case invalid
 
     /// SeeAlso: LocalizableError.localizedDescription
     var localizedDescription: String {
         switch self {
-        case .empty:
+        case .tooShort:
             return "Email is too short"
-        case .invalidEmail:
+        case .invalid:
             return "This is not a valid email"
         }
     }

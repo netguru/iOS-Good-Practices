@@ -8,7 +8,6 @@ import SwiftUI
 struct EmailEntryView: View {
 
     @StateObject var viewModel: DefaultEmailEntryViewModel
-
     @FocusState private var focusedField: String?
 
     var body: some View {
@@ -32,34 +31,20 @@ struct EmailEntryView: View {
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             TextInput(
+                configuration: .makeEmailTextInputConfiguration(),
                 value: $viewModel.currentEmail,
                 focusedField: _focusedField,
-                error: viewModel.currentValidationError,
-                prompt: FieldName.emailEntry.prompt,
-                fieldName: FieldName.emailEntry.rawValue,
-                keyboardType: .emailAddress
+                error: viewModel.currentValidationError
             )
             .padding()
         }
         .onAppear {
-            setFocusDelayed(to: .emailEntry)
+            setDelayedFocus()
         }
     }
 }
 
 private extension EmailEntryView {
-
-    /// Currently focused field.
-    enum FieldName: String {
-        case emailEntry
-
-        var prompt: String {
-            switch self {
-            case .emailEntry:
-                return "Enter email"
-            }
-        }
-    }
 
     var canSubmit: Bool {
         viewModel.currentValidationError == nil && viewModel.currentEmail.count > 3
@@ -69,9 +54,9 @@ private extension EmailEntryView {
         focusedField = nil
     }
 
-    func setFocusDelayed(to field: FieldName) {
+    func setDelayedFocus() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.focusedField = field.rawValue
+            self.focusedField = TextInputType.email.rawValue
         }
     }
 }

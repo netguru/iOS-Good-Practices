@@ -8,59 +8,71 @@
 
 /* Begin PBXBuildFile section */
 		1DFF77716ACAF777BAB4DDF4 /* Pods_SwiftUIInteroperability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F83E7C211DB01353B17B90F4 /* Pods_SwiftUIInteroperability.framework */; };
-		1E5F604CBCF25558D9FB9434 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F61FF9C7F28C6AAB310AA /* WelcomeViewModel.swift */; };
+		1E5F60453DE37FBAD997EDC4 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6A86BFC73609A7209FBB /* TextInput.swift */; };
+		1E5F60ACFAAB9D513F9436B4 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6C027F956A9FD495E599 /* EncodableExtensions.swift */; };
 		1E5F60D252ED414BBA8912D6 /* ViewControllersTransitionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F67FBEBE50918EA50DFA9 /* ViewControllersTransitionsCoordinator.swift */; };
 		1E5F60DE1D4DCB17F229FA8E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6E71CA46C6094C9E6FE8 /* ColorExtension.swift */; };
-		1E5F616B624101C8EF8620CD /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F65F8B8348D27E2381E4F /* OnboardingSlide.swift */; };
 		1E5F61709F9FE6D718C12EDA /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6E8E1D40A374BFE670FE /* Validator.swift */; };
 		1E5F61A44B7A59A9B6C0CD82 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F662B5AB98E53B0682643 /* LocalStorage.swift */; };
-		1E5F61E92A212AC39B88820E /* SecureTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F660DB7D3EFF9CFB9D3B2 /* SecureTextInput.swift */; };
+		1E5F61C1BFF4B37DFF668E8A /* UserRegistrationConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F600227AEA877EB6E647B /* UserRegistrationConfirmationViewModel.swift */; };
 		1E5F61EC33915CF17E6BF2B6 /* LocalDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6A29EBF004B9F2B7837F /* LocalDataService.swift */; };
 		1E5F620D2D55F8D05AE7D128 /* RotatingLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6CBD4896187B286EBF92 /* RotatingLoaderView.swift */; };
-		1E5F623D41C1FCA0BC2CCA1F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6BB4A23842FEC67C61D2 /* OnboardingViewController.swift */; };
+		1E5F6231A542FD020BFD33F2 /* EmailValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F624718F832F3D63EC685 /* EmailValidationError.swift */; };
 		1E5F628A7B84934ADF3C7F9A /* PresentableHudConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6BF61EA31A6295233D14 /* PresentableHudConfiguration.swift */; };
-		1E5F629BF8A218F8C533EB48 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F623509BFF4B5DFD8969F /* WelcomeViewController.swift */; };
-		1E5F639A57CC8E64C877FCEF /* EmailEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F63B819F1EE6E28BD953D /* EmailEntryViewModel.swift */; };
-		1E5F63BC2F319C7D0EAEBF91 /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6AA991679462D110993C /* AuthenticationFlowCoordinator.swift */; };
-		1E5F642D524F59D0AEE389C0 /* UnauthenticatedUserRootFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6269D793030C0BBA7CAC /* UnauthenticatedUserRootFlowCoordinator.swift */; };
-		1E5F6471A0EC5ED157A93CAB /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F623D8EDEA412A2378E67 /* TextInput.swift */; };
+		1E5F62A3D717BDF7A97BC079 /* EmailEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F64C70B6871CD53B2942C /* EmailEntryViewController.swift */; };
+		1E5F6306B2BB2BECBC9A3AD2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F669B1FF127E882729DA6 /* WelcomeViewController.swift */; };
+		1E5F63D0075E51DC9F2325EB /* RegistrationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6D0B5F3450A7C8BEA4F5 /* RegistrationFlowCoordinator.swift */; };
+		1E5F648441953CD4912863A2 /* EmailEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6F7D0DF9E0FD96DA412C /* EmailEntryView.swift */; };
 		1E5F64C98CC38CADECC2C2DA /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F698136C84546594F850C /* ProgressHUD.swift */; };
 		1E5F6559DA743956BB35EE27 /* AsynchronousOperationsExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6A7FDF605E1E320D79E9 /* AsynchronousOperationsExecutor.swift */; };
+		1E5F655E07E60F6BEAF35169 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F60F0A031E7271037EC5F /* RegistrationService.swift */; };
 		1E5F6581EF26B74AB81B6A00 /* UserAuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6F8722B839957217C9C6 /* UserAuthenticationError.swift */; };
 		1E5F65D1D2D5E7A9B8EFF744 /* RootFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6D02D1B04E88CD040B85 /* RootFlowCoordinator.swift */; };
-		1E5F65E826F3DE6CE069C494 /* EmailValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F678F0A9BD28B30EB7119 /* EmailValidationError.swift */; };
 		1E5F66B11EB3678DD73E1923 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6927740F84AF2157506A /* AuthenticationService.swift */; };
-		1E5F66BD82ADC1B7476063CE /* EmailLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F69A61F5E2B42A93F4148 /* EmailLoginViewModel.swift */; };
+		1E5F66CE5B7D6E0B52FB1E5D /* PasswordRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6DC19F850824604ACD35 /* PasswordRegistrationViewModel.swift */; };
 		1E5F66D6D451AD10EC22038F /* NavigableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6775D0B0911FFC3E5D06 /* NavigableViewModel.swift */; };
 		1E5F66E47C225A124585C10A /* AppDataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6C1C2B33070AE373E222 /* AppDataCache.swift */; };
 		1E5F670C8854CD4582226D62 /* RootFlowCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F611823FB2B4A5323754A /* RootFlowCoordinatorFactory.swift */; };
-		1E5F681CD1636DCBE93ED753 /* RegistrationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6054421FDA7521CBC659 /* RegistrationFlowCoordinator.swift */; };
+		1E5F6795CB3C12EDF353FA6F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6B195B3F2CAB77BF9BB0 /* OnboardingView.swift */; };
+		1E5F6799766F634D282FE477 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6762694199C515923DA6 /* EmailLoginViewController.swift */; };
+		1E5F685E2B29E2A9860739FA /* UserRegistrationConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F65C80FE6EDB62161869C /* UserRegistrationConfirmationView.swift */; };
 		1E5F6876717E06EF901AB973 /* InfoAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6F738016BA89A8D90650 /* InfoAlert.swift */; };
-		1E5F68D6BC3A22E0B9C6CC05 /* EmailEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6EAFA703E9E6E9094559 /* EmailEntryViewController.swift */; };
 		1E5F694E297EB0B072F910FA /* DecodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62C10DC48A0EFE9F60C9 /* DecodableExtensions.swift */; };
+		1E5F69944C076370BF99AD47 /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F69C59161BC1BE7C1E1E4 /* AuthenticationFlowCoordinator.swift */; };
+		1E5F69B657BC8DBA0AD454A0 /* UnauthenticatedUserRootFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6021211302EA2C252125 /* UnauthenticatedUserRootFlowCoordinator.swift */; };
 		1E5F69CCB580FE4F3684BBFC /* DelayedOperationsExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6747EDB70FDA99958377 /* DelayedOperationsExecutor.swift */; };
+		1E5F69CFC525F30E72D1951B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6641913B7A5BD4124049 /* AuthenticationFlow.swift */; };
 		1E5F69F733E0691E77753AA5 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F63E73EB167FCD8877D05 /* EmailValidator.swift */; };
+		1E5F6A2D9E3BC4CC90E9E41C /* TextInputConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6A1EF6E2E063AFD54B6A /* TextInputConfiguration.swift */; };
 		1E5F6A41D27A74153C571317 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6EA3A2A0F0FA66487A73 /* UserInfo.swift */; };
+		1E5F6B098A27439C15793DB9 /* UserRegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F66020BBA567C50BED7AA /* UserRegistrationError.swift */; };
+		1E5F6B2F66373F9F82F9D387 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6976D29096CE141978B3 /* PasswordValidator.swift */; };
 		1E5F6B3B20C73DA4AC57257C /* VisibleViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F67127D8450B949524879 /* VisibleViewProvider.swift */; };
+		1E5F6B720BF4144059A3DE46 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6C55AB59B2A831C990C3 /* WelcomeViewModel.swift */; };
 		1E5F6BAD9A757522B33336C8 /* ButtonViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6E8E7506D3C7F139FF79 /* ButtonViewModifiers.swift */; };
+		1E5F6BDE51C10863E54D5AB8 /* PasswordRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6EA176240576448EEDA8 /* PasswordRegistrationViewController.swift */; };
 		1E5F6BF3176279A2C6A9865C /* ViewControllerTransitionAnimationsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62DC962183CAFC8A0062 /* ViewControllerTransitionAnimationsFactory.swift */; };
 		1E5F6C1FB5895649FCE57EDA /* LocalizableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F66DBB51B0D4B90B4463C /* LocalizableError.swift */; };
 		1E5F6C8AFBFE06873079FCF7 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F690C9DBBE8629A63ADB3 /* FlowCoordinator.swift */; };
-		1E5F6C9B6406EDA948777EAD /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6B9020E6B2E96781F293 /* AuthenticationFlow.swift */; };
-		1E5F6DC861CD7CC59F709376 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6F90C72D5F08428ECD31 /* EmailLoginViewController.swift */; };
+		1E5F6CA4AD95F0B186C2797D /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F63FB17316C7B27A09052 /* EmailLoginView.swift */; };
+		1E5F6CB7E3442AF9DC8FFD98 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F66AB260626FBC91F0E26 /* OnboardingViewModel.swift */; };
+		1E5F6CF1EBB417A7326D1AF2 /* OnboardingSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62E517426708BD96EB11 /* OnboardingSlideView.swift */; };
+		1E5F6D01827F0B1007A0BBD2 /* EmailEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6325C03432106F0BCBF9 /* EmailEntryViewModel.swift */; };
+		1E5F6D9181D3A472696DF8B1 /* PasswordValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6D4D87B753A9B77344A9 /* PasswordValidationError.swift */; };
+		1E5F6DF5E05E11049CD8C7D0 /* PasswordRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6DABF951C6DB44497E81 /* PasswordRegistrationView.swift */; };
+		1E5F6DF934E163AAF8AD6DE9 /* SecureTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F63EB559A72CDA81A232C /* SecureTextInput.swift */; };
+		1E5F6E0030F191E430BFF2C8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F694915902487823F4ED0 /* OnboardingViewController.swift */; };
 		1E5F6E7D47840D63D443E6FA /* MBProgressHUDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F61A7C2E92EA7CC599DA8 /* MBProgressHUDExtension.swift */; };
-		1E5F6F65F5BB524FAB88EADE /* OnboardingFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F681A6505AB65336780B8 /* OnboardingFlowCoordinator.swift */; };
-		1E5F6FD15265EFBD48C82E17 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6DF3EB83CBFEC9146BDE /* OnboardingViewModel.swift */; };
+		1E5F6E87859F9C449B4E55C0 /* OnboardingFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6C5276F8EF3C37D0F5C5 /* OnboardingFlowCoordinator.swift */; };
+		1E5F6F0D21B06801D0451876 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F647222DEC11A70D8132B /* WelcomeView.swift */; };
+		1E5F6F6EE6E94EFB66443491 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6B9AE1762F70BF5E571C /* OnboardingSlide.swift */; };
+		1E5F6FB5684D1F339D7849C7 /* UserRegistrationConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F645F8AF78F040DDA5E2E /* UserRegistrationConfirmationViewController.swift */; };
+		1E5F6FD642B91D95D63C54E4 /* EmailLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6FDC247BCEDBE231DB7F /* EmailLoginViewModel.swift */; };
 		220E3D4127FADA06005CAC21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220E3D4027FADA06005CAC21 /* Assets.xcassets */; };
 		220E3D4427FADA06005CAC21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220E3D4327FADA06005CAC21 /* Preview Assets.xcassets */; };
 		226D2480280417C800006849 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 226D247F280417C800006849 /* Colors.xcassets */; };
 		226D24832804197C00006849 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D24812804197C00006849 /* Assets.swift */; };
 		226D24842804197C00006849 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D24822804197C00006849 /* Colors.swift */; };
-		22700A3728000154008F6D2D /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22700A3628000154008F6D2D /* EmailLoginView.swift */; };
-		227EA24F27FB160300F14ADF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EA24E27FB160300F14ADF /* OnboardingView.swift */; };
-		227EA25227FD647700F14ADF /* OnboardingSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EA25127FD647600F14ADF /* OnboardingSlideView.swift */; };
-		22AF9C1E27FDB4CB00C0E8E0 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AF9C1D27FDB4CB00C0E8E0 /* WelcomeView.swift */; };
-		22AF9C2027FECE9000C0E8E0 /* EmailEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AF9C1F27FECE9000C0E8E0 /* EmailEntryView.swift */; };
 		22B8FC5E27FAECC200EB19F7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8FC5C27FAECC200EB19F7 /* main.swift */; };
 		22B8FC6027FAEDDE00EB19F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8FC5F27FAEDDE00EB19F7 /* AppDelegate.swift */; };
 		22B8FC6727FAF80900EB19F7 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8FC6627FAF80900EB19F7 /* DependencyProvider.swift */; };
@@ -80,49 +92,66 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E5F6054421FDA7521CBC659 /* RegistrationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationFlowCoordinator.swift; sourceTree = "<group>"; };
+		1E5F600227AEA877EB6E647B /* UserRegistrationConfirmationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistrationConfirmationViewModel.swift; sourceTree = "<group>"; };
+		1E5F6021211302EA2C252125 /* UnauthenticatedUserRootFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnauthenticatedUserRootFlowCoordinator.swift; sourceTree = "<group>"; };
+		1E5F60F0A031E7271037EC5F /* RegistrationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		1E5F611823FB2B4A5323754A /* RootFlowCoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootFlowCoordinatorFactory.swift; sourceTree = "<group>"; };
 		1E5F61A7C2E92EA7CC599DA8 /* MBProgressHUDExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBProgressHUDExtension.swift; sourceTree = "<group>"; };
-		1E5F61FF9C7F28C6AAB310AA /* WelcomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
-		1E5F623509BFF4B5DFD8969F /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		1E5F623D8EDEA412A2378E67 /* TextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
-		1E5F6269D793030C0BBA7CAC /* UnauthenticatedUserRootFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnauthenticatedUserRootFlowCoordinator.swift; sourceTree = "<group>"; };
+		1E5F624718F832F3D63EC685 /* EmailValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidationError.swift; sourceTree = "<group>"; };
 		1E5F62C10DC48A0EFE9F60C9 /* DecodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableExtensions.swift; sourceTree = "<group>"; };
 		1E5F62DC962183CAFC8A0062 /* ViewControllerTransitionAnimationsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTransitionAnimationsFactory.swift; sourceTree = "<group>"; };
-		1E5F63B819F1EE6E28BD953D /* EmailEntryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailEntryViewModel.swift; sourceTree = "<group>"; };
+		1E5F62E517426708BD96EB11 /* OnboardingSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSlideView.swift; sourceTree = "<group>"; };
+		1E5F6325C03432106F0BCBF9 /* EmailEntryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailEntryViewModel.swift; sourceTree = "<group>"; };
 		1E5F63E73EB167FCD8877D05 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
-		1E5F65F8B8348D27E2381E4F /* OnboardingSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
-		1E5F660DB7D3EFF9CFB9D3B2 /* SecureTextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureTextInput.swift; sourceTree = "<group>"; };
+		1E5F63EB559A72CDA81A232C /* SecureTextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureTextInput.swift; sourceTree = "<group>"; };
+		1E5F63FB17316C7B27A09052 /* EmailLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
+		1E5F645F8AF78F040DDA5E2E /* UserRegistrationConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistrationConfirmationViewController.swift; sourceTree = "<group>"; };
+		1E5F647222DEC11A70D8132B /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		1E5F64C70B6871CD53B2942C /* EmailEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailEntryViewController.swift; sourceTree = "<group>"; };
+		1E5F65C80FE6EDB62161869C /* UserRegistrationConfirmationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistrationConfirmationView.swift; sourceTree = "<group>"; };
+		1E5F66020BBA567C50BED7AA /* UserRegistrationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistrationError.swift; sourceTree = "<group>"; };
 		1E5F662B5AB98E53B0682643 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		1E5F6641913B7A5BD4124049 /* AuthenticationFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
+		1E5F669B1FF127E882729DA6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		1E5F66AB260626FBC91F0E26 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		1E5F66DBB51B0D4B90B4463C /* LocalizableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableError.swift; sourceTree = "<group>"; };
 		1E5F67127D8450B949524879 /* VisibleViewProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibleViewProvider.swift; sourceTree = "<group>"; };
 		1E5F6747EDB70FDA99958377 /* DelayedOperationsExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayedOperationsExecutor.swift; sourceTree = "<group>"; };
+		1E5F6762694199C515923DA6 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		1E5F6775D0B0911FFC3E5D06 /* NavigableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigableViewModel.swift; sourceTree = "<group>"; };
-		1E5F678F0A9BD28B30EB7119 /* EmailValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidationError.swift; sourceTree = "<group>"; };
 		1E5F67FBEBE50918EA50DFA9 /* ViewControllersTransitionsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllersTransitionsCoordinator.swift; sourceTree = "<group>"; };
-		1E5F681A6505AB65336780B8 /* OnboardingFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingFlowCoordinator.swift; sourceTree = "<group>"; };
 		1E5F690C9DBBE8629A63ADB3 /* FlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		1E5F6927740F84AF2157506A /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		1E5F694915902487823F4ED0 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		1E5F6976D29096CE141978B3 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		1E5F698136C84546594F850C /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
-		1E5F69A61F5E2B42A93F4148 /* EmailLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailLoginViewModel.swift; sourceTree = "<group>"; };
+		1E5F69C59161BC1BE7C1E1E4 /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
+		1E5F6A1EF6E2E063AFD54B6A /* TextInputConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputConfiguration.swift; sourceTree = "<group>"; };
 		1E5F6A29EBF004B9F2B7837F /* LocalDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataService.swift; sourceTree = "<group>"; };
 		1E5F6A7FDF605E1E320D79E9 /* AsynchronousOperationsExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousOperationsExecutor.swift; sourceTree = "<group>"; };
-		1E5F6AA991679462D110993C /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
-		1E5F6B9020E6B2E96781F293 /* AuthenticationFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
-		1E5F6BB4A23842FEC67C61D2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		1E5F6A86BFC73609A7209FBB /* TextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
+		1E5F6B195B3F2CAB77BF9BB0 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		1E5F6B9AE1762F70BF5E571C /* OnboardingSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		1E5F6BF61EA31A6295233D14 /* PresentableHudConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentableHudConfiguration.swift; sourceTree = "<group>"; };
+		1E5F6C027F956A9FD495E599 /* EncodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
 		1E5F6C1C2B33070AE373E222 /* AppDataCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataCache.swift; sourceTree = "<group>"; };
+		1E5F6C5276F8EF3C37D0F5C5 /* OnboardingFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingFlowCoordinator.swift; sourceTree = "<group>"; };
+		1E5F6C55AB59B2A831C990C3 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		1E5F6CBD4896187B286EBF92 /* RotatingLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingLoaderView.swift; sourceTree = "<group>"; };
 		1E5F6D02D1B04E88CD040B85 /* RootFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootFlowCoordinator.swift; sourceTree = "<group>"; };
-		1E5F6DF3EB83CBFEC9146BDE /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		1E5F6D0B5F3450A7C8BEA4F5 /* RegistrationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationFlowCoordinator.swift; sourceTree = "<group>"; };
+		1E5F6D4D87B753A9B77344A9 /* PasswordValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidationError.swift; sourceTree = "<group>"; };
+		1E5F6DABF951C6DB44497E81 /* PasswordRegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRegistrationView.swift; sourceTree = "<group>"; };
+		1E5F6DC19F850824604ACD35 /* PasswordRegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRegistrationViewModel.swift; sourceTree = "<group>"; };
 		1E5F6E71CA46C6094C9E6FE8 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		1E5F6E8E1D40A374BFE670FE /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		1E5F6E8E7506D3C7F139FF79 /* ButtonViewModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewModifiers.swift; sourceTree = "<group>"; };
+		1E5F6EA176240576448EEDA8 /* PasswordRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRegistrationViewController.swift; sourceTree = "<group>"; };
 		1E5F6EA3A2A0F0FA66487A73 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		1E5F6EAFA703E9E6E9094559 /* EmailEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailEntryViewController.swift; sourceTree = "<group>"; };
 		1E5F6F738016BA89A8D90650 /* InfoAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoAlert.swift; sourceTree = "<group>"; };
+		1E5F6F7D0DF9E0FD96DA412C /* EmailEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailEntryView.swift; sourceTree = "<group>"; };
 		1E5F6F8722B839957217C9C6 /* UserAuthenticationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuthenticationError.swift; sourceTree = "<group>"; };
-		1E5F6F90C72D5F08428ECD31 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
+		1E5F6FDC247BCEDBE231DB7F /* EmailLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailLoginViewModel.swift; sourceTree = "<group>"; };
 		220E3D3927FADA04005CAC21 /* SwiftUIInteroperability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIInteroperability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		220E3D4027FADA06005CAC21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		220E3D4327FADA06005CAC21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -130,11 +159,6 @@
 		226D247F280417C800006849 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		226D24812804197C00006849 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		226D24822804197C00006849 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		22700A3628000154008F6D2D /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
-		227EA24E27FB160300F14ADF /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		227EA25127FD647600F14ADF /* OnboardingSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideView.swift; sourceTree = "<group>"; };
-		22AF9C1D27FDB4CB00C0E8E0 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		22AF9C1F27FECE9000C0E8E0 /* EmailEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailEntryView.swift; sourceTree = "<group>"; };
 		22B8FC5C27FAECC200EB19F7 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		22B8FC5F27FAEDDE00EB19F7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22B8FC6627FAF80900EB19F7 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
@@ -169,6 +193,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E5F60391A93A2B29D5545F9 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6325C03432106F0BCBF9 /* EmailEntryViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		1E5F6159ADAE98AAA053C5A9 /* Flow Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,14 +211,23 @@
 			path = "Flow Coordinators";
 			sourceTree = "<group>";
 		};
-		1E5F615F37CDA96E91AF82AD /* Email Login View */ = {
+		1E5F617A4B8D8522F9D1AE36 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				1E5F6F90C72D5F08428ECD31 /* EmailLoginViewController.swift */,
-				22700A3628000154008F6D2D /* EmailLoginView.swift */,
-				1E5F6677BB417E0B42A01451 /* View Model */,
+				1E5F6C55AB59B2A831C990C3 /* WelcomeViewModel.swift */,
+				1E5F6641913B7A5BD4124049 /* AuthenticationFlow.swift */,
 			);
-			path = "Email Login View";
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		1E5F61D75ED39C6743A7589F /* Authenticaton Flow */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F69C59161BC1BE7C1E1E4 /* AuthenticationFlowCoordinator.swift */,
+				1E5F6745656CED3DB842BA9C /* Email Login View */,
+				1E5F62F7D86B13C01E44F3B6 /* Forgot Password View */,
+			);
+			path = "Authenticaton Flow";
 			sourceTree = "<group>";
 		};
 		1E5F6233F16E2A21B0BAE65F /* Visible View Controller */ = {
@@ -214,6 +255,32 @@
 			path = Permament;
 			sourceTree = "<group>";
 		};
+		1E5F62F7D86B13C01E44F3B6 /* Forgot Password View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Forgot Password View";
+			sourceTree = "<group>";
+		};
+		1E5F64007AD33318003413E5 /* Welcome View */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F669B1FF127E882729DA6 /* WelcomeViewController.swift */,
+				1E5F617A4B8D8522F9D1AE36 /* View Model */,
+				1E5F647222DEC11A70D8132B /* WelcomeView.swift */,
+			);
+			path = "Welcome View";
+			sourceTree = "<group>";
+		};
+		1E5F645F1D821723F013E3BD /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F624718F832F3D63EC685 /* EmailValidationError.swift */,
+				1E5F6D4D87B753A9B77344A9 /* PasswordValidationError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		1E5F6496ED38D0351DF6DE4C /* Temporary */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,56 +289,24 @@
 			path = Temporary;
 			sourceTree = "<group>";
 		};
-		1E5F64E5BAE5FB513B2ABF74 /* View Model */ = {
+		1E5F6662100ECE84C9E68B74 /* Email Entry View */ = {
 			isa = PBXGroup;
 			children = (
-				1E5F61FF9C7F28C6AAB310AA /* WelcomeViewModel.swift */,
-				1E5F6B9020E6B2E96781F293 /* AuthenticationFlow.swift */,
+				1E5F64C70B6871CD53B2942C /* EmailEntryViewController.swift */,
+				1E5F60391A93A2B29D5545F9 /* View Model */,
+				1E5F6F7D0DF9E0FD96DA412C /* EmailEntryView.swift */,
 			);
-			path = "View Model";
+			path = "Email Entry View";
 			sourceTree = "<group>";
 		};
-		1E5F6551C7C6AB2153423900 /* View Model */ = {
+		1E5F6745656CED3DB842BA9C /* Email Login View */ = {
 			isa = PBXGroup;
 			children = (
-				1E5F6DF3EB83CBFEC9146BDE /* OnboardingViewModel.swift */,
-				1E5F65F8B8348D27E2381E4F /* OnboardingSlide.swift */,
+				1E5F6762694199C515923DA6 /* EmailLoginViewController.swift */,
+				1E5F63FB17316C7B27A09052 /* EmailLoginView.swift */,
+				1E5F67AE6FE65D6DB7555A1B /* View Model */,
 			);
-			path = "View Model";
-			sourceTree = "<group>";
-		};
-		1E5F65F061DAA2BEF50ACB2E /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				1E5F63B819F1EE6E28BD953D /* EmailEntryViewModel.swift */,
-				1E5F678F0A9BD28B30EB7119 /* EmailValidationError.swift */,
-			);
-			path = "View Model";
-			sourceTree = "<group>";
-		};
-		1E5F663DCAE2E41FF492FA90 /* Onboarding Flow */ = {
-			isa = PBXGroup;
-			children = (
-				1E5F681A6505AB65336780B8 /* OnboardingFlowCoordinator.swift */,
-				1E5F6DD197E6506C78242F6C /* Onboarding View */,
-				1E5F6FCD04F48EA48CC1FE92 /* Welcome View */,
-			);
-			path = "Onboarding Flow";
-			sourceTree = "<group>";
-		};
-		1E5F6677BB417E0B42A01451 /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				1E5F69A61F5E2B42A93F4148 /* EmailLoginViewModel.swift */,
-			);
-			path = "View Model";
-			sourceTree = "<group>";
-		};
-		1E5F6679AE9C832ACCE68A60 /* Forgot Password View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Forgot Password View";
+			path = "Email Login View";
 			sourceTree = "<group>";
 		};
 		1E5F67654322610E404E8385 /* Alert */ = {
@@ -282,25 +317,41 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
-		1E5F67FA22753FD15AC1D360 /* Authentication Flow */ = {
+		1E5F67AE6FE65D6DB7555A1B /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				1E5F6AA991679462D110993C /* AuthenticationFlowCoordinator.swift */,
-				1E5F615F37CDA96E91AF82AD /* Email Login View */,
-				1E5F6679AE9C832ACCE68A60 /* Forgot Password View */,
+				1E5F6FDC247BCEDBE231DB7F /* EmailLoginViewModel.swift */,
 			);
-			path = "Authentication Flow";
+			path = "View Model";
 			sourceTree = "<group>";
 		};
-		1E5F69D23243C141506BCAEB /* Unauthenticated User Root Flow */ = {
+		1E5F67E9B6FBD0555A92A2FE /* Main Flow */ = {
 			isa = PBXGroup;
 			children = (
-				1E5F6269D793030C0BBA7CAC /* UnauthenticatedUserRootFlowCoordinator.swift */,
-				1E5F663DCAE2E41FF492FA90 /* Onboarding Flow */,
-				1E5F6AA961B253E34766195E /* Registration Flow */,
-				1E5F6EC4E13301B37F371F6D /* Authenticaton Flow */,
+			);
+			path = "Main Flow";
+			sourceTree = "<group>";
+		};
+		1E5F6844609944BC88B111D3 /* Unauthenticated User Root Flow */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6021211302EA2C252125 /* UnauthenticatedUserRootFlowCoordinator.swift */,
+				1E5F6F0DD589C7C6A318BDA2 /* Onboarding Flow */,
+				1E5F6D046113DB5329F23B7F /* Registration Flow */,
+				1E5F61D75ED39C6743A7589F /* Authenticaton Flow */,
 			);
 			path = "Unauthenticated User Root Flow";
+			sourceTree = "<group>";
+		};
+		1E5F69D96AC8D5748881916F /* Onboarding View */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6A78B697D85FD77ED7FD /* View Model */,
+				1E5F6B195B3F2CAB77BF9BB0 /* OnboardingView.swift */,
+				1E5F694915902487823F4ED0 /* OnboardingViewController.swift */,
+				1E5F62E517426708BD96EB11 /* OnboardingSlideView.swift */,
+			);
+			path = "Onboarding View";
 			sourceTree = "<group>";
 		};
 		1E5F6A30FE608C5147A21A2F /* Animation */ = {
@@ -312,11 +363,22 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
-		1E5F6AA961B253E34766195E /* Registration Flow */ = {
+		1E5F6A5DFAC745DC9351DFDF /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				1E5F60F0A031E7271037EC5F /* RegistrationService.swift */,
+				1E5F66020BBA567C50BED7AA /* UserRegistrationError.swift */,
 			);
-			path = "Registration Flow";
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		1E5F6A78B697D85FD77ED7FD /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F66AB260626FBC91F0E26 /* OnboardingViewModel.swift */,
+				1E5F6B9AE1762F70BF5E571C /* OnboardingSlide.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		1E5F6AD960B2EBCC982F0D1C /* Error */ = {
@@ -327,14 +389,24 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
-		1E5F6B5A6630D03899BD54F2 /* Email Entry View */ = {
+		1E5F6AE0DAA08B361486F63A /* Text Field */ = {
 			isa = PBXGroup;
 			children = (
-				1E5F6EAFA703E9E6E9094559 /* EmailEntryViewController.swift */,
-				1E5F65F061DAA2BEF50ACB2E /* View Model */,
-				22AF9C1F27FECE9000C0E8E0 /* EmailEntryView.swift */,
+				1E5F6A86BFC73609A7209FBB /* TextInput.swift */,
+				1E5F63EB559A72CDA81A232C /* SecureTextInput.swift */,
+				1E5F6A1EF6E2E063AFD54B6A /* TextInputConfiguration.swift */,
 			);
-			path = "Email Entry View";
+			path = "Text Field";
+			sourceTree = "<group>";
+		};
+		1E5F6B0DCA7CF829D76E536D /* Password Entry */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6EA176240576448EEDA8 /* PasswordRegistrationViewController.swift */,
+				1E5F6C069ADBB6033E0E1E55 /* View Model */,
+				1E5F6DABF951C6DB44497E81 /* PasswordRegistrationView.swift */,
+			);
+			path = "Password Entry";
 			sourceTree = "<group>";
 		};
 		1E5F6B95E529001B3C021A91 /* Colors */ = {
@@ -359,6 +431,8 @@
 			children = (
 				1E5F63E73EB167FCD8877D05 /* EmailValidator.swift */,
 				1E5F6E8E1D40A374BFE670FE /* Validator.swift */,
+				1E5F6976D29096CE141978B3 /* PasswordValidator.swift */,
+				1E5F645F1D821723F013E3BD /* Error */,
 			);
 			path = Validation;
 			sourceTree = "<group>";
@@ -374,6 +448,14 @@
 			path = "Progress HUD";
 			sourceTree = "<group>";
 		};
+		1E5F6C069ADBB6033E0E1E55 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6DC19F850824604ACD35 /* PasswordRegistrationViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		1E5F6C15D7BA6EAE698E5B4C /* Info */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,39 +464,40 @@
 			path = Info;
 			sourceTree = "<group>";
 		};
-		1E5F6C957412B20D36E63AB9 /* Registration Flow */ = {
-			isa = PBXGroup;
-			children = (
-				1E5F6054421FDA7521CBC659 /* RegistrationFlowCoordinator.swift */,
-				1E5F6B5A6630D03899BD54F2 /* Email Entry View */,
-			);
-			path = "Registration Flow";
-			sourceTree = "<group>";
-		};
 		1E5F6CF7D3719688CD635D8B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				1E5F62C10DC48A0EFE9F60C9 /* DecodableExtensions.swift */,
+				1E5F6C027F956A9FD495E599 /* EncodableExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		1E5F6DD197E6506C78242F6C /* Onboarding View */ = {
+		1E5F6D046113DB5329F23B7F /* Registration Flow */ = {
 			isa = PBXGroup;
 			children = (
-				1E5F6551C7C6AB2153423900 /* View Model */,
-				227EA24E27FB160300F14ADF /* OnboardingView.swift */,
-				1E5F6BB4A23842FEC67C61D2 /* OnboardingViewController.swift */,
-				227EA25127FD647600F14ADF /* OnboardingSlideView.swift */,
+				1E5F6662100ECE84C9E68B74 /* Email Entry View */,
+				1E5F6B0DCA7CF829D76E536D /* Password Entry */,
+				1E5F6D4FCF592407A710CDD1 /* User Registeration Confirmation */,
+				1E5F6D0B5F3450A7C8BEA4F5 /* RegistrationFlowCoordinator.swift */,
 			);
-			path = "Onboarding View";
+			path = "Registration Flow";
+			sourceTree = "<group>";
+		};
+		1E5F6D4FCF592407A710CDD1 /* User Registeration Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F65C80FE6EDB62161869C /* UserRegistrationConfirmationView.swift */,
+				1E5F6F591F701EA43C60C5BB /* View Model */,
+				1E5F645F8AF78F040DDA5E2E /* UserRegistrationConfirmationViewController.swift */,
+			);
+			path = "User Registeration Confirmation";
 			sourceTree = "<group>";
 		};
 		1E5F6E117735BAF8271E497C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1E5F623D8EDEA412A2378E67 /* TextInput.swift */,
-				1E5F660DB7D3EFF9CFB9D3B2 /* SecureTextInput.swift */,
+				1E5F6AE0DAA08B361486F63A /* Text Field */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -428,13 +511,31 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
-		1E5F6EC4E13301B37F371F6D /* Authenticaton Flow */ = {
+		1E5F6F0DD589C7C6A318BDA2 /* Onboarding Flow */ = {
 			isa = PBXGroup;
 			children = (
-				1E5F6C957412B20D36E63AB9 /* Registration Flow */,
-				1E5F67FA22753FD15AC1D360 /* Authentication Flow */,
+				1E5F6C5276F8EF3C37D0F5C5 /* OnboardingFlowCoordinator.swift */,
+				1E5F69D96AC8D5748881916F /* Onboarding View */,
+				1E5F64007AD33318003413E5 /* Welcome View */,
 			);
-			path = "Authenticaton Flow";
+			path = "Onboarding Flow";
+			sourceTree = "<group>";
+		};
+		1E5F6F591F701EA43C60C5BB /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F600227AEA877EB6E647B /* UserRegistrationConfirmationViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		1E5F6F839D9C3EB64F8571DB /* Application Flows */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6844609944BC88B111D3 /* Unauthenticated User Root Flow */,
+				1E5F67E9B6FBD0555A92A2FE /* Main Flow */,
+			);
+			path = "Application Flows";
 			sourceTree = "<group>";
 		};
 		1E5F6FA6033C663800D57943 /* UI */ = {
@@ -457,16 +558,6 @@
 				1E5F6F8722B839957217C9C6 /* UserAuthenticationError.swift */,
 			);
 			path = Authentication;
-			sourceTree = "<group>";
-		};
-		1E5F6FCD04F48EA48CC1FE92 /* Welcome View */ = {
-			isa = PBXGroup;
-			children = (
-				1E5F623509BFF4B5DFD8969F /* WelcomeViewController.swift */,
-				1E5F64E5BAE5FB513B2ABF74 /* View Model */,
-				22AF9C1D27FDB4CB00C0E8E0 /* WelcomeView.swift */,
-			);
-			path = "Welcome View";
 			sourceTree = "<group>";
 		};
 		220E3D3027FADA04005CAC21 = {
@@ -532,7 +623,7 @@
 			children = (
 				22B8FC6527FAF7DF00EB19F7 /* Common */,
 				22B8FC5F27FAEDDE00EB19F7 /* AppDelegate.swift */,
-				1E5F69D23243C141506BCAEB /* Unauthenticated User Root Flow */,
+				1E5F6F839D9C3EB64F8571DB /* Application Flows */,
 			);
 			path = "Source Files";
 			sourceTree = "<group>";
@@ -573,6 +664,7 @@
 				1E5F6AD960B2EBCC982F0D1C /* Error */,
 				1E5F6CF7D3719688CD635D8B /* Extensions */,
 				1E5F6B9C8EB96EDCFE7627E4 /* Asynchronous Executors */,
+				1E5F6A5DFAC745DC9351DFDF /* Registration */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -820,44 +912,22 @@
 				1E5F65D1D2D5E7A9B8EFF744 /* RootFlowCoordinator.swift in Sources */,
 				1E5F6C8AFBFE06873079FCF7 /* FlowCoordinator.swift in Sources */,
 				1E5F670C8854CD4582226D62 /* RootFlowCoordinatorFactory.swift in Sources */,
-				227EA24F27FB160300F14ADF /* OnboardingView.swift in Sources */,
-				1E5F642D524F59D0AEE389C0 /* UnauthenticatedUserRootFlowCoordinator.swift in Sources */,
-				1E5F6F65F5BB524FAB88EADE /* OnboardingFlowCoordinator.swift in Sources */,
 				1E5F6BF3176279A2C6A9865C /* ViewControllerTransitionAnimationsFactory.swift in Sources */,
 				1E5F60D252ED414BBA8912D6 /* ViewControllersTransitionsCoordinator.swift in Sources */,
-				1E5F6FD15265EFBD48C82E17 /* OnboardingViewModel.swift in Sources */,
-				1E5F623D41C1FCA0BC2CCA1F /* OnboardingViewController.swift in Sources */,
-				227EA25227FD647700F14ADF /* OnboardingSlideView.swift in Sources */,
-				1E5F616B624101C8EF8620CD /* OnboardingSlide.swift in Sources */,
 				1E5F6BAD9A757522B33336C8 /* ButtonViewModifiers.swift in Sources */,
-				1E5F629BF8A218F8C533EB48 /* WelcomeViewController.swift in Sources */,
-				22700A3728000154008F6D2D /* EmailLoginView.swift in Sources */,
-				1E5F604CBCF25558D9FB9434 /* WelcomeViewModel.swift in Sources */,
-				22AF9C1E27FDB4CB00C0E8E0 /* WelcomeView.swift in Sources */,
 				1E5F61A44B7A59A9B6C0CD82 /* LocalStorage.swift in Sources */,
 				1E5F61EC33915CF17E6BF2B6 /* LocalDataService.swift in Sources */,
 				1E5F66E47C225A124585C10A /* AppDataCache.swift in Sources */,
-				1E5F6C9B6406EDA948777EAD /* AuthenticationFlow.swift in Sources */,
 				1E5F66D6D451AD10EC22038F /* NavigableViewModel.swift in Sources */,
-				1E5F681CD1636DCBE93ED753 /* RegistrationFlowCoordinator.swift in Sources */,
-				1E5F68D6BC3A22E0B9C6CC05 /* EmailEntryViewController.swift in Sources */,
-				22AF9C2027FECE9000C0E8E0 /* EmailEntryView.swift in Sources */,
-				1E5F639A57CC8E64C877FCEF /* EmailEntryViewModel.swift in Sources */,
 				226D24842804197C00006849 /* Colors.swift in Sources */,
-				1E5F65E826F3DE6CE069C494 /* EmailValidationError.swift in Sources */,
 				1E5F69F733E0691E77753AA5 /* EmailValidator.swift in Sources */,
 				1E5F61709F9FE6D718C12EDA /* Validator.swift in Sources */,
-				1E5F63BC2F319C7D0EAEBF91 /* AuthenticationFlowCoordinator.swift in Sources */,
-				1E5F6DC861CD7CC59F709376 /* EmailLoginViewController.swift in Sources */,
 				226D24832804197C00006849 /* Assets.swift in Sources */,
-				1E5F66BD82ADC1B7476063CE /* EmailLoginViewModel.swift in Sources */,
 				1E5F66B11EB3678DD73E1923 /* AuthenticationService.swift in Sources */,
 				1E5F6A41D27A74153C571317 /* UserInfo.swift in Sources */,
 				1E5F6581EF26B74AB81B6A00 /* UserAuthenticationError.swift in Sources */,
 				1E5F6C1FB5895649FCE57EDA /* LocalizableError.swift in Sources */,
 				1E5F694E297EB0B072F910FA /* DecodableExtensions.swift in Sources */,
-				1E5F6471A0EC5ED157A93CAB /* TextInput.swift in Sources */,
-				1E5F61E92A212AC39B88820E /* SecureTextInput.swift in Sources */,
 				1E5F64C98CC38CADECC2C2DA /* ProgressHUD.swift in Sources */,
 				1E5F6E7D47840D63D443E6FA /* MBProgressHUDExtension.swift in Sources */,
 				1E5F620D2D55F8D05AE7D128 /* RotatingLoaderView.swift in Sources */,
@@ -867,6 +937,40 @@
 				1E5F6559DA743956BB35EE27 /* AsynchronousOperationsExecutor.swift in Sources */,
 				1E5F69CCB580FE4F3684BBFC /* DelayedOperationsExecutor.swift in Sources */,
 				1E5F60DE1D4DCB17F229FA8E /* ColorExtension.swift in Sources */,
+				1E5F6B2F66373F9F82F9D387 /* PasswordValidator.swift in Sources */,
+				1E5F6231A542FD020BFD33F2 /* EmailValidationError.swift in Sources */,
+				1E5F6D9181D3A472696DF8B1 /* PasswordValidationError.swift in Sources */,
+				1E5F60453DE37FBAD997EDC4 /* TextInput.swift in Sources */,
+				1E5F6DF934E163AAF8AD6DE9 /* SecureTextInput.swift in Sources */,
+				1E5F6A2D9E3BC4CC90E9E41C /* TextInputConfiguration.swift in Sources */,
+				1E5F655E07E60F6BEAF35169 /* RegistrationService.swift in Sources */,
+				1E5F6B098A27439C15793DB9 /* UserRegistrationError.swift in Sources */,
+				1E5F69B657BC8DBA0AD454A0 /* UnauthenticatedUserRootFlowCoordinator.swift in Sources */,
+				1E5F6E87859F9C449B4E55C0 /* OnboardingFlowCoordinator.swift in Sources */,
+				1E5F6CB7E3442AF9DC8FFD98 /* OnboardingViewModel.swift in Sources */,
+				1E5F6F6EE6E94EFB66443491 /* OnboardingSlide.swift in Sources */,
+				1E5F6795CB3C12EDF353FA6F /* OnboardingView.swift in Sources */,
+				1E5F6E0030F191E430BFF2C8 /* OnboardingViewController.swift in Sources */,
+				1E5F6CF1EBB417A7326D1AF2 /* OnboardingSlideView.swift in Sources */,
+				1E5F6306B2BB2BECBC9A3AD2 /* WelcomeViewController.swift in Sources */,
+				1E5F6B720BF4144059A3DE46 /* WelcomeViewModel.swift in Sources */,
+				1E5F69CFC525F30E72D1951B /* AuthenticationFlow.swift in Sources */,
+				1E5F6F0D21B06801D0451876 /* WelcomeView.swift in Sources */,
+				1E5F62A3D717BDF7A97BC079 /* EmailEntryViewController.swift in Sources */,
+				1E5F6D01827F0B1007A0BBD2 /* EmailEntryViewModel.swift in Sources */,
+				1E5F648441953CD4912863A2 /* EmailEntryView.swift in Sources */,
+				1E5F6BDE51C10863E54D5AB8 /* PasswordRegistrationViewController.swift in Sources */,
+				1E5F66CE5B7D6E0B52FB1E5D /* PasswordRegistrationViewModel.swift in Sources */,
+				1E5F6DF5E05E11049CD8C7D0 /* PasswordRegistrationView.swift in Sources */,
+				1E5F685E2B29E2A9860739FA /* UserRegistrationConfirmationView.swift in Sources */,
+				1E5F61C1BFF4B37DFF668E8A /* UserRegistrationConfirmationViewModel.swift in Sources */,
+				1E5F6FB5684D1F339D7849C7 /* UserRegistrationConfirmationViewController.swift in Sources */,
+				1E5F63D0075E51DC9F2325EB /* RegistrationFlowCoordinator.swift in Sources */,
+				1E5F69944C076370BF99AD47 /* AuthenticationFlowCoordinator.swift in Sources */,
+				1E5F6799766F634D282FE477 /* EmailLoginViewController.swift in Sources */,
+				1E5F6CA4AD95F0B186C2797D /* EmailLoginView.swift in Sources */,
+				1E5F6FD642B91D95D63C54E4 /* EmailLoginViewModel.swift in Sources */,
+				1E5F60ACFAAB9D513F9436B4 /* EncodableExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

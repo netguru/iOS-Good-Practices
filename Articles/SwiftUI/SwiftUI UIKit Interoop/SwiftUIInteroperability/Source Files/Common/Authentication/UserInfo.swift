@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct UserInfo: Codable {
+struct UserInfo: Codable, Equatable {
 
     let id: String
     let email: String

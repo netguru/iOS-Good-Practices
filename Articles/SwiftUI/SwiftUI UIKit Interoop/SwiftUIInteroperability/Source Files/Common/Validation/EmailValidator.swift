@@ -13,10 +13,10 @@ final class EmailValidator: Validator {
     /// SeeAlso: TextFieldValidator.validate()
     func validate(value: String?) -> LocalizableError? {
         guard let email = value else {
-            return EmailValidationError.empty
+            return EmailValidationError.tooShort
         }
 
-        return predicate.evaluate(with: email) ? nil : EmailValidationError.invalidEmail
+        return predicate.evaluate(with: email) ? nil : EmailValidationError.invalid
     }
 }
 

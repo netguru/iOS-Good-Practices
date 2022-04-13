@@ -47,12 +47,12 @@ final class DefaultLocalDataService: LocalDataService {
     var currentUser: UserAuthenticationInfo? {
         get {
             if let userData = localStorage.data(forKey: Keys.currentUserKey.rawValue) {
-                return try? UserAuthenticationInfo(from: userData)
+                return userData.decoded(into: UserAuthenticationInfo.self)
             }
             return nil
         }
         set {
-            localStorage.set(newValue, forKey: Keys.currentUserKey.rawValue)
+            localStorage.set(newValue.data, forKey: Keys.currentUserKey.rawValue)
         }
     }
 

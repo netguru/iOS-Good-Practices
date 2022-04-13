@@ -40,7 +40,10 @@ class DefaultEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
     @Published var password: String = ""
 
     /// A current email authentication error.
-    @Published private(set) var currentAuthenticationError: LocalizableError?
+    @Published private(set) var emailError: LocalizableError?
+
+    /// A current password authentication error.
+    @Published private(set) var passwordError: LocalizableError?
 
     // MARK: Private Properties
 
@@ -48,6 +51,8 @@ class DefaultEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
     private let presentableHUD: PresentableHud
     private let infoAlert: InfoAlert
     private let appDataCache: AppDataCache
+    private let emailValidator: Validator
+    private let passwordValidator: Validator
 
     // MARK: Initializers
 
@@ -57,16 +62,23 @@ class DefaultEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
     /// - Parameter appDataCache: an application data cache.
     /// - Parameter presentableHUD: a presentable HUD.
     /// - Parameter infoAlert: an information alert.
+    /// - Parameter emailValidator: an email validator.
+    /// - Parameter passwordValidator: a password validator.
     init(
         authenticationService: AuthenticationService,
         appDataCache: AppDataCache,
         presentableHUD: PresentableHud,
-        infoAlert: InfoAlert
+        infoAlert: InfoAlert,
+        emailValidator: Validator = EmailValidator(),
+        passwordValidator: Validator = PasswordValidator()
     ) {
         self.authenticationService = authenticationService
         self.presentableHUD = presentableHUD
         self.appDataCache = appDataCache
         self.infoAlert = infoAlert
+        self.emailValidator = emailValidator
+        self.passwordValidator = passwordValidator
+        setupFieldValidation()
     }
 
     // MARK: Public methods
@@ -102,5 +114,24 @@ private extension DefaultEmailLoginViewModel {
 
     func storeInSession(user: UserInfo) {
         appDataCache.store(user, forKey: .authenticatedUser)
+    }
+
+    func setupFieldValidation() {
+        $email
+            .dropFirst()
+            .debounce(for: 0.1, scheduler: RunLoop.main)
+            .removeDuplicates()
+            .map {
+                self.emailValidator.validate(value: $0)
+            }
+            .assign(to: &$emailError)
+        $password
+            .dropFirst()
+            .debounce(for: 0.1, scheduler: RunLoop.main)
+            .removeDuplicates()
+            .map {
+                self.passwordValidator.validate(value: $0)
+            }
+            .assign(to: &$passwordError)
     }
 }

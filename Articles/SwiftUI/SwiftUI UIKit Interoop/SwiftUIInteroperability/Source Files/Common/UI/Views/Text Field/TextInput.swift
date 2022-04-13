@@ -7,26 +7,24 @@ import SwiftUI
 
 struct TextInput: View {
 
+    let configuration: TextInputConfiguration
     @Binding var value: String
     @FocusState var focusedField: String?
     let error: LocalizableError?
-    let prompt: String
-    let fieldName: String
-    let keyboardType: UIKeyboardType
 
     var body: some View {
         VStack {
             TextField(
-                prompt,
+                configuration.prompt,
                 text: $value
             )
             .onSubmit {
                 focusedField = nil
             }
-            .focused($focusedField, equals: fieldName)
+            .focused($focusedField, equals: configuration.name)
             .textInputAutocapitalization(.never)
             .disableAutocorrection(true)
-            .keyboardType(keyboardType)
+            .keyboardType(configuration.type.keyboardType)
             .padding()
             .overlay(
                 RoundedRectangle(cornerRadius: 14)

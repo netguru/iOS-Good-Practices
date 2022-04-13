@@ -1,30 +1,27 @@
 //
-//  AuthenticationService.swift
+//  RegistrationService.swift
 //  SwiftUI Interoperability
 //
 
-//
-//  AuthenticationService.swift
-
 import Foundation
 
-// MARK: AuthenticationService
+// MARK: RegistrationService
 
-/// An abstraction describing authentication service.
-protocol AuthenticationService: AnyObject {
+/// An abstraction describing registration service.
+protocol RegistrationService: AnyObject {
 
-    /// Authenticates the user with email and password.
+    /// Register the user with email and password.
     ///
     /// - Parameters:
     ///   - userAuthenticationInfo: user authentication info.
     ///   - completion: a completion callback.
-    func authenticate(userAuthenticationInfo: UserAuthenticationInfo, completion: ((Result<UserInfo, UserAuthenticationError>) -> Void)?)
+    func register(userAuthenticationInfo: UserAuthenticationInfo, completion: ((Result<UserInfo, UserRegistrationError>) -> Void)?)
 }
 
-// MARK: DefaultAuthenticationService
+// MARK: DefaultRegistrationService
 
-/// A default implementation of AuthenticationService
-final class DefaultAuthenticationService: AuthenticationService {
+/// A default implementation of RegistrationService
+final class DefaultRegistrationService: RegistrationService {
 
     // MARK: Private Properties
 
@@ -42,18 +39,19 @@ final class DefaultAuthenticationService: AuthenticationService {
 
     // MARK: Public methods
 
-    /// SeeAlso: AuthenticationService.authenticate(userAuthenticationInfo:)
-    func authenticate(userAuthenticationInfo: UserAuthenticationInfo, completion: ((Result<UserInfo, UserAuthenticationError>) -> Void)?) {
+    /// SeeAlso: RegistrationService.register(userAuthenticationInfo:)
+    func register(userAuthenticationInfo: UserAuthenticationInfo, completion: ((Result<UserInfo, UserRegistrationError>) -> Void)?) {
         /// Discussion: This is just a placeholder for "real" authentication service.
         /// We just check if the user data is already stored in the local storage.
         /// It's not secure at all, but it's just a POC, so...
         let randomDelay = Double.random(in: 2..<4)
         delayedExecutor.executeDelayed(by: randomDelay) { [unowned self] in
-            if let currentUser = localStorage.currentUser, currentUser == userAuthenticationInfo {
-                let userInfo = UserInfo(id: UUID().uuidString, email: currentUser.email)
-                completion?(.success(userInfo))
+            if let currentUser = localStorage.currentUser, currentUser.email == userAuthenticationInfo.email {
+                completion?(.failure(.emailTaken))
             } else {
-                completion?(.failure(.failed))
+                localStorage.currentUser = userAuthenticationInfo
+                let userInfo = UserInfo(id: UUID().uuidString, email: userAuthenticationInfo.email)
+                completion?(.success(userInfo))
             }
         }
     }

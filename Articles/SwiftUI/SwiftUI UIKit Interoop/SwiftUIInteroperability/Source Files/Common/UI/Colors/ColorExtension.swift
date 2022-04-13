@@ -6,10 +6,10 @@
 import UIKit
 
 extension UIColor {
-    
+
     ///
     /// Preloader colors:
-    /// 
+    ///
 
     class var preloaderBackgroundColor: UIColor {
         Colors.basicBlack.color.withAlphaComponent(0.25)
