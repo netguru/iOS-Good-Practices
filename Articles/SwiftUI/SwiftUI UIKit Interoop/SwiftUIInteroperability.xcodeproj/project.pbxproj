@@ -66,6 +66,7 @@
 		1E5F6C1FB5895649FCE57EDA /* LocalizableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F66DBB51B0D4B90B4463C /* LocalizableError.swift */; };
 		1E5F6C4970D14621299C497C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6672CCC230DF46882F38 /* ProfileViewModel.swift */; };
 		1E5F6C8AFBFE06873079FCF7 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F690C9DBBE8629A63ADB3 /* FlowCoordinator.swift */; };
+		1E5F6C9F38BDD380A39FD90F /* AcceptanceAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6314E523614982916256 /* AcceptanceAlert.swift */; };
 		1E5F6CA4AD95F0B186C2797D /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F63FB17316C7B27A09052 /* EmailLoginView.swift */; };
 		1E5F6CB7E3442AF9DC8FFD98 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F66AB260626FBC91F0E26 /* OnboardingViewModel.swift */; };
 		1E5F6CF1EBB417A7326D1AF2 /* OnboardingSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62E517426708BD96EB11 /* OnboardingSlideView.swift */; };
@@ -124,6 +125,7 @@
 		1E5F62C10DC48A0EFE9F60C9 /* DecodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableExtensions.swift; sourceTree = "<group>"; };
 		1E5F62DC962183CAFC8A0062 /* ViewControllerTransitionAnimationsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTransitionAnimationsFactory.swift; sourceTree = "<group>"; };
 		1E5F62E517426708BD96EB11 /* OnboardingSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSlideView.swift; sourceTree = "<group>"; };
+		1E5F6314E523614982916256 /* AcceptanceAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptanceAlert.swift; sourceTree = "<group>"; };
 		1E5F6325C03432106F0BCBF9 /* EmailEntryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailEntryViewModel.swift; sourceTree = "<group>"; };
 		1E5F63BC96B6DAFC5AAA2F51 /* AccountManagementFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManagementFlowCoordinator.swift; sourceTree = "<group>"; };
 		1E5F63E73EB167FCD8877D05 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				1E5F6C15D7BA6EAE698E5B4C /* Info */,
+				1E5F6F5A247BF215E9F4F2B6 /* Acceptance */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -646,6 +649,14 @@
 				1E5F600227AEA877EB6E647B /* UserRegistrationConfirmationViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		1E5F6F5A247BF215E9F4F2B6 /* Acceptance */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6314E523614982916256 /* AcceptanceAlert.swift */,
+			);
+			path = Acceptance;
 			sourceTree = "<group>";
 		};
 		1E5F6F839D9C3EB64F8571DB /* Application Flows */ = {
@@ -1107,6 +1118,7 @@
 				1E5F602834AFE7FD5BAF6839 /* CurrenciesView.swift in Sources */,
 				1E5F65FA0EBDB0EB011F92BF /* CurrenciesViewModel.swift in Sources */,
 				1E5F66654DF7FF521280CB34 /* CurrenciesViewController.swift in Sources */,
+				1E5F6C9F38BDD380A39FD90F /* AcceptanceAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

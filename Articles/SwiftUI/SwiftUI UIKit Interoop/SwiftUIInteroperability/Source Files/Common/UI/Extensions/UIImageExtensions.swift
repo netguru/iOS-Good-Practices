@@ -15,7 +15,7 @@ extension UIImage {
     }
 
     /// Resizes an image based on a provided content mode.
-    /// 
+    ///
     /// - Parameters:
     ///   - size: an image size.
     ///   - contentMode: an image content mode.

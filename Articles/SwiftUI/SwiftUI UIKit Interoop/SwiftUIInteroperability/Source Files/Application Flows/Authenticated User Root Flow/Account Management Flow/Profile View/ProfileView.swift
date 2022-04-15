@@ -8,35 +8,21 @@ import SwiftUI
 struct ProfileView: View {
 
     @StateObject var viewModel: DefaultProfileViewModel
-    @FocusState private var focusedField: String?
 
     var body: some View {
-        ZStack {
+        VStack(spacing: 5) {
+            Spacer()
             Text("Profile View")
-        }
-        .onAppear {
-            setDelayedFocus()
-        }
+            Text(viewModel.email).font(.footnote)
+            Spacer()
+            Button {
+                viewModel.logOut()
+            } label: {
+                Text("LOG OUT").font(.footnote).hollowedButtonText()
+            }
+        }.padding()
+            .onAppear {}
     }
 }
 
-private extension ProfileView {
-
-    func resignFirstResponder() {
-        focusedField = nil
-    }
-
-    func setDelayedFocus() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.focusedField = ""
-        }
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView(
-            viewModel: DefaultProfileViewModel()
-        )
-    }
-}
+private extension ProfileView {}

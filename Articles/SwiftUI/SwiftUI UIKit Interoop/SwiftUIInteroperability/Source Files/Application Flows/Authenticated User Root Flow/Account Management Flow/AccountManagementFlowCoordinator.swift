@@ -8,7 +8,13 @@ import UIKit
 // MARK: AccountManagementFlowCoordinator
 
 /// An abstraction describing app AccountManagement flow.
-protocol AccountManagementFlowCoordinatorDelegate: AnyObject {}
+protocol AccountManagementFlowCoordinatorDelegate: AnyObject {
+
+    /// Triggered when user logged out.
+    ///
+    /// - Parameter flowCoordinator: a flow coordinator.
+    func accountManagementFlowCoordinatorDidLogUserOut(_ flowCoordinator: AccountManagementFlowCoordinator)
+}
 
 /// A flow coordinator for AccountManagement flow.
 final class AccountManagementFlowCoordinator: FlowCoordinator {
@@ -50,14 +56,18 @@ final class AccountManagementFlowCoordinator: FlowCoordinator {
     }
 
     /// SeeAlso: FlowCoordinator.finish()
-    func finish() {}
+    func finish() {
+        delegate?.accountManagementFlowCoordinatorDidLogUserOut(self)
+    }
 }
 
 // MARK: DashboardViewControllerDelegate
 
 extension AccountManagementFlowCoordinator: ProfileViewControllerDelegate {
 
-    func profileViewControllerDidFinish(_ viewController: UIViewController) {}
+    func profileViewControllerDidLogOut(_ viewController: UIViewController) {
+        finish()
+    }
 }
 
 // MARK: Private Extension
@@ -65,7 +75,12 @@ extension AccountManagementFlowCoordinator: ProfileViewControllerDelegate {
 private extension AccountManagementFlowCoordinator {
 
     func showInitialViewController(animated: Bool = true) {
-        let viewModel = DefaultProfileViewModel()
+        let viewModel = DefaultProfileViewModel(
+            authenticationService: dependencyProvider.authenticationService,
+            presentableHUD: dependencyProvider.presentableHUD,
+            infoAlert: dependencyProvider.infoAlert,
+            acceptanceAlert: dependencyProvider.acceptanceAlert
+        )
         let view = ProfileView(viewModel: viewModel)
         let viewController = ProfileViewController(view: view, viewModel: viewModel)
         viewController.delegate = self

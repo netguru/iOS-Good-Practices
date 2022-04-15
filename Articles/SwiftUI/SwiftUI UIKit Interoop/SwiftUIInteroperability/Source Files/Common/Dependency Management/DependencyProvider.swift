@@ -27,6 +27,9 @@ protocol DependencyProvider: AnyObject {
 
     /// An information alert.
     var infoAlert: InfoAlert { get }
+
+    /// An acceptance alert.
+    var acceptanceAlert: AcceptanceAlert { get }
 }
 
 // MARK: DefaultDependencyProvider
@@ -41,6 +44,7 @@ final class DefaultDependencyProvider {
     private unowned var windowController: WindowController?
     private var defaultPresentableHUD: DefaultPresentableHud?
     private var defaultInfoAlert: DefaultInfoAlert?
+    private var defaultAcceptanceAlert: DefaultAcceptanceAlert?
 
     /// A default initializer.
     init() {
@@ -57,6 +61,7 @@ final class DefaultDependencyProvider {
         self.windowController = windowController
         defaultPresentableHUD = DefaultPresentableHud(viewProvider: windowController)
         defaultInfoAlert = DefaultInfoAlert(viewControllerProvider: windowController)
+        defaultAcceptanceAlert = DefaultAcceptanceAlert(viewControllerProvider: windowController)
     }
 }
 
@@ -86,5 +91,9 @@ extension DefaultDependencyProvider: DependencyProvider {
 
     var infoAlert: InfoAlert {
         defaultInfoAlert!
+    }
+
+    var acceptanceAlert: AcceptanceAlert {
+        defaultAcceptanceAlert!
     }
 }

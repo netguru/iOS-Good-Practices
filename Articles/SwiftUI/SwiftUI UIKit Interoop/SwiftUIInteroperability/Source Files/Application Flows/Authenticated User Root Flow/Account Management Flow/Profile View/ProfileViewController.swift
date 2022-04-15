@@ -10,10 +10,10 @@ import UIKit
 
 protocol ProfileViewControllerDelegate: AnyObject {
 
-    /// Notifies delegate when the view is ready to be taken off navigation stack.
+    /// Notifies delegate when the user has successfully logged out.
     ///
     /// - Parameter viewController: a view controller.
-    func profileViewControllerDidFinish(_ viewController: UIViewController)
+    func profileViewControllerDidLogOut(_ viewController: UIViewController)
 }
 
 // MARK: ProfileViewController
@@ -62,8 +62,8 @@ final class ProfileViewController<Content>: UIHostingController<Content> where C
 private extension ProfileViewController {
 
     func setupViewModelCallbacks() {
-        viewModel.onNavigationAwayFromViewRequested = { [unowned self] in
-            delegate?.profileViewControllerDidFinish(self)
+        viewModel.onLogout = { [unowned self] in
+            delegate?.profileViewControllerDidLogOut(self)
         }
     }
 }
