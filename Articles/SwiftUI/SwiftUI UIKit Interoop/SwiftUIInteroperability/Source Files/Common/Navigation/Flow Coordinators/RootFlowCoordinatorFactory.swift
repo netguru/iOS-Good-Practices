@@ -43,7 +43,10 @@ final class DefaultRootFlowCoordinatorFactory: RootFlowCoordinatorFactory {
     ///
     /// - Returns: a root flow to be presented.
     func makeNextRootFlowCoordinator() -> RootFlowCoordinator {
-        UnauthenticatedUserRootFlowCoordinator(dependencyProvider: dependencyProvider)
-        // TODO: Implement support for other root flows.
+        if dependencyProvider.permanentStorage.currentUser != nil {
+            return AuthenticatedUserRootFlowCoordinator(dependencyProvider: dependencyProvider)
+        } else {
+            return UnauthenticatedUserRootFlowCoordinator(dependencyProvider: dependencyProvider)
+        }
     }
 }

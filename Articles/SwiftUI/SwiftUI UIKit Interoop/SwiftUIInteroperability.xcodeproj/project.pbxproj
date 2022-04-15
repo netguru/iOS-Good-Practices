@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1DFF77716ACAF777BAB4DDF4 /* Pods_SwiftUIInteroperability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F83E7C211DB01353B17B90F4 /* Pods_SwiftUIInteroperability.framework */; };
+		1E5F602834AFE7FD5BAF6839 /* CurrenciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6AC2F661FE3B94AC512C /* CurrenciesView.swift */; };
 		1E5F60453DE37FBAD997EDC4 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6A86BFC73609A7209FBB /* TextInput.swift */; };
 		1E5F60ACFAAB9D513F9436B4 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6C027F956A9FD495E599 /* EncodableExtensions.swift */; };
 		1E5F60D252ED414BBA8912D6 /* ViewControllersTransitionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F67FBEBE50918EA50DFA9 /* ViewControllersTransitionsCoordinator.swift */; };
 		1E5F60DE1D4DCB17F229FA8E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6E71CA46C6094C9E6FE8 /* ColorExtension.swift */; };
+		1E5F614CE2403EB69F81DA60 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F60F6F29F4ACDD211CBB4 /* ProfileViewController.swift */; };
 		1E5F61709F9FE6D718C12EDA /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6E8E1D40A374BFE670FE /* Validator.swift */; };
 		1E5F61A44B7A59A9B6C0CD82 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F662B5AB98E53B0682643 /* LocalStorage.swift */; };
 		1E5F61C1BFF4B37DFF668E8A /* UserRegistrationConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F600227AEA877EB6E647B /* UserRegistrationConfirmationViewModel.swift */; };
@@ -22,16 +24,22 @@
 		1E5F62A3D717BDF7A97BC079 /* EmailEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F64C70B6871CD53B2942C /* EmailEntryViewController.swift */; };
 		1E5F6306B2BB2BECBC9A3AD2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F669B1FF127E882729DA6 /* WelcomeViewController.swift */; };
 		1E5F63D0075E51DC9F2325EB /* RegistrationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6D0B5F3450A7C8BEA4F5 /* RegistrationFlowCoordinator.swift */; };
+		1E5F64720F2CA04F394CA031 /* UITabBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F643AD16D46FF6152AFF7 /* UITabBarExtensions.swift */; };
 		1E5F648441953CD4912863A2 /* EmailEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6F7D0DF9E0FD96DA412C /* EmailEntryView.swift */; };
 		1E5F64C98CC38CADECC2C2DA /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F698136C84546594F850C /* ProgressHUD.swift */; };
+		1E5F6558418DF00FD1C2CD29 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F61DF99C90E3706C8EE24 /* DashboardViewController.swift */; };
 		1E5F6559DA743956BB35EE27 /* AsynchronousOperationsExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6A7FDF605E1E320D79E9 /* AsynchronousOperationsExecutor.swift */; };
 		1E5F655E07E60F6BEAF35169 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F60F0A031E7271037EC5F /* RegistrationService.swift */; };
 		1E5F6581EF26B74AB81B6A00 /* UserAuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6F8722B839957217C9C6 /* UserAuthenticationError.swift */; };
+		1E5F65C7A767030D53F1F252 /* DashboardFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62900CE71E6236CC7CEB /* DashboardFlowCoordinator.swift */; };
 		1E5F65D1D2D5E7A9B8EFF744 /* RootFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6D02D1B04E88CD040B85 /* RootFlowCoordinator.swift */; };
+		1E5F65FA0EBDB0EB011F92BF /* CurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62BFE6AF945D7FD6B6A5 /* CurrenciesViewModel.swift */; };
+		1E5F66654DF7FF521280CB34 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F661445786335FB425035 /* CurrenciesViewController.swift */; };
 		1E5F66B11EB3678DD73E1923 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6927740F84AF2157506A /* AuthenticationService.swift */; };
 		1E5F66CE5B7D6E0B52FB1E5D /* PasswordRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6DC19F850824604ACD35 /* PasswordRegistrationViewModel.swift */; };
 		1E5F66D6D451AD10EC22038F /* NavigableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6775D0B0911FFC3E5D06 /* NavigableViewModel.swift */; };
 		1E5F66E47C225A124585C10A /* AppDataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6C1C2B33070AE373E222 /* AppDataCache.swift */; };
+		1E5F66FB30039A4DEC0872FE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6D50CC4FA1D072589158 /* ProfileView.swift */; };
 		1E5F670C8854CD4582226D62 /* RootFlowCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F611823FB2B4A5323754A /* RootFlowCoordinatorFactory.swift */; };
 		1E5F6795CB3C12EDF353FA6F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6B195B3F2CAB77BF9BB0 /* OnboardingView.swift */; };
 		1E5F6799766F634D282FE477 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6762694199C515923DA6 /* EmailLoginViewController.swift */; };
@@ -45,18 +53,23 @@
 		1E5F69F733E0691E77753AA5 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F63E73EB167FCD8877D05 /* EmailValidator.swift */; };
 		1E5F6A2D9E3BC4CC90E9E41C /* TextInputConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6A1EF6E2E063AFD54B6A /* TextInputConfiguration.swift */; };
 		1E5F6A41D27A74153C571317 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6EA3A2A0F0FA66487A73 /* UserInfo.swift */; };
+		1E5F6A5724C59990FB7E6802 /* AuthenticatedUserFlowCoordinatorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62564F82EADEF9963917 /* AuthenticatedUserFlowCoordinatorName.swift */; };
+		1E5F6AEFB50726E8CC684E88 /* AccountManagementFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F63BC96B6DAFC5AAA2F51 /* AccountManagementFlowCoordinator.swift */; };
 		1E5F6B098A27439C15793DB9 /* UserRegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F66020BBA567C50BED7AA /* UserRegistrationError.swift */; };
 		1E5F6B2F66373F9F82F9D387 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6976D29096CE141978B3 /* PasswordValidator.swift */; };
 		1E5F6B3B20C73DA4AC57257C /* VisibleViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F67127D8450B949524879 /* VisibleViewProvider.swift */; };
+		1E5F6B5CEB3AC052F68BB8AE /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F615D2F7E20FCCE752FDA /* DashboardViewModel.swift */; };
 		1E5F6B720BF4144059A3DE46 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6C55AB59B2A831C990C3 /* WelcomeViewModel.swift */; };
 		1E5F6BAD9A757522B33336C8 /* ButtonViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6E8E7506D3C7F139FF79 /* ButtonViewModifiers.swift */; };
 		1E5F6BDE51C10863E54D5AB8 /* PasswordRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6EA176240576448EEDA8 /* PasswordRegistrationViewController.swift */; };
 		1E5F6BF3176279A2C6A9865C /* ViewControllerTransitionAnimationsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62DC962183CAFC8A0062 /* ViewControllerTransitionAnimationsFactory.swift */; };
 		1E5F6C1FB5895649FCE57EDA /* LocalizableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F66DBB51B0D4B90B4463C /* LocalizableError.swift */; };
+		1E5F6C4970D14621299C497C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6672CCC230DF46882F38 /* ProfileViewModel.swift */; };
 		1E5F6C8AFBFE06873079FCF7 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F690C9DBBE8629A63ADB3 /* FlowCoordinator.swift */; };
 		1E5F6CA4AD95F0B186C2797D /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F63FB17316C7B27A09052 /* EmailLoginView.swift */; };
 		1E5F6CB7E3442AF9DC8FFD98 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F66AB260626FBC91F0E26 /* OnboardingViewModel.swift */; };
 		1E5F6CF1EBB417A7326D1AF2 /* OnboardingSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62E517426708BD96EB11 /* OnboardingSlideView.swift */; };
+		1E5F6CFE5E88665EF2F6D2F9 /* AuthenticatedUserRootFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F654D739D27D717D2E801 /* AuthenticatedUserRootFlowCoordinator.swift */; };
 		1E5F6D01827F0B1007A0BBD2 /* EmailEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6325C03432106F0BCBF9 /* EmailEntryViewModel.swift */; };
 		1E5F6D9181D3A472696DF8B1 /* PasswordValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6D4D87B753A9B77344A9 /* PasswordValidationError.swift */; };
 		1E5F6DF5E05E11049CD8C7D0 /* PasswordRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6DABF951C6DB44497E81 /* PasswordRegistrationView.swift */; };
@@ -64,10 +77,13 @@
 		1E5F6E0030F191E430BFF2C8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F694915902487823F4ED0 /* OnboardingViewController.swift */; };
 		1E5F6E7D47840D63D443E6FA /* MBProgressHUDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F61A7C2E92EA7CC599DA8 /* MBProgressHUDExtension.swift */; };
 		1E5F6E87859F9C449B4E55C0 /* OnboardingFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6C5276F8EF3C37D0F5C5 /* OnboardingFlowCoordinator.swift */; };
+		1E5F6F0D117805033084D0D3 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6248880DB66BDDA0B748 /* UIImageExtensions.swift */; };
 		1E5F6F0D21B06801D0451876 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F647222DEC11A70D8132B /* WelcomeView.swift */; };
+		1E5F6F399126159920FF98BF /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F68A82E4A76394E7842CE /* DashboardView.swift */; };
 		1E5F6F6EE6E94EFB66443491 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6B9AE1762F70BF5E571C /* OnboardingSlide.swift */; };
 		1E5F6FB5684D1F339D7849C7 /* UserRegistrationConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F645F8AF78F040DDA5E2E /* UserRegistrationConfirmationViewController.swift */; };
 		1E5F6FD642B91D95D63C54E4 /* EmailLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6FDC247BCEDBE231DB7F /* EmailLoginViewModel.swift */; };
+		1E5F6FF1DD908DF8F8897D2C /* CurrenciesOverviewFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F690139AEE19F55F64E84 /* CurrenciesOverviewFlowCoordinator.swift */; };
 		220E3D4127FADA06005CAC21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220E3D4027FADA06005CAC21 /* Assets.xcassets */; };
 		220E3D4427FADA06005CAC21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220E3D4327FADA06005CAC21 /* Preview Assets.xcassets */; };
 		226D2480280417C800006849 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 226D247F280417C800006849 /* Colors.xcassets */; };
@@ -95,23 +111,35 @@
 		1E5F600227AEA877EB6E647B /* UserRegistrationConfirmationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistrationConfirmationViewModel.swift; sourceTree = "<group>"; };
 		1E5F6021211302EA2C252125 /* UnauthenticatedUserRootFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnauthenticatedUserRootFlowCoordinator.swift; sourceTree = "<group>"; };
 		1E5F60F0A031E7271037EC5F /* RegistrationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
+		1E5F60F6F29F4ACDD211CBB4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1E5F611823FB2B4A5323754A /* RootFlowCoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootFlowCoordinatorFactory.swift; sourceTree = "<group>"; };
+		1E5F615D2F7E20FCCE752FDA /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		1E5F61A7C2E92EA7CC599DA8 /* MBProgressHUDExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBProgressHUDExtension.swift; sourceTree = "<group>"; };
+		1E5F61DF99C90E3706C8EE24 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		1E5F624718F832F3D63EC685 /* EmailValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidationError.swift; sourceTree = "<group>"; };
+		1E5F6248880DB66BDDA0B748 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		1E5F62564F82EADEF9963917 /* AuthenticatedUserFlowCoordinatorName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserFlowCoordinatorName.swift; sourceTree = "<group>"; };
+		1E5F62900CE71E6236CC7CEB /* DashboardFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardFlowCoordinator.swift; sourceTree = "<group>"; };
+		1E5F62BFE6AF945D7FD6B6A5 /* CurrenciesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesViewModel.swift; sourceTree = "<group>"; };
 		1E5F62C10DC48A0EFE9F60C9 /* DecodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableExtensions.swift; sourceTree = "<group>"; };
 		1E5F62DC962183CAFC8A0062 /* ViewControllerTransitionAnimationsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTransitionAnimationsFactory.swift; sourceTree = "<group>"; };
 		1E5F62E517426708BD96EB11 /* OnboardingSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSlideView.swift; sourceTree = "<group>"; };
 		1E5F6325C03432106F0BCBF9 /* EmailEntryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailEntryViewModel.swift; sourceTree = "<group>"; };
+		1E5F63BC96B6DAFC5AAA2F51 /* AccountManagementFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManagementFlowCoordinator.swift; sourceTree = "<group>"; };
 		1E5F63E73EB167FCD8877D05 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		1E5F63EB559A72CDA81A232C /* SecureTextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureTextInput.swift; sourceTree = "<group>"; };
 		1E5F63FB17316C7B27A09052 /* EmailLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
+		1E5F643AD16D46FF6152AFF7 /* UITabBarExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarExtensions.swift; sourceTree = "<group>"; };
 		1E5F645F8AF78F040DDA5E2E /* UserRegistrationConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistrationConfirmationViewController.swift; sourceTree = "<group>"; };
 		1E5F647222DEC11A70D8132B /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		1E5F64C70B6871CD53B2942C /* EmailEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailEntryViewController.swift; sourceTree = "<group>"; };
+		1E5F654D739D27D717D2E801 /* AuthenticatedUserRootFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserRootFlowCoordinator.swift; sourceTree = "<group>"; };
 		1E5F65C80FE6EDB62161869C /* UserRegistrationConfirmationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistrationConfirmationView.swift; sourceTree = "<group>"; };
 		1E5F66020BBA567C50BED7AA /* UserRegistrationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistrationError.swift; sourceTree = "<group>"; };
+		1E5F661445786335FB425035 /* CurrenciesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
 		1E5F662B5AB98E53B0682643 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		1E5F6641913B7A5BD4124049 /* AuthenticationFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
+		1E5F6672CCC230DF46882F38 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		1E5F669B1FF127E882729DA6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		1E5F66AB260626FBC91F0E26 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		1E5F66DBB51B0D4B90B4463C /* LocalizableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableError.swift; sourceTree = "<group>"; };
@@ -120,6 +148,8 @@
 		1E5F6762694199C515923DA6 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		1E5F6775D0B0911FFC3E5D06 /* NavigableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigableViewModel.swift; sourceTree = "<group>"; };
 		1E5F67FBEBE50918EA50DFA9 /* ViewControllersTransitionsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllersTransitionsCoordinator.swift; sourceTree = "<group>"; };
+		1E5F68A82E4A76394E7842CE /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		1E5F690139AEE19F55F64E84 /* CurrenciesOverviewFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesOverviewFlowCoordinator.swift; sourceTree = "<group>"; };
 		1E5F690C9DBBE8629A63ADB3 /* FlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		1E5F6927740F84AF2157506A /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		1E5F694915902487823F4ED0 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +160,7 @@
 		1E5F6A29EBF004B9F2B7837F /* LocalDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataService.swift; sourceTree = "<group>"; };
 		1E5F6A7FDF605E1E320D79E9 /* AsynchronousOperationsExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousOperationsExecutor.swift; sourceTree = "<group>"; };
 		1E5F6A86BFC73609A7209FBB /* TextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
+		1E5F6AC2F661FE3B94AC512C /* CurrenciesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesView.swift; sourceTree = "<group>"; };
 		1E5F6B195B3F2CAB77BF9BB0 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		1E5F6B9AE1762F70BF5E571C /* OnboardingSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		1E5F6BF61EA31A6295233D14 /* PresentableHudConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentableHudConfiguration.swift; sourceTree = "<group>"; };
@@ -141,6 +172,7 @@
 		1E5F6D02D1B04E88CD040B85 /* RootFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootFlowCoordinator.swift; sourceTree = "<group>"; };
 		1E5F6D0B5F3450A7C8BEA4F5 /* RegistrationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationFlowCoordinator.swift; sourceTree = "<group>"; };
 		1E5F6D4D87B753A9B77344A9 /* PasswordValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidationError.swift; sourceTree = "<group>"; };
+		1E5F6D50CC4FA1D072589158 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		1E5F6DABF951C6DB44497E81 /* PasswordRegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRegistrationView.swift; sourceTree = "<group>"; };
 		1E5F6DC19F850824604ACD35 /* PasswordRegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRegistrationViewModel.swift; sourceTree = "<group>"; };
 		1E5F6E71CA46C6094C9E6FE8 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -201,6 +233,15 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		1E5F606EBFF4903BDE6989C3 /* Dashboard Flow */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F62900CE71E6236CC7CEB /* DashboardFlowCoordinator.swift */,
+				1E5F68586C8F395E9EAB4E37 /* Dashboard View */,
+			);
+			path = "Dashboard Flow";
+			sourceTree = "<group>";
+		};
 		1E5F6159ADAE98AAA053C5A9 /* Flow Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +266,6 @@
 			children = (
 				1E5F69C59161BC1BE7C1E1E4 /* AuthenticationFlowCoordinator.swift */,
 				1E5F6745656CED3DB842BA9C /* Email Login View */,
-				1E5F62F7D86B13C01E44F3B6 /* Forgot Password View */,
 			);
 			path = "Authenticaton Flow";
 			sourceTree = "<group>";
@@ -255,13 +295,6 @@
 			path = Permament;
 			sourceTree = "<group>";
 		};
-		1E5F62F7D86B13C01E44F3B6 /* Forgot Password View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Forgot Password View";
-			sourceTree = "<group>";
-		};
 		1E5F64007AD33318003413E5 /* Welcome View */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +322,23 @@
 			path = Temporary;
 			sourceTree = "<group>";
 		};
+		1E5F64D71DE607C95C74A513 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F62BFE6AF945D7FD6B6A5 /* CurrenciesViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		1E5F65C17859D332468AE74D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F643AD16D46FF6152AFF7 /* UITabBarExtensions.swift */,
+				1E5F6248880DB66BDDA0B748 /* UIImageExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1E5F6662100ECE84C9E68B74 /* Email Entry View */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +347,25 @@
 				1E5F6F7D0DF9E0FD96DA412C /* EmailEntryView.swift */,
 			);
 			path = "Email Entry View";
+			sourceTree = "<group>";
+		};
+		1E5F666C19E0669E40DEF801 /* Currencies Overview Flow */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F690139AEE19F55F64E84 /* CurrenciesOverviewFlowCoordinator.swift */,
+				1E5F6D9A32DB853CF192994E /* Currencies View */,
+			);
+			path = "Currencies Overview Flow";
+			sourceTree = "<group>";
+		};
+		1E5F668AEA773D60E9F2EB86 /* Profile View */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6D50CC4FA1D072589158 /* ProfileView.swift */,
+				1E5F6DB268AE8B2D562540ED /* View Model */,
+				1E5F60F6F29F4ACDD211CBB4 /* ProfileViewController.swift */,
+			);
+			path = "Profile View";
 			sourceTree = "<group>";
 		};
 		1E5F6745656CED3DB842BA9C /* Email Login View */ = {
@@ -325,11 +394,16 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
-		1E5F67E9B6FBD0555A92A2FE /* Main Flow */ = {
+		1E5F67E9B6FBD0555A92A2FE /* Authenticated User Root Flow */ = {
 			isa = PBXGroup;
 			children = (
+				1E5F666C19E0669E40DEF801 /* Currencies Overview Flow */,
+				1E5F606EBFF4903BDE6989C3 /* Dashboard Flow */,
+				1E5F6BE619B481CE89E6C287 /* Account Management Flow */,
+				1E5F654D739D27D717D2E801 /* AuthenticatedUserRootFlowCoordinator.swift */,
+				1E5F62564F82EADEF9963917 /* AuthenticatedUserFlowCoordinatorName.swift */,
 			);
-			path = "Main Flow";
+			path = "Authenticated User Root Flow";
 			sourceTree = "<group>";
 		};
 		1E5F6844609944BC88B111D3 /* Unauthenticated User Root Flow */ = {
@@ -341,6 +415,24 @@
 				1E5F61D75ED39C6743A7589F /* Authenticaton Flow */,
 			);
 			path = "Unauthenticated User Root Flow";
+			sourceTree = "<group>";
+		};
+		1E5F684E0EAAD1AE95070BE9 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F615D2F7E20FCCE752FDA /* DashboardViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		1E5F68586C8F395E9EAB4E37 /* Dashboard View */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F68A82E4A76394E7842CE /* DashboardView.swift */,
+				1E5F684E0EAAD1AE95070BE9 /* View Model */,
+				1E5F61DF99C90E3706C8EE24 /* DashboardViewController.swift */,
+			);
+			path = "Dashboard View";
 			sourceTree = "<group>";
 		};
 		1E5F69D96AC8D5748881916F /* Onboarding View */ = {
@@ -448,6 +540,15 @@
 			path = "Progress HUD";
 			sourceTree = "<group>";
 		};
+		1E5F6BE619B481CE89E6C287 /* Account Management Flow */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F63BC96B6DAFC5AAA2F51 /* AccountManagementFlowCoordinator.swift */,
+				1E5F668AEA773D60E9F2EB86 /* Profile View */,
+			);
+			path = "Account Management Flow";
+			sourceTree = "<group>";
+		};
 		1E5F6C069ADBB6033E0E1E55 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +595,24 @@
 			path = "User Registeration Confirmation";
 			sourceTree = "<group>";
 		};
+		1E5F6D9A32DB853CF192994E /* Currencies View */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6AC2F661FE3B94AC512C /* CurrenciesView.swift */,
+				1E5F64D71DE607C95C74A513 /* View Model */,
+				1E5F661445786335FB425035 /* CurrenciesViewController.swift */,
+			);
+			path = "Currencies View";
+			sourceTree = "<group>";
+		};
+		1E5F6DB268AE8B2D562540ED /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6672CCC230DF46882F38 /* ProfileViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		1E5F6E117735BAF8271E497C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,7 +652,7 @@
 			isa = PBXGroup;
 			children = (
 				1E5F6844609944BC88B111D3 /* Unauthenticated User Root Flow */,
-				1E5F67E9B6FBD0555A92A2FE /* Main Flow */,
+				1E5F67E9B6FBD0555A92A2FE /* Authenticated User Root Flow */,
 			);
 			path = "Application Flows";
 			sourceTree = "<group>";
@@ -546,6 +665,7 @@
 				1E5F6BD9803852943DC886E5 /* Progress HUD */,
 				1E5F67654322610E404E8385 /* Alert */,
 				1E5F6B95E529001B3C021A91 /* Colors */,
+				1E5F65C17859D332468AE74D /* Extensions */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -971,6 +1091,22 @@
 				1E5F6CA4AD95F0B186C2797D /* EmailLoginView.swift in Sources */,
 				1E5F6FD642B91D95D63C54E4 /* EmailLoginViewModel.swift in Sources */,
 				1E5F60ACFAAB9D513F9436B4 /* EncodableExtensions.swift in Sources */,
+				1E5F6CFE5E88665EF2F6D2F9 /* AuthenticatedUserRootFlowCoordinator.swift in Sources */,
+				1E5F6AEFB50726E8CC684E88 /* AccountManagementFlowCoordinator.swift in Sources */,
+				1E5F6FF1DD908DF8F8897D2C /* CurrenciesOverviewFlowCoordinator.swift in Sources */,
+				1E5F65C7A767030D53F1F252 /* DashboardFlowCoordinator.swift in Sources */,
+				1E5F64720F2CA04F394CA031 /* UITabBarExtensions.swift in Sources */,
+				1E5F6A5724C59990FB7E6802 /* AuthenticatedUserFlowCoordinatorName.swift in Sources */,
+				1E5F6F0D117805033084D0D3 /* UIImageExtensions.swift in Sources */,
+				1E5F6F399126159920FF98BF /* DashboardView.swift in Sources */,
+				1E5F6B5CEB3AC052F68BB8AE /* DashboardViewModel.swift in Sources */,
+				1E5F6558418DF00FD1C2CD29 /* DashboardViewController.swift in Sources */,
+				1E5F66FB30039A4DEC0872FE /* ProfileView.swift in Sources */,
+				1E5F6C4970D14621299C497C /* ProfileViewModel.swift in Sources */,
+				1E5F614CE2403EB69F81DA60 /* ProfileViewController.swift in Sources */,
+				1E5F602834AFE7FD5BAF6839 /* CurrenciesView.swift in Sources */,
+				1E5F65FA0EBDB0EB011F92BF /* CurrenciesViewModel.swift in Sources */,
+				1E5F66654DF7FF521280CB34 /* CurrenciesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

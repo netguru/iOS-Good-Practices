@@ -28,6 +28,12 @@ internal enum Asset {
         internal enum ProgressHUD {
             internal static let spinner = ImageAsset(name: "Common/ProgressHUD/Spinner")
         }
+
+        internal enum TabBar {
+            internal static let tabbarIconCurrencies = ImageAsset(name: "Common/TabBar/Tabbar Icon Currencies")
+            internal static let tabbarIconDashboard = ImageAsset(name: "Common/TabBar/Tabbar Icon Dashboard")
+            internal static let tabbarIconProfile = ImageAsset(name: "Common/TabBar/Tabbar Icon Profile")
+        }
     }
 }
 

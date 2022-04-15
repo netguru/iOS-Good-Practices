@@ -7,7 +7,7 @@ import UIKit
 
 /// An enumeration containing names of Root Flow Coordinators.
 enum RootFlowCoordinatorName: String, CaseIterable {
-    case unauthenticatedUser, main
+    case unauthenticatedUser, authenticatedUser
 }
 
 /// An abstraction providing access to current root flow coordinator.
