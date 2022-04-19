@@ -47,7 +47,8 @@ struct EmailLoginView: View {
             .padding()
         }
         .onAppear {
-            setFocusDelayed(to: .email)
+            let fieldName: TextInputType = viewModel.email.isEmpty ? .email : .password
+            setFocusDelayed(to: fieldName)
         }
     }
 }

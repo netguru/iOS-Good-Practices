@@ -14,7 +14,7 @@ protocol LocalDataService: AnyObject {
     var hasFinishedOnboarding: Bool { get set }
 
     /// A user that has currently signed up.
-    var currentUser: UserAuthenticationInfo? { get set }
+    var registeredUser: UserAuthenticationInfo? { get set }
 }
 
 // MARK: DefaultLocalDataService
@@ -25,7 +25,7 @@ final class DefaultLocalDataService: LocalDataService {
     /// Keys for saving the data.
     enum Keys: String {
         case hasFinishedOnboardingKey
-        case currentUserKey
+        case registeredUser
     }
 
     /// UserDefaults used for storing data.
@@ -43,16 +43,16 @@ final class DefaultLocalDataService: LocalDataService {
         }
     }
 
-    /// - SeeAlso: LocalDataService.currentUser
-    var currentUser: UserAuthenticationInfo? {
+    /// - SeeAlso: LocalDataService.registeredUser
+    var registeredUser: UserAuthenticationInfo? {
         get {
-            if let userData = localStorage.data(forKey: Keys.currentUserKey.rawValue) {
+            if let userData = localStorage.data(forKey: Keys.registeredUser.rawValue) {
                 return userData.decoded(into: UserAuthenticationInfo.self)
             }
             return nil
         }
         set {
-            localStorage.set(newValue.data, forKey: Keys.currentUserKey.rawValue)
+            localStorage.set(newValue.data, forKey: Keys.registeredUser.rawValue)
         }
     }
 

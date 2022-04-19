@@ -46,10 +46,10 @@ final class DefaultRegistrationService: RegistrationService {
         /// It's not secure at all, but it's just a POC, so...
         let randomDelay = Double.random(in: 2..<4)
         delayedExecutor.executeDelayed(by: randomDelay) { [unowned self] in
-            if let currentUser = localStorage.currentUser, currentUser.email == userAuthenticationInfo.email {
+            if let currentUser = localStorage.registeredUser, currentUser.email == userAuthenticationInfo.email {
                 completion?(.failure(.emailTaken))
             } else {
-                localStorage.currentUser = userAuthenticationInfo
+                localStorage.registeredUser = userAuthenticationInfo
                 let userInfo = UserInfo(id: UUID().uuidString, email: userAuthenticationInfo.email)
                 completion?(.success(userInfo))
             }

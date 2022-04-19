@@ -50,7 +50,10 @@ final class DefaultDependencyProvider {
     init() {
         defaultLocalDataService = DefaultLocalDataService(localStorage: UserDefaults.standard)
         defaultAppDataCache = DefaultAppDataCache()
-        defaultAuthenticationService = DefaultAuthenticationService(localStorage: defaultLocalDataService)
+        defaultAuthenticationService = DefaultAuthenticationService(
+            localStorage: defaultLocalDataService,
+            appDataCache: defaultAppDataCache
+        )
         defaultRegistrationService = DefaultRegistrationService(localStorage: defaultLocalDataService)
     }
 

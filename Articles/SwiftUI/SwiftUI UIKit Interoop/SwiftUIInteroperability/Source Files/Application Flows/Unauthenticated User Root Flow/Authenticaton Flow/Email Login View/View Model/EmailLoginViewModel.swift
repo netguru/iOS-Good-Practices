@@ -50,7 +50,7 @@ class DefaultEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
     private let authenticationService: AuthenticationService
     private let presentableHUD: PresentableHud
     private let infoAlert: InfoAlert
-    private let appDataCache: AppDataCache
+    private let localDataService: LocalDataService
     private let emailValidator: Validator
     private let passwordValidator: Validator
 
@@ -59,14 +59,14 @@ class DefaultEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
     /// A default EmailLoginViewModel initializer.
     ///
     /// - Parameter authenticationService: an authentication service.
-    /// - Parameter appDataCache: an application data cache.
+    /// - Parameter localDataService: a local data service.
     /// - Parameter presentableHUD: a presentable HUD.
     /// - Parameter infoAlert: an information alert.
     /// - Parameter emailValidator: an email validator.
     /// - Parameter passwordValidator: a password validator.
     init(
         authenticationService: AuthenticationService,
-        appDataCache: AppDataCache,
+        localDataService: LocalDataService,
         presentableHUD: PresentableHud,
         infoAlert: InfoAlert,
         emailValidator: Validator = EmailValidator(),
@@ -74,10 +74,11 @@ class DefaultEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
     ) {
         self.authenticationService = authenticationService
         self.presentableHUD = presentableHUD
-        self.appDataCache = appDataCache
+        self.localDataService = localDataService
         self.infoAlert = infoAlert
         self.emailValidator = emailValidator
         self.passwordValidator = passwordValidator
+        prefillEmail()
         setupFieldValidation()
     }
 
@@ -90,8 +91,7 @@ class DefaultEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
         authenticationService.authenticate(userAuthenticationInfo: info) { [weak self] result in
             self?.presentableHUD.hide(animated: true)
             switch result {
-            case let .success(user):
-                self?.storeInSession(user: user)
+            case .success:
                 self?.requestNavigatingAwayFromView()
             case let .failure(error):
                 self?.infoAlert.show(
@@ -112,10 +112,6 @@ class DefaultEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
 
 private extension DefaultEmailLoginViewModel {
 
-    func storeInSession(user: UserInfo) {
-        appDataCache.store(user, forKey: .authenticatedUser)
-    }
-
     func setupFieldValidation() {
         $email
             .dropFirst()
@@ -133,5 +129,11 @@ private extension DefaultEmailLoginViewModel {
                 self.passwordValidator.validate(value: $0)
             }
             .assign(to: &$passwordError)
+    }
+
+    func prefillEmail() {
+        if let email = localDataService.registeredUser?.email {
+            self.email = email
+        }
     }
 }
