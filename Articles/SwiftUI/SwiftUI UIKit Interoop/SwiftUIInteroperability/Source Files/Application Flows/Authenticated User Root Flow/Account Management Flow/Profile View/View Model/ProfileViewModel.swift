@@ -41,10 +41,11 @@ class DefaultProfileViewModel: ObservableObject, ProfileViewModel {
     // MARK: Initializers
 
     /// A default ProfileViewModel initializer.
-    init(authenticationService: AuthenticationService,
-         presentableHUD: PresentableHud,
-         infoAlert: InfoAlert,
-         acceptanceAlert: AcceptanceAlert
+    init(
+        authenticationService: AuthenticationService,
+        presentableHUD: PresentableHud,
+        infoAlert: InfoAlert,
+        acceptanceAlert: AcceptanceAlert
     ) {
         self.authenticationService = authenticationService
         self.presentableHUD = presentableHUD
@@ -60,9 +61,9 @@ class DefaultProfileViewModel: ObservableObject, ProfileViewModel {
         acceptanceAlert.show(
             title: "Logout confirmation",
             message: "Would you like to log out of the application?"
-        ) { [unowned self] action in
+        ) { [weak self] action in
             if action == .yes {
-                performLogout()
+                self?.performLogout()
             }
         }
     }

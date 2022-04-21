@@ -31,18 +31,18 @@ class DefaultOnboardingViewModel: ObservableObject, OnboardingViewModel {
     var onNavigationAwayFromViewRequested: (() -> Void)?
 
     /// A currently displayed slide.
-    @Published private(set) var currentSlide: OnboardingSlide
+    @Published var currentSlide: OnboardingSlide
 
     /// A current slide index.
-    @Published private(set) var currentIndex = 0
+    @Published var currentIndex = 0
 
     /// A total slides count.
-    @Published private(set) var slidesCount = 0
+    @Published var slidesCount = 0
 
     // MARK: Private Properties
 
     private let slides: [OnboardingSlide]
-    private let localStorage: LocalDataService
+    private let localDataService: LocalDataService
 
     // MARK: Initializers
 
@@ -50,12 +50,11 @@ class DefaultOnboardingViewModel: ObservableObject, OnboardingViewModel {
     ///
     /// - Parameters:
     ///   - slides: a list of slides to be shown.
-    ///   - localStorage: a local applicaiton storage.
-    init(slides: [OnboardingSlide], localStorage: LocalDataService) {
+    ///   - localDataService: a local applicaiton storage.
+    init(slides: [OnboardingSlide], localDataService: LocalDataService) {
         self.slides = slides
-        self.localStorage = localStorage
+        self.localDataService = localDataService
         currentSlide = slides[0]
-        print(localStorage.hasFinishedOnboarding)
         slidesCount = slides.count
     }
 
@@ -81,7 +80,7 @@ class DefaultOnboardingViewModel: ObservableObject, OnboardingViewModel {
 
     /// SeeAlso: OnboardingViewModel.finish()
     func finish() {
-        localStorage.hasFinishedOnboarding = true
+        localDataService.hasFinishedOnboarding = true
         requestNavigatingAwayFromView()
     }
 }

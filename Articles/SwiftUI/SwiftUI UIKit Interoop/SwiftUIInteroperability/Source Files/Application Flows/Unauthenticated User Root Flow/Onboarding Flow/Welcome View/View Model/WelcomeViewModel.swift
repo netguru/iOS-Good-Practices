@@ -20,7 +20,7 @@ protocol WelcomeViewModel: NavigableViewModel {
 // MARK: DefaultWelcomeViewModel
 
 /// A default implementation of WelcomeViewModel
-final class DefaultWelcomeViewModel: ObservableObject, WelcomeViewModel {
+class DefaultWelcomeViewModel: ObservableObject, WelcomeViewModel {
 
     // MARK: Public Properties
 

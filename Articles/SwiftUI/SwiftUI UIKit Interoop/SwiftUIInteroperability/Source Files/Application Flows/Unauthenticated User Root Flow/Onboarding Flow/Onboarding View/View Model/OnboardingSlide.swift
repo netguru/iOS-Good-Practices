@@ -6,7 +6,7 @@
 import Foundation
 
 /// A structure containing data for an onboarding slide.
-struct OnboardingSlide: Codable {
+struct OnboardingSlide: Codable, Equatable {
 
     /// A slide title.
     let title: String

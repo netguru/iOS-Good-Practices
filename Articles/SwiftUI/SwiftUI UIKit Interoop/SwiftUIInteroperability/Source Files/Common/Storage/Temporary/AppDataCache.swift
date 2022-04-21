@@ -5,7 +5,7 @@
 
 import Foundation
 
-enum CacheKey: String {
+enum CacheKey: String, Equatable {
     case selectedAuthenticationFlow
     case selectedEmail
     case authenticatedUser

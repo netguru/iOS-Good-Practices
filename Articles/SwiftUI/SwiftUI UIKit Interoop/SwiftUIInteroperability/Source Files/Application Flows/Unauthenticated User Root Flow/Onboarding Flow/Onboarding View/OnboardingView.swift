@@ -76,7 +76,7 @@ struct InitialView_Previews: PreviewProvider {
                     OnboardingSlide(title: "slide 2", message: "message 2"),
                     OnboardingSlide(title: "slide 3", message: "message 3")
                 ],
-                localStorage: DefaultLocalDataService()
+                localDataService: DefaultLocalDataService()
             )
         )
     }

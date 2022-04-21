@@ -10,18 +10,14 @@ struct ProfileView: View {
     @StateObject var viewModel: DefaultProfileViewModel
 
     var body: some View {
-        VStack(spacing: 5) {
-            Spacer()
-            Text("Profile View")
-            Text(viewModel.email).font(.footnote)
-            Spacer()
-            Button {
-                viewModel.logOut()
-            } label: {
-                Text("LOG OUT").font(.footnote).hollowedButtonText()
+        Form {
+            Section(header: Text("Profile information")) {
+                Text("Email: \(viewModel.email)")
+                Button("Logout") {
+                    viewModel.logOut()
+                }
             }
-        }.padding()
-            .onAppear {}
+        }
     }
 }
 

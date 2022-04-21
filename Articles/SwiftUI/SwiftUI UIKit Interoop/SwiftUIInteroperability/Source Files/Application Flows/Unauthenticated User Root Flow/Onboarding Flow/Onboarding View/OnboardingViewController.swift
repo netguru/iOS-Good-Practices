@@ -38,15 +38,15 @@ class OnboardingViewController<Content>: UIHostingController<Content> where Cont
         setupViewModelCallbacks()
     }
 
+    @available(*, unavailable)
     override required init(rootView: Content) {
         fatalError("init(rootView:) has not been implemented")
     }
 
+    @available(*, unavailable)
     @objc dynamic required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    // TODO: Handle lifecycyle events, setup navigation bar, etc.
 }
 
 // MARK: Implementation details

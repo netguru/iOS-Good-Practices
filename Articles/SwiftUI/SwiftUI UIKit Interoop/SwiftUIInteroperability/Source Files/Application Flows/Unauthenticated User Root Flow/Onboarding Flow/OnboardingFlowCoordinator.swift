@@ -63,7 +63,7 @@ final class OnboardingFlowCoordinator: FlowCoordinator {
     /// SeeAlso: FlowCoordinator.finish()
     func finish() {
         guard let selectedFlow = dependencyProvider.temporaryStorage.retrieveObject(forKey: .selectedAuthenticationFlow) as? AuthenticationFlow else {
-            return
+            fatalError("Authentication flow not selected! This should never occur!")
         }
         switch selectedFlow {
         case .signIn:
@@ -112,7 +112,7 @@ private extension OnboardingFlowCoordinator {
         ]
         let viewModel = DefaultOnboardingViewModel(
             slides: slides,
-            localStorage: dependencyProvider.permanentStorage
+            localDataService: dependencyProvider.permanentStorage
         )
         let view = OnboardingView(viewModel: viewModel)
         let viewController = OnboardingViewController(view: view, viewModel: viewModel)

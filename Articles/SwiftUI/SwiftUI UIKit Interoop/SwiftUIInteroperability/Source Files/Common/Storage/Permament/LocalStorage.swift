@@ -28,12 +28,6 @@ protocol LocalStorage {
     /// - Returns: value.
     func integer(forKey defaultName: String) -> Int
 
-    /// Retrieves a float value stored under a provided key.
-    ///
-    /// - Parameter defaultName: key.
-    /// - Returns: value.
-    func float(forKey defaultName: String) -> Float
-
     /// Retrieves a double value stored under a provided key.
     ///
     /// - Parameter defaultName: key.
