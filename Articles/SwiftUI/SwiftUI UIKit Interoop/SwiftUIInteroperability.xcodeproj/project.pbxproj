@@ -63,6 +63,7 @@
 		1E5F69CCB580FE4F3684BBFC /* DelayedOperationsExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6747EDB70FDA99958377 /* DelayedOperationsExecutor.swift */; };
 		1E5F69CFC525F30E72D1951B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6641913B7A5BD4124049 /* AuthenticationFlow.swift */; };
 		1E5F69F733E0691E77753AA5 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F63E73EB167FCD8877D05 /* EmailValidator.swift */; };
+		1E5F6A0DD61665EC5CA0ACDB /* UnauthenticatedUserRootFlowCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6D062205CEF74755F276 /* UnauthenticatedUserRootFlowCoordinatorTests.swift */; };
 		1E5F6A2D9E3BC4CC90E9E41C /* TextInputConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6A1EF6E2E063AFD54B6A /* TextInputConfiguration.swift */; };
 		1E5F6A41D27A74153C571317 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6EA3A2A0F0FA66487A73 /* UserInfo.swift */; };
 		1E5F6A5724C59990FB7E6802 /* AuthenticatedUserFlowCoordinatorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62564F82EADEF9963917 /* AuthenticatedUserFlowCoordinatorName.swift */; };
@@ -204,6 +205,7 @@
 		1E5F6C874471284B853E7556 /* FakeLocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeLocalStorage.swift; sourceTree = "<group>"; };
 		1E5F6CBD4896187B286EBF92 /* RotatingLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingLoaderView.swift; sourceTree = "<group>"; };
 		1E5F6D02D1B04E88CD040B85 /* RootFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootFlowCoordinator.swift; sourceTree = "<group>"; };
+		1E5F6D062205CEF74755F276 /* UnauthenticatedUserRootFlowCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnauthenticatedUserRootFlowCoordinatorTests.swift; sourceTree = "<group>"; };
 		1E5F6D0B5F3450A7C8BEA4F5 /* RegistrationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationFlowCoordinator.swift; sourceTree = "<group>"; };
 		1E5F6D477F573E65BF6F1AD8 /* FakeAcceptanceAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAcceptanceAlert.swift; sourceTree = "<group>"; };
 		1E5F6D4D87B753A9B77344A9 /* PasswordValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidationError.swift; sourceTree = "<group>"; };
@@ -729,6 +731,7 @@
 			isa = PBXGroup;
 			children = (
 				1E5F69224563DC5F89E9DA9B /* Onboarding Flow */,
+				1E5F6D062205CEF74755F276 /* UnauthenticatedUserRootFlowCoordinatorTests.swift */,
 			);
 			path = "Unauthenticated User Root Flow";
 			sourceTree = "<group>";
@@ -1306,6 +1309,7 @@
 				1E5F6C8BE81B8D13B31281BD /* WelcomeViewControllerTests.swift in Sources */,
 				1E5F664F7603BAEC8C3C08E1 /* WelcomeViewModelTests.swift in Sources */,
 				1E5F674E9DECFD3089283B28 /* FakeWelcomeViewModel.swift in Sources */,
+				1E5F6A0DD61665EC5CA0ACDB /* UnauthenticatedUserRootFlowCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

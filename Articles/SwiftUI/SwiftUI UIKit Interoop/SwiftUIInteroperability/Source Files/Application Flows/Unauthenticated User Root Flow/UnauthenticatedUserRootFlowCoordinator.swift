@@ -31,13 +31,10 @@ final class UnauthenticatedUserRootFlowCoordinator: RootFlowCoordinator {
     }
 
     /// A root flow coordinator delegate.
-    weak var rootFlowCoordinatorDelegate: RootFlowCoordinatorDelegate?
+    weak var delegate: RootFlowCoordinatorDelegate?
 
     /// A currently running flow coordinator.
     private(set) var currentFlowCoordinator: FlowCoordinator?
-
-    /// A coordinator that has started from this one.
-    private(set) var currentChildFlowCoordinator: FlowCoordinator?
 
     /// A reference to the application Dependency Provider.
     private(set) unowned var dependencyProvider: DependencyProvider

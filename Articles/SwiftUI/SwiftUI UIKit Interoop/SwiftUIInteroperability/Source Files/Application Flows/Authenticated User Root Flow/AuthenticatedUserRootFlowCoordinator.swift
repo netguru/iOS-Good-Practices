@@ -26,7 +26,7 @@ final class AuthenticatedUserRootFlowCoordinator: NSObject, RootFlowCoordinator 
     }
 
     /// A root flow coordinator delegate.
-    weak var rootFlowCoordinatorDelegate: RootFlowCoordinatorDelegate?
+    weak var delegate: RootFlowCoordinatorDelegate?
 
     /// A currently running flow coordinator.
     private(set) var currentFlowCoordinator: FlowCoordinator?

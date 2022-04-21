@@ -105,7 +105,7 @@ private extension DefaultWindowController {
     }
 
     func presentRootFlowCoordinator(_ flowCoordinator: RootFlowCoordinator, animationType: ViewControllerTransitionAnimation) {
-        flowCoordinator.rootFlowCoordinatorDelegate = self
+        flowCoordinator.delegate = self
         flowCoordinator.start()
         viewControllersTransitionsCoordinator.transition(toViewController: flowCoordinator.rootViewController, animationType: animationType)
         currentRootFlowCoordinator = flowCoordinator

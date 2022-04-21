@@ -32,7 +32,7 @@ protocol RootFlowCoordinatorDelegate: AnyObject {
 protocol RootFlowCoordinator: AnyObject {
 
     /// A root flow coordinator delegate.
-    var rootFlowCoordinatorDelegate: RootFlowCoordinatorDelegate? { get set }
+    var delegate: RootFlowCoordinatorDelegate? { get set }
 
     /// A View Controller being the root of a flow, usually a UINavigationController.
     var rootViewController: UIViewController { get }
@@ -53,6 +53,6 @@ extension RootFlowCoordinator {
 
     /// A convenience method to notify delegate that the root flow has finished.
     func finish() {
-        rootFlowCoordinatorDelegate?.rootFlowCoordinatorDidFinish(self)
+        delegate?.rootFlowCoordinatorDidFinish(self)
     }
 }
