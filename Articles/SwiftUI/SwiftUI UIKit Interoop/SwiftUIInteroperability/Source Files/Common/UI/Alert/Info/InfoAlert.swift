@@ -26,7 +26,7 @@ protocol InfoAlert: AnyObject {
 
 extension InfoAlert {
 
-    /// - SeeAlso: `InfoAlert.show`
+    /// - SeeAlso: InfoAlert.show()
     func show(
         title: String,
         message: String?
@@ -34,7 +34,7 @@ extension InfoAlert {
         show(title: title, message: message, buttonTitle: "OK", acceptanceCompletion: nil)
     }
 
-    /// - SeeAlso: `InfoAlert.show`
+    /// - SeeAlso: InfoAlert.show()
     func show(
         title: String,
         message: String?,
@@ -56,7 +56,7 @@ final class DefaultInfoAlert: InfoAlert {
         self.viewControllerProvider = viewControllerProvider
     }
 
-    /// - SeeAlso: `InfoAlert.show`
+    /// - SeeAlso: InfoAlert.show()
     func show(
         title: String,
         message: String?,
@@ -73,15 +73,5 @@ final class DefaultInfoAlert: InfoAlert {
         alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController?.addAction(okAction)
         viewControllerProvider.visibleViewController.present(alertController!, animated: true, completion: nil)
-    }
-
-    /// - SeeAlso: `DismissibleAlert.dismiss()`
-    func dismiss(animated: Bool) {
-        guard let alertController = alertController else {
-            return
-        }
-        alertController.dismiss(animated: true) { [unowned self] in
-            self.alertController = nil
-        }
     }
 }

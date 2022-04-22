@@ -31,20 +31,13 @@ protocol AcceptanceAlert: AnyObject {
         noActionStyle: UIAlertAction.Style,
         completion: ((AcceptanceAlertAction) -> Void)?
     )
-
-    /// Dismisses an alert.
-    ///
-    /// - Parameters:
-    ///   - animated: an animated flag.
-    ///   - action: an actions to execute.
-    func dismiss(animated: Bool, withAction action: AcceptanceAlertAction)
 }
 
 // MARK: Default Implementation
 
 extension AcceptanceAlert {
 
-    /// - SeeAlso: `AcceptanceAlert.show(title:message:completion)`
+    /// - SeeAlso: AcceptanceAlert.show(title:message:completion)
     func show(
         title: String,
         message: String?,
@@ -108,16 +101,5 @@ final class DefaultAcceptanceAlert: AcceptanceAlert {
         alertController?.addAction(yesAction)
         self.completion = completion
         viewControllerProvider.visibleViewController.present(alertController!, animated: true, completion: nil)
-    }
-
-    /// - SeeAlso: `AcceptanceAlert.dismiss()`
-    func dismiss(animated: Bool, withAction action: AcceptanceAlertAction) {
-        guard let alertController = alertController else {
-            return
-        }
-        alertController.dismiss(animated: animated) { [unowned self] in
-            completion?(action)
-            completion = nil
-        }
     }
 }

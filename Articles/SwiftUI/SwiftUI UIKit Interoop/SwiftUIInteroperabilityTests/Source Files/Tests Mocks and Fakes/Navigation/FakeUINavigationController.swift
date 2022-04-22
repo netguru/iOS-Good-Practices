@@ -11,6 +11,7 @@ import Mimus
 class FakeUINavigationController: UINavigationController, Mock {
     var storage = Storage()
     private(set) var pushedViewControllers: [UIViewController] = []
+    private(set) var presentedViewControllers: [UIViewController] = []
 
     override var viewControllers: [UIViewController] {
         get {
@@ -19,6 +20,10 @@ class FakeUINavigationController: UINavigationController, Mock {
         set {
             recordCall(withIdentifier: "setViewControllers", arguments: [newValue])
         }
+    }
+
+    override var presentedViewController: UIViewController? {
+        presentedViewControllers.last
     }
 
     convenience init() {
@@ -34,5 +39,15 @@ class FakeUINavigationController: UINavigationController, Mock {
         guard !pushedViewControllers.isEmpty else { return nil }
         pushedViewControllers.removeLast()
         return pushedViewControllers.last
+    }
+
+    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
+        recordCall(withIdentifier: "present", arguments: [flag])
+        presentedViewControllers.append(viewControllerToPresent)
+    }
+
+    override func dismiss(animated flag: Bool, completion: (() -> Void)?) {
+        recordCall(withIdentifier: "dismiss", arguments: [flag])
+        presentedViewControllers.popLast()
     }
 }
