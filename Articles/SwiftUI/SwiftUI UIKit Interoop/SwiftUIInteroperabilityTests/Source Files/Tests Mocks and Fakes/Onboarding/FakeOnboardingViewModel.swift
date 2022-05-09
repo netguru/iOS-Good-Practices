@@ -11,16 +11,6 @@ import Mimus
 final class FakeOnboardingViewModel: DefaultOnboardingViewModel, Mock {
     var storage = Mimus.Storage()
 
-    func setState(
-        currentSlide: OnboardingSlide,
-        currentIndex: Int,
-        slidesCount: Int
-    ) {
-        self.currentSlide = currentSlide
-        self.slidesCount = slidesCount
-        self.currentIndex = currentIndex
-    }
-
     override func nextSlide() {
         recordCall(withIdentifier: "nextSlide")
     }
@@ -31,5 +21,18 @@ final class FakeOnboardingViewModel: DefaultOnboardingViewModel, Mock {
 
     override func finish() {
         recordCall(withIdentifier: "finish")
+    }
+}
+
+extension FakeOnboardingViewModel {
+
+    func setState(
+        currentSlide: OnboardingSlide,
+        currentIndex: Int,
+        slidesCount: Int
+    ) {
+        self.currentSlide = currentSlide
+        self.slidesCount = slidesCount
+        self.currentIndex = currentIndex
     }
 }

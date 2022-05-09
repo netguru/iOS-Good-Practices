@@ -82,6 +82,7 @@
 		1E5F6BBC403DD27BEDCB83CC /* FakeRegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62F8958078E59F9988D2 /* FakeRegistrationService.swift */; };
 		1E5F6BDE51C10863E54D5AB8 /* PasswordRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6EA176240576448EEDA8 /* PasswordRegistrationViewController.swift */; };
 		1E5F6BF3176279A2C6A9865C /* ViewControllerTransitionAnimationsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62DC962183CAFC8A0062 /* ViewControllerTransitionAnimationsFactory.swift */; };
+		1E5F6C16A826DB79816616A8 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6B07389CEBF674CA0510 /* ProfileViewModelTests.swift */; };
 		1E5F6C1FB5895649FCE57EDA /* LocalizableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F66DBB51B0D4B90B4463C /* LocalizableError.swift */; };
 		1E5F6C4970D14621299C497C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6672CCC230DF46882F38 /* ProfileViewModel.swift */; };
 		1E5F6C8AFBFE06873079FCF7 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F690C9DBBE8629A63ADB3 /* FlowCoordinator.swift */; };
@@ -200,6 +201,7 @@
 		1E5F6AC00BB158CFBAF84001 /* AppDataCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataCacheTests.swift; sourceTree = "<group>"; };
 		1E5F6AC2F661FE3B94AC512C /* CurrenciesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesView.swift; sourceTree = "<group>"; };
 		1E5F6AD0E198E578427227C0 /* AcceptanceAlertTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptanceAlertTests.swift; sourceTree = "<group>"; };
+		1E5F6B07389CEBF674CA0510 /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
 		1E5F6B195B3F2CAB77BF9BB0 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		1E5F6B1AC9D9B18ED4B6623E /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
 		1E5F6B4465E0538D516B56D4 /* FakeInfoAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeInfoAlert.swift; sourceTree = "<group>"; };
@@ -357,6 +359,14 @@
 			path = Permament;
 			sourceTree = "<group>";
 		};
+		1E5F62CD74F667AE93813C2A /* Profile Flow */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F632FD97B073DD89B8EB6 /* Profile View */,
+			);
+			path = "Profile Flow";
+			sourceTree = "<group>";
+		};
 		1E5F631441CF139FC2B2DE2E /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +374,14 @@
 				1E5F6A87572173B35A802E0D /* FakeWelcomeViewModel.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		1E5F632FD97B073DD89B8EB6 /* Profile View */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6B07389CEBF674CA0510 /* ProfileViewModelTests.swift */,
+			);
+			path = "Profile View";
 			sourceTree = "<group>";
 		};
 		1E5F63F94F76CA2BD9757697 /* Alert */ = {
@@ -425,6 +443,7 @@
 				1E5F6D691FAB999C97991C61 /* Unauthenticated User Root Flow */,
 				1E5F68F493FEB4926A56401C /* Storage */,
 				1E5F63F94F76CA2BD9757697 /* Alert */,
+				1E5F6B8B0F9A08EA46999767 /* Authorized User Root Flow */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -662,6 +681,14 @@
 				1E5F6B1AC9D9B18ED4B6623E /* UIAlertControllerExtensions.swift */,
 			);
 			path = "Test Extensions";
+			sourceTree = "<group>";
+		};
+		1E5F6B8B0F9A08EA46999767 /* Authorized User Root Flow */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F62CD74F667AE93813C2A /* Profile Flow */,
+			);
+			path = "Authorized User Root Flow";
 			sourceTree = "<group>";
 		};
 		1E5F6B95E529001B3C021A91 /* Colors */ = {
@@ -1346,6 +1373,7 @@
 				1E5F684CB1A2ABC3E2DEA190 /* InfoAlertTests.swift in Sources */,
 				1E5F67FD40C59368581D7B16 /* UIAlertControllerExtensions.swift in Sources */,
 				1E5F6E93DC19606B944923C6 /* AcceptanceAlertTests.swift in Sources */,
+				1E5F6C16A826DB79816616A8 /* ProfileViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
