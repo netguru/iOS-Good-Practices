@@ -11,7 +11,7 @@ import SwiftUI
 struct WelcomeView: View {
 
     /// A view model.
-    @StateObject var viewModel: DefaultWelcomeViewModel
+    @StateObject var viewModel: LiveWelcomeViewModel
 
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
@@ -43,6 +43,6 @@ struct WelcomeView: View {
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView(viewModel: DefaultWelcomeViewModel(temporaryStorage: DefaultAppDataCache()))
+        WelcomeView(viewModel: LiveWelcomeViewModel(temporaryStorage: LiveAppDataCache()))
     }
 }

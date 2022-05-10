@@ -9,11 +9,11 @@ import XCTest
 
 final class InfoAlertTest: XCTestCase {
     var fakeUINavigationController: FakeUINavigationController!
-    var sut: DefaultInfoAlert!
+    var sut: LiveInfoAlert!
 
     override func setUp() {
         fakeUINavigationController = FakeUINavigationController()
-        sut = DefaultInfoAlert(viewControllerProvider: fakeUINavigationController)
+        sut = LiveInfoAlert(viewControllerProvider: fakeUINavigationController)
     }
 
     func testShowingInformationAlert() {

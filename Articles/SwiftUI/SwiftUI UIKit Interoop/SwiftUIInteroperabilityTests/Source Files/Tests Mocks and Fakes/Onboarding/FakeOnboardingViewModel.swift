@@ -8,7 +8,7 @@ import Mimus
 
 @testable import SwiftUIInteroperability
 
-final class FakeOnboardingViewModel: DefaultOnboardingViewModel, Mock {
+final class FakeOnboardingViewModel: LiveOnboardingViewModel, Mock {
     var storage = Mimus.Storage()
 
     override func nextSlide() {

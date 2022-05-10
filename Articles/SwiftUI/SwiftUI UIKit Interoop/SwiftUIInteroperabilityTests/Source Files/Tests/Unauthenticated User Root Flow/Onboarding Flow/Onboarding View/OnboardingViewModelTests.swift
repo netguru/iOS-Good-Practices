@@ -12,12 +12,12 @@ final class OnboardingViewModelTest: XCTestCase {
     var fixtureSlide2 = OnboardingSlide(title: "title 2", message: "message 2")
     var fixtureSlide3 = OnboardingSlide(title: "title 3", message: "message 3")
     var fakeLocalDataService: FakeLocalDataService!
-    var sut: DefaultOnboardingViewModel!
+    var sut: LiveOnboardingViewModel!
 
     override func setUp() {
         fakeLocalDataService = FakeLocalDataService()
         let fixtureSlides = [fixtureSlide1, fixtureSlide2, fixtureSlide3]
-        sut = DefaultOnboardingViewModel(
+        sut = LiveOnboardingViewModel(
             slides: fixtureSlides,
             localDataService: fakeLocalDataService
         )

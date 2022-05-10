@@ -29,10 +29,10 @@ protocol AuthenticationService: AnyObject {
     func logout(completion: ((Bool) -> Void)?)
 }
 
-// MARK: DefaultAuthenticationService
+// MARK: LiveAuthenticationService
 
 /// A default implementation of AuthenticationService
-final class DefaultAuthenticationService: AuthenticationService {
+final class LiveAuthenticationService: AuthenticationService {
 
     // MARK: Public properties
 
@@ -46,7 +46,7 @@ final class DefaultAuthenticationService: AuthenticationService {
     private let appDataCache: AppDataCache
 
     // TODO: Remove when network call is implemented!
-    private let delayedExecutor: DelayedOperationsExecutor = DefaultDelayedAsynchronousBlocksExecutor()
+    private let delayedExecutor: DelayedOperationsExecutor = LiveDelayedAsynchronousBlocksExecutor()
 
     /// A default initializer for Authentication service.
     ///

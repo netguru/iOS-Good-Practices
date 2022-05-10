@@ -16,7 +16,7 @@ protocol RootFlowCoordinatorFactory: AnyObject {
 
 /// A default implementation of RootFlowCoordinatorFactory.
 /// SeeAlso: RootFlowCoordinatorFactory.
-final class DefaultRootFlowCoordinatorFactory: RootFlowCoordinatorFactory {
+final class LiveRootFlowCoordinatorFactory: RootFlowCoordinatorFactory {
 
     // MARK: Properties
 
@@ -26,7 +26,7 @@ final class DefaultRootFlowCoordinatorFactory: RootFlowCoordinatorFactory {
 
     // MARK: Initializers
 
-    /// A default initializer for DefaultRootFlowCoordinatorFactory.
+    /// A default initializer for LiveRootFlowCoordinatorFactory.
     ///
     /// - Parameters:
     ///   - dependencyProvider: a reference to the application Dependency Provider.

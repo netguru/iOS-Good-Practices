@@ -40,7 +40,7 @@ protocol AppDataCache {
 }
 
 /// Default implementation of AppDataCache.
-final class DefaultAppDataCache: AppDataCache {
+final class LiveAppDataCache: AppDataCache {
 
     private var storage = [CacheKey: Any]()
 

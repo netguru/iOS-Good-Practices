@@ -12,14 +12,14 @@ final class ProfileViewModelTest: XCTestCase {
     var fakePresentableHud: FakePresentableHud!
     var fakeInfoAlert: FakeInfoAlert!
     var fakeAcceptanceAlert: FakeAcceptanceAlert!
-    var sut: DefaultProfileViewModel!
+    var sut: LiveProfileViewModel!
 
     override func setUp() {
         fakeAuthenticationService = FakeAuthenticationService()
         fakePresentableHud = FakePresentableHud()
         fakeInfoAlert = FakeInfoAlert()
         fakeAcceptanceAlert = FakeAcceptanceAlert()
-        sut = DefaultProfileViewModel(
+        sut = LiveProfileViewModel(
             authenticationService: fakeAuthenticationService,
             presentableHUD: fakePresentableHud,
             infoAlert: fakeInfoAlert,

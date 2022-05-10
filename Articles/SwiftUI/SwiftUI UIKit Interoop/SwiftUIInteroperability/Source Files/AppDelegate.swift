@@ -18,14 +18,14 @@ class AppDelegate: UIResponder {
 
     /// Default AppDelegate initializer
     override init() {
-        let dependencyProvider = DefaultDependencyProvider()
+        let dependencyProvider = LiveDependencyProvider()
         let rootViewController = UIHostingController(rootView: RootView())
-        let viewControllersTransitionsCoordinator = DefaultViewControllersTransitionsCoordinator(
+        let viewControllersTransitionsCoordinator = LiveViewControllersTransitionsCoordinator(
             containerViewController: rootViewController
         )
-        windowController = DefaultWindowController(
+        windowController = LiveWindowController(
             dependencyProvider: dependencyProvider,
-            rootFlowCoordinatorFactory: DefaultRootFlowCoordinatorFactory(dependencyProvider: dependencyProvider),
+            rootFlowCoordinatorFactory: LiveRootFlowCoordinatorFactory(dependencyProvider: dependencyProvider),
             viewControllersTransitionsCoordinator: viewControllersTransitionsCoordinator,
             rootViewController: rootViewController
         )

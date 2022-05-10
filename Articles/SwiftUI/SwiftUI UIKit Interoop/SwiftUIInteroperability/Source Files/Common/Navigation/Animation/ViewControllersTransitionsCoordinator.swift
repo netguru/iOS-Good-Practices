@@ -18,7 +18,7 @@ protocol ViewControllersTransitionsCoordinator: AnyObject {
 
 /// A default implementation of ViewControllersTransitionsCoordinator
 /// SeeAlso: ViewControllersTransitionsCoordinator
-final class DefaultViewControllersTransitionsCoordinator: ViewControllersTransitionsCoordinator {
+final class LiveViewControllersTransitionsCoordinator: ViewControllersTransitionsCoordinator {
 
     // MARK: Properties
 
@@ -35,14 +35,14 @@ final class DefaultViewControllersTransitionsCoordinator: ViewControllersTransit
 
     // MARK: Initializers
 
-    /// A default initializer for DefaultViewControllersTransitionsCoordinator
+    /// A default initializer for LiveViewControllersTransitionsCoordinator
     ///
     /// - Parameters:
     ///   - containerViewController: a containing View Controller, on top of witch a transition is performed
     ///   - animationBlocksFactory: a factory providing animation blocks for a transition process
     init(
         containerViewController: UIViewController,
-        animationBlocksFactory: ViewControllerTransitionAnimationsFactory = DefaultViewControllerTransitionAnimationsFactory()
+        animationBlocksFactory: ViewControllerTransitionAnimationsFactory = LiveViewControllerTransitionAnimationsFactory()
     ) {
         self.containerViewController = containerViewController
         self.animationBlocksFactory = animationBlocksFactory

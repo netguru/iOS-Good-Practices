@@ -11,10 +11,10 @@ import SwiftUI
 /// An abstraction describing a View Model for an application initial view.
 protocol UserRegistrationConfirmationViewModel: NavigableViewModel {}
 
-// MARK: DefaultUserRegistrationConfirmationViewModel
+// MARK: LiveUserRegistrationConfirmationViewModel
 
 /// A default implementation of UserRegistrationConfirmationViewModel.
-class DefaultUserRegistrationConfirmationViewModel: ObservableObject, UserRegistrationConfirmationViewModel {
+class LiveUserRegistrationConfirmationViewModel: ObservableObject, UserRegistrationConfirmationViewModel {
 
     // MARK: Public Properties
 

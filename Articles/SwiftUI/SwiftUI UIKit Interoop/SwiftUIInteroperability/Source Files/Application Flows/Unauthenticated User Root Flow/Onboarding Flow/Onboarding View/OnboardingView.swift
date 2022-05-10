@@ -9,7 +9,7 @@ import SwiftUI
 struct OnboardingView: View {
 
     /// A view model.
-    @StateObject var viewModel: DefaultOnboardingViewModel
+    @StateObject var viewModel: LiveOnboardingViewModel
 
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
@@ -66,7 +66,7 @@ private extension OnboardingView {
 
 struct InitialView_Previews: PreviewProvider {
 
-    class PreviewOnboardingViewModel: DefaultOnboardingViewModel {}
+    class PreviewOnboardingViewModel: LiveOnboardingViewModel {}
 
     static var previews: some View {
         OnboardingView(
@@ -76,7 +76,7 @@ struct InitialView_Previews: PreviewProvider {
                     OnboardingSlide(title: "slide 2", message: "message 2"),
                     OnboardingSlide(title: "slide 3", message: "message 3")
                 ],
-                localDataService: DefaultLocalDataService()
+                localDataService: LiveLocalDataService()
             )
         )
     }

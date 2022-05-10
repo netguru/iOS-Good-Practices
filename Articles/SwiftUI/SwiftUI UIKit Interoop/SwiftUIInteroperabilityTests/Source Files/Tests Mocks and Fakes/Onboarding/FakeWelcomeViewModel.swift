@@ -8,7 +8,7 @@ import Mimus
 
 @testable import SwiftUIInteroperability
 
-final class FakeWelcomeViewModel: DefaultWelcomeViewModel, Mock {
+final class FakeWelcomeViewModel: LiveWelcomeViewModel, Mock {
     var storage = Mimus.Storage()
 
     override func requestSignUp() {

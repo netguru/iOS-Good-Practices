@@ -20,10 +20,10 @@ protocol EmailLoginViewModel: NavigableViewModel {
     func navigateToRegistration()
 }
 
-// MARK: DefaultEmailLoginViewModel
+// MARK: LiveEmailLoginViewModel
 
 /// A default implementation of EmailLoginViewModel.
-class DefaultEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
+class LiveEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
 
     // MARK: Public Properties
 
@@ -110,7 +110,7 @@ class DefaultEmailLoginViewModel: ObservableObject, EmailLoginViewModel {
 
 // MARK: Implementation details
 
-private extension DefaultEmailLoginViewModel {
+private extension LiveEmailLoginViewModel {
 
     func setupFieldValidation() {
         $email

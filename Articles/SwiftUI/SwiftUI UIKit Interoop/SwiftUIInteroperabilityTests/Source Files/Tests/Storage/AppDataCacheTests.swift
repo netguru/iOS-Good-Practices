@@ -10,11 +10,11 @@ import XCTest
 final class AppDataCacheTest: XCTestCase {
     let fixtureKey = CacheKey.selectedEmail
     let fixtureStringValue = "fixtureStringValue"
-    var sut: DefaultAppDataCache!
+    var sut: LiveAppDataCache!
     var retrievedValue: String?
 
     override func setUp() {
-        sut = DefaultAppDataCache()
+        sut = LiveAppDataCache()
         retrievedValue = nil
     }
 

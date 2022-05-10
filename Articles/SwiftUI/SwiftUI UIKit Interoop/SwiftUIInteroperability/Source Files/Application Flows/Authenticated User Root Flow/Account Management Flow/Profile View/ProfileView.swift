@@ -7,7 +7,7 @@ import SwiftUI
 
 struct ProfileView: View {
 
-    @StateObject var viewModel: DefaultProfileViewModel
+    @StateObject var viewModel: LiveProfileViewModel
 
     var body: some View {
         Form {

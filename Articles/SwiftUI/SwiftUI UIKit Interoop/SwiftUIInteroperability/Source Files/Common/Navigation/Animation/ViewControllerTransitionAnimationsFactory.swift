@@ -38,7 +38,7 @@ protocol ViewControllerTransitionAnimationsFactory: AnyObject {
 
 /// A default implementation of ViewControllerTransitionAnimationsFactory
 /// SeeAlso: ViewControllerTransitionAnimationsFactory
-final class DefaultViewControllerTransitionAnimationsFactory: ViewControllerTransitionAnimationsFactory {
+final class LiveViewControllerTransitionAnimationsFactory: ViewControllerTransitionAnimationsFactory {
 
     // MARK: Public methods
 
@@ -65,7 +65,7 @@ final class DefaultViewControllerTransitionAnimationsFactory: ViewControllerTran
 
 // MARK: Private extension
 
-private extension DefaultViewControllerTransitionAnimationsFactory {
+private extension LiveViewControllerTransitionAnimationsFactory {
 
     func makeSlideAnimationPreBlock(fromView: UIView?, toView: UIView?, isForward: Bool) -> () -> Void {
         let direction: CGFloat = isForward ? 1 : -1

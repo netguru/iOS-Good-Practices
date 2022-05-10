@@ -45,7 +45,7 @@ extension InfoAlert {
 }
 
 /// Constructing and presenting informational alert.
-final class DefaultInfoAlert: InfoAlert {
+final class LiveInfoAlert: InfoAlert {
 
     /// An alert controller configured by the object.
     private(set) var alertController: UIAlertController?

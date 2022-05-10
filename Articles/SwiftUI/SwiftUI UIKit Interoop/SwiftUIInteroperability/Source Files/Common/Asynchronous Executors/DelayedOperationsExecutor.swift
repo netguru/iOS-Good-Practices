@@ -22,7 +22,7 @@ protocol DelayedOperationsExecutor: AnyObject {
 
 /// A default DelayedOperationsExecutor implementation.
 /// Executes blocks of code on a Main Queue, with a delay.
-final class DefaultDelayedAsynchronousBlocksExecutor: DelayedOperationsExecutor {
+final class LiveDelayedAsynchronousBlocksExecutor: DelayedOperationsExecutor {
 
     /// SeeAlso: DelayedOperationsExecutor.type
     let type: AsynchronousExecutorType = .main

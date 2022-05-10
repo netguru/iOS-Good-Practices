@@ -21,10 +21,10 @@ protocol PasswordRegistrationViewModel: NavigableViewModel {
     func goBack()
 }
 
-// MARK: DefaultPasswordRegistrationViewModel
+// MARK: LivePasswordRegistrationViewModel
 
 /// A default implementation of PasswordRegistrationViewModel.
-class DefaultPasswordRegistrationViewModel: ObservableObject, PasswordRegistrationViewModel {
+class LivePasswordRegistrationViewModel: ObservableObject, PasswordRegistrationViewModel {
 
     // MARK: Public Properties
 
@@ -106,7 +106,7 @@ class DefaultPasswordRegistrationViewModel: ObservableObject, PasswordRegistrati
 
 // MARK: Implementation details
 
-private extension DefaultPasswordRegistrationViewModel {
+private extension LivePasswordRegistrationViewModel {
 
     func setupFieldValidation() {
         $password

@@ -9,11 +9,11 @@ import XCTest
 
 final class AcceptanceAlertTest: XCTestCase {
     var fakeUINavigationController: FakeUINavigationController!
-    var sut: DefaultAcceptanceAlert!
+    var sut: LiveAcceptanceAlert!
 
     override func setUp() {
         fakeUINavigationController = FakeUINavigationController()
-        sut = DefaultAcceptanceAlert(viewControllerProvider: fakeUINavigationController)
+        sut = LiveAcceptanceAlert(viewControllerProvider: fakeUINavigationController)
     }
 
     func testShowingAcceptanceAlert() {

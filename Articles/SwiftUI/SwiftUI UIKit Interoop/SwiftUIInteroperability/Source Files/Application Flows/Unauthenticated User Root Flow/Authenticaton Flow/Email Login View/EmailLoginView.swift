@@ -7,7 +7,7 @@ import SwiftUI
 
 struct EmailLoginView: View {
 
-    @StateObject var viewModel: DefaultEmailLoginViewModel
+    @StateObject var viewModel: LiveEmailLoginViewModel
     @FocusState private var focusedField: String?
 
     var body: some View {

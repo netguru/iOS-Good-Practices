@@ -22,7 +22,7 @@ protocol WindowController: VisibleViewControllerProvider {
 /// An object handling main application Window.
 /// Is responsible for setting up and displaying initial application root flow.
 /// When the flow is done, triggers creation and starting of a new root flow.
-final class DefaultWindowController: WindowController {
+final class LiveWindowController: WindowController {
 
     // MARK: Properties
 
@@ -87,7 +87,7 @@ final class DefaultWindowController: WindowController {
 
 // MARK: RootFlowCoordinatorDelegate
 
-extension DefaultWindowController: RootFlowCoordinatorDelegate {
+extension LiveWindowController: RootFlowCoordinatorDelegate {
 
     /// SeeAlso: `RootFlowCoordinatorDelegate.rootFlowCoordinatorDidFinish(RootFlowCoordinator)`
     func rootFlowCoordinatorDidFinish(_ flowCoordinator: RootFlowCoordinator) {
@@ -97,7 +97,7 @@ extension DefaultWindowController: RootFlowCoordinatorDelegate {
 
 // MARK: Private extension
 
-private extension DefaultWindowController {
+private extension LiveWindowController {
 
     func presentNextRootFlowCoordinator(animationType: ViewControllerTransitionAnimation) {
         let coordinator = rootFlowCoordinatorFactory.makeNextRootFlowCoordinator()

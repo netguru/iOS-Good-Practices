@@ -20,10 +20,10 @@ protocol OnboardingViewModel: NavigableViewModel {
     func finish()
 }
 
-// MARK: DefaultOnboardingViewModel
+// MARK: LiveOnboardingViewModel
 
 /// A default implementation of OnboardingViewModel
-class DefaultOnboardingViewModel: ObservableObject, OnboardingViewModel {
+class LiveOnboardingViewModel: ObservableObject, OnboardingViewModel {
 
     // MARK: Public Properties
 
@@ -87,7 +87,7 @@ class DefaultOnboardingViewModel: ObservableObject, OnboardingViewModel {
 
 // MARK: Helper extension
 
-extension DefaultOnboardingViewModel {
+extension LiveOnboardingViewModel {
 
     var canGoForward: Bool {
         currentIndex < slides.count - 1

@@ -17,10 +17,10 @@ protocol WelcomeViewModel: NavigableViewModel {
     func requestLogin()
 }
 
-// MARK: DefaultWelcomeViewModel
+// MARK: LiveWelcomeViewModel
 
 /// A default implementation of WelcomeViewModel
-class DefaultWelcomeViewModel: ObservableObject, WelcomeViewModel {
+class LiveWelcomeViewModel: ObservableObject, WelcomeViewModel {
 
     // MARK: Public Properties
 

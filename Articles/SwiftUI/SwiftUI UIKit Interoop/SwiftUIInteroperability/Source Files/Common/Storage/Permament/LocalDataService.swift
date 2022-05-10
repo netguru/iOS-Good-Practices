@@ -17,10 +17,10 @@ protocol LocalDataService: AnyObject {
     var registeredUser: UserAuthenticationInfo? { get set }
 }
 
-// MARK: DefaultLocalDataService
+// MARK: LiveLocalDataService
 
 /// Default local data service used for storing data.
-final class DefaultLocalDataService: LocalDataService {
+final class LiveLocalDataService: LocalDataService {
 
     /// Keys for saving the data.
     enum Keys: String {

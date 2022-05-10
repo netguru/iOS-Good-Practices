@@ -21,7 +21,7 @@ protocol ProfileViewModel: AnyObject {
 // MARK: DefaultProfileViewModel
 
 /// A default implementation of ProfileViewModel.
-class DefaultProfileViewModel: ObservableObject, ProfileViewModel {
+class LiveProfileViewModel: ObservableObject, ProfileViewModel {
 
     // MARK: Public Properties
 
@@ -71,7 +71,7 @@ class DefaultProfileViewModel: ObservableObject, ProfileViewModel {
 
 // MARK: Implementation details
 
-private extension DefaultProfileViewModel {
+private extension LiveProfileViewModel {
 
     func performLogout() {
         presentableHUD.show(animated: true)

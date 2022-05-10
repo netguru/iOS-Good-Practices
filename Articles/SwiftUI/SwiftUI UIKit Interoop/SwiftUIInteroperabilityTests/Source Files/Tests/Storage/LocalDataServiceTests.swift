@@ -9,17 +9,17 @@ import XCTest
 
 final class LocalDataServiceTest: XCTestCase {
     var fakeLocalStorage: FakeLocalStorage!
-    var sut: DefaultLocalDataService!
+    var sut: LiveLocalDataService!
 
     override func setUp() {
         fakeLocalStorage = FakeLocalStorage()
-        sut = DefaultLocalDataService(localStorage: fakeLocalStorage)
+        sut = LiveLocalDataService(localStorage: fakeLocalStorage)
     }
 
     func testHandingOnboardingCompletionFlag() {
         //  given:
         let fixtureOnboardingCompletionFlag = true
-        let fixtureKey = DefaultLocalDataService.Keys.hasFinishedOnboardingKey.rawValue
+        let fixtureKey = LiveLocalDataService.Keys.hasFinishedOnboardingKey.rawValue
         fakeLocalStorage.simulatedValues = [fixtureKey: fixtureOnboardingCompletionFlag]
 
         //  when:
@@ -38,7 +38,7 @@ final class LocalDataServiceTest: XCTestCase {
     func testHandingRegisteredUser() {
         //  given:
         let fixtureRegisteredUser = UserAuthenticationInfo(email: "", password: "")
-        let fixtureKey = DefaultLocalDataService.Keys.registeredUser.rawValue
+        let fixtureKey = LiveLocalDataService.Keys.registeredUser.rawValue
         fakeLocalStorage.simulatedValues = [fixtureKey: fixtureRegisteredUser.data]
 
         //  when:

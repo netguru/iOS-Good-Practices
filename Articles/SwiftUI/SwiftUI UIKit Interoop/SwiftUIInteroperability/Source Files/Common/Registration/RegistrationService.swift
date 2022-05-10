@@ -18,17 +18,17 @@ protocol RegistrationService: AnyObject {
     func register(userAuthenticationInfo: UserAuthenticationInfo, completion: ((Result<UserInfo, UserRegistrationError>) -> Void)?)
 }
 
-// MARK: DefaultRegistrationService
+// MARK: LiveRegistrationService
 
 /// A default implementation of RegistrationService
-final class DefaultRegistrationService: RegistrationService {
+final class LiveRegistrationService: RegistrationService {
 
     // MARK: Private Properties
 
     private let localStorage: LocalDataService
 
     // TODO: Remove when network call is implemented!
-    private let delayedExecutor: DelayedOperationsExecutor = DefaultDelayedAsynchronousBlocksExecutor()
+    private let delayedExecutor: DelayedOperationsExecutor = LiveDelayedAsynchronousBlocksExecutor()
 
     /// A default initializer for Authentication service.
     ///

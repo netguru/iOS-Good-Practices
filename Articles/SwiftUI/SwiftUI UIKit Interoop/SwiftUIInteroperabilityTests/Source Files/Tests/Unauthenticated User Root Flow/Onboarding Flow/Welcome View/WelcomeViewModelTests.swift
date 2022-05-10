@@ -9,13 +9,13 @@ import XCTest
 
 final class WelcomeViewModelTest: XCTestCase {
     var fakeAppDataCache: FakeAppDataCache!
-    var sut: DefaultWelcomeViewModel!
+    var sut: LiveWelcomeViewModel!
 
     private var didFinish: Bool?
 
     override func setUp() {
         fakeAppDataCache = FakeAppDataCache()
-        sut = DefaultWelcomeViewModel(
+        sut = LiveWelcomeViewModel(
             temporaryStorage: fakeAppDataCache
         )
         sut.onNavigationAwayFromViewRequested = {

@@ -7,7 +7,7 @@ import SwiftUI
 
 struct PasswordRegistrationView: View {
 
-    @StateObject var viewModel: DefaultPasswordRegistrationViewModel
+    @StateObject var viewModel: LivePasswordRegistrationViewModel
     @FocusState private var focusedField: String?
 
     var body: some View {

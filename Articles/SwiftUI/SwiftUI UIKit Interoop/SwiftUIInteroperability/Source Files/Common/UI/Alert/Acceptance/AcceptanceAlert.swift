@@ -58,7 +58,7 @@ extension AcceptanceAlert {
 // MARK: DefaultAcceptanceAlert
 
 /// Constructing and presenting acceptance alert.
-final class DefaultAcceptanceAlert: AcceptanceAlert {
+final class LiveAcceptanceAlert: AcceptanceAlert {
 
     /// An alert controller configured by the object.
     private(set) var alertController: UIAlertController?

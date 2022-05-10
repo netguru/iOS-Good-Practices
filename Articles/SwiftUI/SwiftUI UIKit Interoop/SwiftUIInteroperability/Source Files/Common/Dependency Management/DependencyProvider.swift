@@ -32,29 +32,29 @@ protocol DependencyProvider: AnyObject {
     var acceptanceAlert: AcceptanceAlert { get }
 }
 
-// MARK: DefaultDependencyProvider
+// MARK: LiveDependencyProvider
 
-final class DefaultDependencyProvider {
+final class LiveDependencyProvider {
 
-    let defaultLocalDataService: DefaultLocalDataService
-    let defaultAppDataCache: DefaultAppDataCache
-    let defaultAuthenticationService: DefaultAuthenticationService
-    let defaultRegistrationService: DefaultRegistrationService
+    let liveLocalDataService: LiveLocalDataService
+    let liveAppDataCache: LiveAppDataCache
+    let liveAuthenticationService: LiveAuthenticationService
+    let liveRegistrationService: LiveRegistrationService
 
     private unowned var windowController: WindowController?
-    private var defaultPresentableHUD: DefaultPresentableHud?
-    private var defaultInfoAlert: DefaultInfoAlert?
-    private var defaultAcceptanceAlert: DefaultAcceptanceAlert?
+    private var livePresentableHUD: LivePresentableHud?
+    private var liveInfoAlert: LiveInfoAlert?
+    private var liveAcceptanceAlert: LiveAcceptanceAlert?
 
     /// A default initializer.
     init() {
-        defaultLocalDataService = DefaultLocalDataService(localStorage: UserDefaults.standard)
-        defaultAppDataCache = DefaultAppDataCache()
-        defaultAuthenticationService = DefaultAuthenticationService(
-            localStorage: defaultLocalDataService,
-            appDataCache: defaultAppDataCache
+        liveLocalDataService = LiveLocalDataService(localStorage: UserDefaults.standard)
+        liveAppDataCache = LiveAppDataCache()
+        liveAuthenticationService = LiveAuthenticationService(
+            localStorage: liveLocalDataService,
+            appDataCache: liveAppDataCache
         )
-        defaultRegistrationService = DefaultRegistrationService(localStorage: defaultLocalDataService)
+        liveRegistrationService = LiveRegistrationService(localStorage: liveLocalDataService)
     }
 
     /// Sets up the provider with data that cannot be obtained at app start.
@@ -62,41 +62,41 @@ final class DefaultDependencyProvider {
     /// - Parameter windowController: an application main window controller.
     func setup(windowController: WindowController) {
         self.windowController = windowController
-        defaultPresentableHUD = DefaultPresentableHud(viewProvider: windowController)
-        defaultInfoAlert = DefaultInfoAlert(viewControllerProvider: windowController)
-        defaultAcceptanceAlert = DefaultAcceptanceAlert(viewControllerProvider: windowController)
+        livePresentableHUD = LivePresentableHud(viewProvider: windowController)
+        liveInfoAlert = LiveInfoAlert(viewControllerProvider: windowController)
+        liveAcceptanceAlert = LiveAcceptanceAlert(viewControllerProvider: windowController)
     }
 }
 
 // MARK: DependencyProvider Extension
 
-extension DefaultDependencyProvider: DependencyProvider {
+extension LiveDependencyProvider: DependencyProvider {
 
     var permanentStorage: LocalDataService {
-        defaultLocalDataService
+        liveLocalDataService
     }
 
     var temporaryStorage: AppDataCache {
-        defaultAppDataCache
+        liveAppDataCache
     }
 
     var authenticationService: AuthenticationService {
-        defaultAuthenticationService
+        liveAuthenticationService
     }
 
     var registrationService: RegistrationService {
-        defaultRegistrationService
+        liveRegistrationService
     }
 
     var presentableHUD: PresentableHud {
-        defaultPresentableHUD!
+        livePresentableHUD!
     }
 
     var infoAlert: InfoAlert {
-        defaultInfoAlert!
+        liveInfoAlert!
     }
 
     var acceptanceAlert: AcceptanceAlert {
-        defaultAcceptanceAlert!
+        liveAcceptanceAlert!
     }
 }

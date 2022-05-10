@@ -7,7 +7,7 @@ import SwiftUI
 
 struct EmailEntryView: View {
 
-    @StateObject var viewModel: DefaultEmailEntryViewModel
+    @StateObject var viewModel: LiveEmailEntryViewModel
     @FocusState private var focusedField: String?
 
     var body: some View {
@@ -64,8 +64,8 @@ private extension EmailEntryView {
 struct EmailEntryView_Previews: PreviewProvider {
     static var previews: some View {
         EmailEntryView(
-            viewModel: DefaultEmailEntryViewModel(
-                temporaryStorage: DefaultAppDataCache()
+            viewModel: LiveEmailEntryViewModel(
+                temporaryStorage: LiveAppDataCache()
             )
         )
     }

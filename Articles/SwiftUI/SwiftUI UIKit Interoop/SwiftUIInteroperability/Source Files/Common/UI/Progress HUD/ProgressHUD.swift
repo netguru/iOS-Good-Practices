@@ -33,10 +33,10 @@ protocol PresentableHud: AnyObject {
     func hide(animated: Bool)
 }
 
-// MARK: DefaultPresentableHud
+// MARK: LivePresentableHud
 
 /// A default PresentableHud implementation.
-final class DefaultPresentableHud: PresentableHud {
+final class LivePresentableHud: PresentableHud {
 
     // MARK: Properties
 
@@ -100,7 +100,7 @@ final class DefaultPresentableHud: PresentableHud {
 
 // MARK: Implementation details
 
-extension DefaultPresentableHud {
+extension LivePresentableHud {
 
     func getPresentingView() -> UIView? {
         viewProvider?.visibleView

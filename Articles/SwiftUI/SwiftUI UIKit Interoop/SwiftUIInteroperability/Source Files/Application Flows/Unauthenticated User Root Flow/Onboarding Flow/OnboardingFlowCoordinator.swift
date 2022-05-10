@@ -110,7 +110,7 @@ private extension OnboardingFlowCoordinator {
             OnboardingSlide(title: "slide title 2", message: "slide message 2"),
             OnboardingSlide(title: "slide title 3", message: "slide message 3")
         ]
-        let viewModel = DefaultOnboardingViewModel(
+        let viewModel = LiveOnboardingViewModel(
             slides: slides,
             localDataService: dependencyProvider.permanentStorage
         )
@@ -121,7 +121,7 @@ private extension OnboardingFlowCoordinator {
     }
 
     func showWelcomeScreen(animated: Bool) {
-        let viewModel = DefaultWelcomeViewModel(
+        let viewModel = LiveWelcomeViewModel(
             temporaryStorage: dependencyProvider.temporaryStorage
         )
         let view = WelcomeView(viewModel: viewModel)

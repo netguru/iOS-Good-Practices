@@ -106,7 +106,7 @@ extension RegistrationFlowCoordinator: UserRegistrationConfirmationViewControlle
 private extension RegistrationFlowCoordinator {
 
     func showInitialViewController(animated: Bool = true) {
-        let viewModel = DefaultEmailEntryViewModel(
+        let viewModel = LiveEmailEntryViewModel(
             temporaryStorage: dependencyProvider.temporaryStorage
         )
         let view = EmailEntryView(viewModel: viewModel)
@@ -116,7 +116,7 @@ private extension RegistrationFlowCoordinator {
     }
 
     func showPasswordRegistrationViewController(animated: Bool = true) {
-        let viewModel = DefaultPasswordRegistrationViewModel(
+        let viewModel = LivePasswordRegistrationViewModel(
             registrationService: dependencyProvider.registrationService,
             appDataCache: dependencyProvider.temporaryStorage,
             presentableHUD: dependencyProvider.presentableHUD,
@@ -129,7 +129,7 @@ private extension RegistrationFlowCoordinator {
     }
 
     func showRegistrationSuccessfulViewController(animated: Bool = true) {
-        let viewModel = DefaultUserRegistrationConfirmationViewModel(
+        let viewModel = LiveUserRegistrationConfirmationViewModel(
             appDataCache: dependencyProvider.temporaryStorage
         )
         let view = UserRegistrationConfirmationView(viewModel: viewModel)

@@ -7,7 +7,7 @@ import SwiftUI
 
 struct UserRegistrationConfirmationView: View {
 
-    @StateObject var viewModel: DefaultUserRegistrationConfirmationViewModel
+    @StateObject var viewModel: LiveUserRegistrationConfirmationViewModel
 
     var body: some View {
         VStack(alignment: .center, spacing: 10) {
@@ -30,7 +30,7 @@ struct UserRegistrationConfirmationView: View {
 struct UserRegistrationConfirmationView_Previews: PreviewProvider {
     static var previews: some View {
         UserRegistrationConfirmationView(
-            viewModel: DefaultUserRegistrationConfirmationViewModel(appDataCache: DefaultAppDataCache())
+            viewModel: LiveUserRegistrationConfirmationViewModel(appDataCache: LiveAppDataCache())
         )
     }
 }
