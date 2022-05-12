@@ -1,0 +1,11 @@
+xcassets:
+  - inputs: SwiftUIInteroperability/Resources/Assets.xcassets
+    outputs:
+      templateName: swift5
+      output: SwiftUIInteroperability/Resources/Assets.swift
+  - inputs: SwiftUIInteroperability/Resources/Colors.xcassets
+    outputs:
+      templateName: swift5
+      output: SwiftUIInteroperability/Resources/Colors.swift
+      params:
+        enumName: Colors
