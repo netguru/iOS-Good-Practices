@@ -9,11 +9,14 @@ extension UITabBar {
 
     /// Applies default application style.
     func applyDefaultStyle() {
-        isTranslucent = false
-        shadowImage = UIImage()
-        backgroundImage = UIImage()
-        backgroundColor = Colors.basicBlack.color
-        unselectedItemTintColor = Colors.basicWhite.color
-        tintColor = Colors.basicGreen.color
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.shadowImage = UIImage()
+        appearance.backgroundImage = UIImage()
+        appearance.backgroundColor = Colors.basicBlack.color
+        appearance.stackedLayoutAppearance.normal.iconColor = Colors.basicWhite.color
+        appearance.stackedLayoutAppearance.selected.iconColor = Colors.basicGreen.color
+        standardAppearance = appearance
+        scrollEdgeAppearance = appearance
     }
 }

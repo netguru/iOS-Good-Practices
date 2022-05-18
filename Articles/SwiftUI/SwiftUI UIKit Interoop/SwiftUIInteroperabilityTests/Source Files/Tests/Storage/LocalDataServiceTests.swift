@@ -19,7 +19,7 @@ final class LocalDataServiceTest: XCTestCase {
     func testHandingOnboardingCompletionFlag() {
         //  given:
         let fixtureOnboardingCompletionFlag = true
-        let fixtureKey = LiveLocalDataService.Keys.hasFinishedOnboardingKey.rawValue
+        let fixtureKey = LiveLocalDataService.Key.hasFinishedOnboardingKey.rawValue
         fakeLocalStorage.simulatedValues = [fixtureKey: fixtureOnboardingCompletionFlag]
 
         //  when:
@@ -38,7 +38,7 @@ final class LocalDataServiceTest: XCTestCase {
     func testHandingRegisteredUser() {
         //  given:
         let fixtureRegisteredUser = UserAuthenticationInfo(email: "", password: "")
-        let fixtureKey = LiveLocalDataService.Keys.registeredUser.rawValue
+        let fixtureKey = LiveLocalDataService.Key.registeredUser.rawValue
         fakeLocalStorage.simulatedValues = [fixtureKey: fixtureRegisteredUser.data]
 
         //  when:

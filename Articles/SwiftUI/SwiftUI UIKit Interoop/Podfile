@@ -15,6 +15,14 @@ target 'SwiftUIInteroperability' do
 	 pod 'Mimus', :git => 'https://github.com/mimus-swift/Mimus', :commit => 'fca9cd6ac22e08ac397c4ab4415fe849bd377cc8'
 	 pod 'SnapshotTesting', "~> 1.9.0"
   end
+
+  plugin 'cocoapods-keys', {
+  	:project => "SwiftUIInteroperability",
+  	:keys => [
+    	"AuthenticationToken",
+    	"BaseUrl"
+  	]
+  }
 end
 
 post_install do |installer|
