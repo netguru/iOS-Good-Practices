@@ -12,8 +12,10 @@ protocol CurrenciesViewControllerDelegate: AnyObject {
 
     /// Notifies delegate when the view is ready to be taken off navigation stack.
     ///
-    /// - Parameter viewController: a view controller.
-    func currenciesViewControllerDidFinish(_ viewController: UIViewController)
+    /// - Parameters:
+    ///   - viewController: a view controller.
+    ///   - details: a currency details.
+    func currenciesViewController(_ viewController: UIViewController, didRequestShowingCurrencyDetails details: CurrencyDetails)
 }
 
 // MARK: CurrenciesViewController
@@ -52,8 +54,14 @@ final class CurrenciesViewController<Content>: UIHostingController<Content> wher
 
     // MARK: Lifecycle events
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.fetchCurrencies()
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
     }
 }
 
@@ -62,8 +70,8 @@ final class CurrenciesViewController<Content>: UIHostingController<Content> wher
 private extension CurrenciesViewController {
 
     func setupViewModelCallbacks() {
-        viewModel.onNavigationAwayFromViewRequested = { [unowned self] in
-            delegate?.currenciesViewControllerDidFinish(self)
+        viewModel.onCurrencyDetailsViewRequested = { [unowned self] currencyDetails in
+            delegate?.currenciesViewController(self, didRequestShowingCurrencyDetails: currencyDetails)
         }
     }
 }

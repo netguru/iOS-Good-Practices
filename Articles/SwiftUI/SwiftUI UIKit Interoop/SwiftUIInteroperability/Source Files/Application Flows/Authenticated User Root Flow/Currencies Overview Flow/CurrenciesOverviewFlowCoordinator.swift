@@ -57,7 +57,9 @@ final class CurrenciesOverviewFlowCoordinator: FlowCoordinator {
 
 extension CurrenciesOverviewFlowCoordinator: CurrenciesViewControllerDelegate {
 
-    func currenciesViewControllerDidFinish(_ viewController: UIViewController) {}
+    func currenciesViewController(_ viewController: UIViewController, didRequestShowingCurrencyDetails details: CurrencyDetails) {
+        // TODO: Show details view
+    }
 }
 
 // MARK: Private Extension
@@ -65,7 +67,11 @@ extension CurrenciesOverviewFlowCoordinator: CurrenciesViewControllerDelegate {
 private extension CurrenciesOverviewFlowCoordinator {
 
     func showInitialViewController(animated: Bool = true) {
-        let viewModel = DefaultCurrenciesViewModel()
+        let viewModel = LiveCurrenciesViewModel(
+            currenciesService: dependencyProvider.currenciesService,
+            presentableHUD: dependencyProvider.presentableHUD,
+            infoAlert: dependencyProvider.infoAlert
+        )
         let view = CurrenciesView(viewModel: viewModel)
         let viewController = CurrenciesViewController(view: view, viewModel: viewModel)
         viewController.delegate = self

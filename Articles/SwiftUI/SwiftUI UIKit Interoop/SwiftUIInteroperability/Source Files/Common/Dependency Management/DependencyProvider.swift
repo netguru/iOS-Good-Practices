@@ -4,11 +4,18 @@
 //
 
 import UIKit
+import Keys
 
 // MARK: DependencyProvider
 
 /// An abstraction providing convenient reference to all major app dependencies: storage, notification handlers
 protocol DependencyProvider: AnyObject {
+
+    /// An authentication token provider.
+    var authenticationTokenProvider: AuthenticationTokenProvider { get }
+
+    /// A cryptocurrencies service.
+    var currenciesService: CurrenciesService { get }
 
     /// An app permanent storage.
     var permanentStorage: LocalDataService { get }
@@ -40,6 +47,9 @@ final class LiveDependencyProvider {
     let liveAppDataCache: LiveAppDataCache
     let liveAuthenticationService: LiveAuthenticationService
     let liveRegistrationService: LiveRegistrationService
+    let liveAuthenticationTokenProvider: LiveAuthenticationTokenProvider
+    let liveNetworkModule: LiveNetworkModule
+    let liveCurrenciesService: LiveCurrenciesService
 
     private unowned var windowController: WindowController?
     private var livePresentableHUD: LivePresentableHud?
@@ -48,13 +58,30 @@ final class LiveDependencyProvider {
 
     /// A default initializer.
     init() {
+        let appSecrets = ApplicationSecrets(cocoapodKeys: SwiftUIInteroperabilityKeys())
+        liveAuthenticationTokenProvider = LiveAuthenticationTokenProvider(appSecretsProvider: appSecrets)
         liveLocalDataService = LiveLocalDataService(localStorage: UserDefaults.standard)
         liveAppDataCache = LiveAppDataCache()
+
+        liveNetworkModule = LiveNetworkModule(
+            requestBuilder: LiveRequestBuilder(baseURL: URL(string: appSecrets.baseUrl)!),
+            urlSession: URLSession(configuration: .default),
+            actions: [
+                AddAuthenticationTokenNetworkModuleAction(authenticationTokenProvider: liveAuthenticationTokenProvider),
+                AddJsonContentTypeNetworkModuleAction()
+            ]
+        )
+
+        //  Services:
         liveAuthenticationService = LiveAuthenticationService(
             localStorage: liveLocalDataService,
             appDataCache: liveAppDataCache
         )
         liveRegistrationService = LiveRegistrationService(localStorage: liveLocalDataService)
+        liveCurrenciesService = LiveCurrenciesService(
+            networkController: LiveCurrenciesNetworkController(networkModule: liveNetworkModule),
+            localDataService: liveLocalDataService
+        )
     }
 
     /// Sets up the provider with data that cannot be obtained at app start.
@@ -92,11 +119,19 @@ extension LiveDependencyProvider: DependencyProvider {
         livePresentableHUD!
     }
 
+    var currenciesService: CurrenciesService {
+        liveCurrenciesService
+    }
+
     var infoAlert: InfoAlert {
         liveInfoAlert!
     }
 
     var acceptanceAlert: AcceptanceAlert {
         liveAcceptanceAlert!
+    }
+
+    var authenticationTokenProvider: AuthenticationTokenProvider {
+        liveAuthenticationTokenProvider
     }
 }

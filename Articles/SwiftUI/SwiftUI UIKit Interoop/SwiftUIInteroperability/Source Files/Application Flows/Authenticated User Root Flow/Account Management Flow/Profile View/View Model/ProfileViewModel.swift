@@ -75,12 +75,12 @@ private extension LiveProfileViewModel {
 
     func performLogout() {
         presentableHUD.show(animated: true)
-        authenticationService.logout { [unowned self] success in
-            presentableHUD.hide(animated: true)
+        authenticationService.logout { [weak self] success in
+            self?.presentableHUD.hide(animated: true)
             if success {
-                onLogout?()
+                self?.onLogout?()
             } else {
-                infoAlert.show(
+                self?.infoAlert.show(
                     title: "An error has occurred",
                     message: "Please try again later"
                 )
