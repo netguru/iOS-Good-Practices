@@ -81,7 +81,3 @@ final class LiveCurrenciesService: CurrenciesService {
         }
     }
 }
-
-// MARK: Implementation details
-
-private extension LiveCurrenciesService {}

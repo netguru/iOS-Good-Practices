@@ -12,19 +12,16 @@ struct PasswordRegistrationView: View {
 
     var body: some View {
         ZStack {
-            VStack(alignment: .leading) {
-                HStack {
-                    Button {
-                        resignFirstResponder()
-                        viewModel.goBack()
-                    } label: {
-                        Text("<<").font(.footnote).hollowedButtonText()
-                    }
-                    .padding(10)
-                    Spacer()
-                }
-                Spacer()
-            }
+
+            // MARK: Back navigation button
+
+            BackNavigationView(
+                tint: Colors.basicGreen.color.swiftUIColor,
+                callback: viewModel.goBack
+            )
+
+            // MARK: Bottom buttons
+
             VStack(alignment: .center, spacing: 30) {
                 Spacer()
                 Button {
@@ -37,6 +34,9 @@ struct PasswordRegistrationView: View {
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+            // MARK: Textfields:
+
             VStack(alignment: .center, spacing: 10) {
                 SecureTextInput(
                     configuration: .makePasswordTextInputConfiguration(),

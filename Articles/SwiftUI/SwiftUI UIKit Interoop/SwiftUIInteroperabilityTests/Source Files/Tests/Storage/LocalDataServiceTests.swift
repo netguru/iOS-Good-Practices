@@ -53,4 +53,30 @@ final class LocalDataServiceTest: XCTestCase {
         //  then:
         fakeLocalStorage.verifyCall(withIdentifier: "set", arguments: [fixtureRegisteredUser.data, fixtureKey])
     }
+
+    func testHandingCurrencies() {
+        //  given:
+        let fixtureCurrencies = [Currency.makeFixtureCurrency()]
+        let fixtureKey = LiveLocalDataService.Key.currencies.rawValue
+        fakeLocalStorage.simulatedValues = [fixtureKey: fixtureCurrencies.data]
+
+        //  when:
+        let retrievedValue = sut.currencies
+
+        //  then:
+        XCTAssertEqual(retrievedValue, fixtureCurrencies, "Should return the proper value")
+
+        //  when:
+        sut.currencies = fixtureCurrencies
+
+        //  then:
+        fakeLocalStorage.verifyCall(withIdentifier: "set", arguments: [fixtureCurrencies.data, fixtureKey])
+    }
+}
+
+extension Currency {
+
+    static func makeFixtureCurrency(id: Int = 1) -> Currency {
+        Currency(id: id, symbol: "BTC", name: "Bitcoin", slug: "bitcin", quote: .init(USD: .init(price: Double.random(in: 1...20000))))
+    }
 }
