@@ -6,7 +6,7 @@
 import Foundation
 
 /// An enumeration representing a network error.
-enum NetworkError: LocalizableError {
+enum NetworkError: LocalizableError, Equatable {
     case notFound
     case timedOut
     case invalidRequest(message: String?)

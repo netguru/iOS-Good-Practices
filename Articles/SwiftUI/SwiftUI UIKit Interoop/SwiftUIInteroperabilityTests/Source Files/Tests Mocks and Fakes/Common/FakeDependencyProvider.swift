@@ -17,6 +17,16 @@ final class FakeDependencyProvider: DependencyProvider, Mock {
     let fakePresentableHud = FakePresentableHud()
     let fakeInfoAlert = FakeInfoAlert()
     let fakeAcceptanceAlert = FakeAcceptanceAlert()
+    let fakeAuthenticationTokenProvider = FakeAuthenticationTokenProvider()
+    let fakeCurrenciesService = FakeCurrenciesService()
+
+    var authenticationTokenProvider: AuthenticationTokenProvider {
+        fakeAuthenticationTokenProvider
+    }
+
+    var currenciesService: CurrenciesService {
+        fakeCurrenciesService
+    }
 
     var permanentStorage: LocalDataService {
         fakeLocalDataService

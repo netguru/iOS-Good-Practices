@@ -58,7 +58,18 @@ final class CurrenciesOverviewFlowCoordinator: FlowCoordinator {
 extension CurrenciesOverviewFlowCoordinator: CurrenciesViewControllerDelegate {
 
     func currenciesViewController(_ viewController: UIViewController, didRequestShowingCurrencyDetails details: CurrencyDetails) {
-        // TODO: Show details view
+        let viewModel = LiveCurrencyDetailsViewModel(details: details)
+        let view = CurrencyDetailsView(viewModel: viewModel)
+        let viewController = CurrencyDetailsViewController(view: view, viewModel: viewModel)
+        viewController.delegate = self
+        presentingNavigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension CurrenciesOverviewFlowCoordinator: CurrencyDetailsViewControllerDelegate {
+
+    func currencyDetailsViewControllerDidRequestBackwardsNavigation(_ viewController: UIViewController) {
+        presentingNavigationController?.popViewController(animated: true)
     }
 }
 

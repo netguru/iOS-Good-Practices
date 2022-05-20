@@ -12,6 +12,7 @@ final class FakeLocalDataService: LocalDataService, Mock {
     var storage = Mimus.Storage()
     var simulatedHasFinishedOnboarding: Bool?
     var simulatedRegisteredUser: UserAuthenticationInfo?
+    var simulatedCurrencies: [Currency]?
 
     var hasFinishedOnboarding: Bool {
         get {
@@ -30,6 +31,16 @@ final class FakeLocalDataService: LocalDataService, Mock {
         set {
             recordCall(withIdentifier: "registeredUser", arguments: [newValue])
             simulatedRegisteredUser = newValue
+        }
+    }
+
+    var currencies: [Currency] {
+        get {
+            simulatedCurrencies ?? []
+        }
+        set {
+            recordCall(withIdentifier: "currencies", arguments: [newValue])
+            simulatedCurrencies = newValue
         }
     }
 }

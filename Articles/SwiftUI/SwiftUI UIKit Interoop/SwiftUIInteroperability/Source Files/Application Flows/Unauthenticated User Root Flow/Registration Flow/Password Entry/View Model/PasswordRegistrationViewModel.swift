@@ -9,16 +9,10 @@ import SwiftUI
 // MARK: PasswordRegistrationViewModel
 
 /// An abstraction describing a View Model for an application initial view.
-protocol PasswordRegistrationViewModel: NavigableViewModel {
-
-    /// A callback to be triggered when the view has requested to go back in navigation stack.
-    var onGoBackRequested: (() -> Void)? { get set }
+protocol PasswordRegistrationViewModel: NavigableViewModel, BackwardsNavigableViewModel {
 
     /// Creates user account.
     func createAccount()
-
-    /// Requests backwards navigation.
-    func goBack()
 }
 
 // MARK: LivePasswordRegistrationViewModel
@@ -31,8 +25,8 @@ class LivePasswordRegistrationViewModel: ObservableObject, PasswordRegistrationV
     /// - SeeAlso: NavigableViewModel.onNavigationAwayFromViewRequested
     var onNavigationAwayFromViewRequested: (() -> Void)?
 
-    /// - SeeAlso: NavigableViewModel.onGoBackRequested
-    var onGoBackRequested: (() -> Void)?
+    /// - SeeAlso: BackwardsNavigableViewModel.onBackwardNavigationRequested
+    var onBackwardNavigationRequested: (() -> Void)?
 
     /// Entered password.
     @Published var password: String = ""
@@ -96,11 +90,6 @@ class LivePasswordRegistrationViewModel: ObservableObject, PasswordRegistrationV
                 )
             }
         }
-    }
-
-    /// - SeeAlso: PasswordRegistrationViewModel.goBack()
-    func goBack() {
-        onGoBackRequested?()
     }
 }
 
