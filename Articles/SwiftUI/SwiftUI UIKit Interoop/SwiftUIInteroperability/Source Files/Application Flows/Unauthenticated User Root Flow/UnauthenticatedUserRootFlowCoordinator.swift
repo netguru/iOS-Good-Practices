@@ -105,7 +105,8 @@ extension UnauthenticatedUserRootFlowCoordinator: AuthenticationFlowCoordinatorD
 private extension UnauthenticatedUserRootFlowCoordinator {
 
     func startInitialFlowCoordinator() {
-        if dependencyProvider.permanentStorage.registeredUser != nil {
+        let storage: LocalDataService = dependencyProvider.resolve()
+        if storage.registeredUser != nil {
             startAuthenticationFlow()
         } else {
             startOnboardingFlowCoordinator()

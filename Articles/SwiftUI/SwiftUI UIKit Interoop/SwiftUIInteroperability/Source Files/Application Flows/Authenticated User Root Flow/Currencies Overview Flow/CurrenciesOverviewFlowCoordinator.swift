@@ -79,9 +79,9 @@ private extension CurrenciesOverviewFlowCoordinator {
 
     func showInitialViewController(animated: Bool = true) {
         let viewModel = LiveCurrenciesViewModel(
-            currenciesService: dependencyProvider.currenciesService,
-            presentableHUD: dependencyProvider.presentableHUD,
-            infoAlert: dependencyProvider.infoAlert
+            currenciesService: dependencyProvider.resolve(),
+            presentableHUD: dependencyProvider.resolve(),
+            infoAlert: dependencyProvider.resolve()
         )
         let view = CurrenciesView(viewModel: viewModel)
         let viewController = CurrenciesViewController(view: view, viewModel: viewModel)

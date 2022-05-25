@@ -76,10 +76,10 @@ private extension AccountManagementFlowCoordinator {
 
     func showInitialViewController(animated: Bool = true) {
         let viewModel = LiveProfileViewModel(
-            authenticationService: dependencyProvider.authenticationService,
-            presentableHUD: dependencyProvider.presentableHUD,
-            infoAlert: dependencyProvider.infoAlert,
-            acceptanceAlert: dependencyProvider.acceptanceAlert
+            authenticationService: dependencyProvider.resolve(),
+            presentableHUD: dependencyProvider.resolve(),
+            infoAlert: dependencyProvider.resolve(),
+            acceptanceAlert: dependencyProvider.resolve()
         )
         let view = ProfileView(viewModel: viewModel)
         let viewController = ProfileViewController(view: view, viewModel: viewModel)

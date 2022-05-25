@@ -85,10 +85,10 @@ private extension AuthenticationFlowCoordinator {
 
     func showInitialViewController(animated: Bool = true) {
         let viewModel = LiveEmailLoginViewModel(
-            authenticationService: dependencyProvider.authenticationService,
-            localDataService: dependencyProvider.permanentStorage,
-            presentableHUD: dependencyProvider.presentableHUD,
-            infoAlert: dependencyProvider.infoAlert
+            authenticationService: dependencyProvider.resolve(),
+            localDataService: dependencyProvider.resolve(),
+            presentableHUD: dependencyProvider.resolve(),
+            infoAlert: dependencyProvider.resolve()
         )
         let view = EmailLoginView(viewModel: viewModel)
         let viewController = EmailLoginViewController(view: view, viewModel: viewModel)
