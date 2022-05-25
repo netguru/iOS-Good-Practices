@@ -43,7 +43,8 @@ final class LiveRootFlowCoordinatorFactory: RootFlowCoordinatorFactory {
     ///
     /// - Returns: a root flow to be presented.
     func makeNextRootFlowCoordinator() -> RootFlowCoordinator {
-        if dependencyProvider.temporaryStorage.retrieveObject(forKey: .authenticatedUser) != nil {
+        let storage: AppDataCache = dependencyProvider.resolve()
+        if storage.retrieveObject(forKey: .authenticatedUser) != nil {
             return AuthenticatedUserRootFlowCoordinator(dependencyProvider: dependencyProvider)
         } else {
             return UnauthenticatedUserRootFlowCoordinator(dependencyProvider: dependencyProvider)

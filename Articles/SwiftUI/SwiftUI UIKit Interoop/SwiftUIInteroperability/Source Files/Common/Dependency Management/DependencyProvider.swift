@@ -11,59 +11,36 @@ import Keys
 /// An abstraction providing convenient reference to all major app dependencies: storage, notification handlers
 protocol DependencyProvider: AnyObject {
 
-    /// An authentication token provider.
-    var authenticationTokenProvider: AuthenticationTokenProvider { get }
+    /// Registers a dependency under a provided protocol / type.
+    ///
+    /// - Parameters:
+    ///   - dependency: a dependency.
+    ///   - type: a type under which a dependency will be registered.
+    func register<T>(_ dependency: T, for type: T.Type)
 
-    /// A cryptocurrencies service.
-    var currenciesService: CurrenciesService { get }
-
-    /// An app permanent storage.
-    var permanentStorage: LocalDataService { get }
-
-    /// An app temporary storage.
-    var temporaryStorage: AppDataCache { get }
-
-    /// An authentication service.
-    var authenticationService: AuthenticationService { get }
-
-    /// A registration service.
-    var registrationService: RegistrationService { get }
-
-    /// A presentable HUD.
-    var presentableHUD: PresentableHud { get }
-
-    /// An information alert.
-    var infoAlert: InfoAlert { get }
-
-    /// An acceptance alert.
-    var acceptanceAlert: AcceptanceAlert { get }
+    /// Resolves a dependency, based on a provided type.
+    ///
+    /// - Returns: a resolved dependency.
+    func resolve<T>() -> T
 }
 
 // MARK: LiveDependencyProvider
 
 final class LiveDependencyProvider {
+    private var dependencies = [String: Any]()
 
-    let liveLocalDataService: LiveLocalDataService
-    let liveAppDataCache: LiveAppDataCache
-    let liveAuthenticationService: LiveAuthenticationService
-    let liveRegistrationService: LiveRegistrationService
-    let liveAuthenticationTokenProvider: LiveAuthenticationTokenProvider
-    let liveNetworkModule: LiveNetworkModule
-    let liveCurrenciesService: LiveCurrenciesService
+    /// Sets up the provider.
+    ///
+    /// - Parameter windowController: an application main window controller.
+    func setup(windowController: WindowController) {
 
-    private unowned var windowController: WindowController?
-    private var livePresentableHUD: LivePresentableHud?
-    private var liveInfoAlert: LiveInfoAlert?
-    private var liveAcceptanceAlert: LiveAcceptanceAlert?
-
-    /// A default initializer.
-    init() {
+        //  App secrets and providers:
         let appSecrets = ApplicationSecrets(cocoapodKeys: SwiftUIInteroperabilityKeys())
-        liveAuthenticationTokenProvider = LiveAuthenticationTokenProvider(appSecretsProvider: appSecrets)
-        liveLocalDataService = LiveLocalDataService(localStorage: UserDefaults.standard)
-        liveAppDataCache = LiveAppDataCache()
+        let liveAuthenticationTokenProvider = LiveAuthenticationTokenProvider(appSecretsProvider: appSecrets)
+        register(liveAuthenticationTokenProvider, for: AuthenticationTokenProvider.self)
 
-        liveNetworkModule = LiveNetworkModule(
+        //  Network module:
+        let liveNetworkModule = LiveNetworkModule(
             requestBuilder: LiveRequestBuilder(baseURL: URL(string: appSecrets.baseUrl)!),
             urlSession: URLSession(configuration: .default),
             actions: [
@@ -71,27 +48,29 @@ final class LiveDependencyProvider {
                 AddJsonContentTypeNetworkModuleAction()
             ]
         )
+        register(liveNetworkModule, for: NetworkModule.self)
 
         //  Services:
-        liveAuthenticationService = LiveAuthenticationService(
+        let liveAppDataCache = LiveAppDataCache()
+        let liveLocalDataService = LiveLocalDataService(localStorage: UserDefaults.standard)
+        let liveAuthenticationService = LiveAuthenticationService(
             localStorage: liveLocalDataService,
             appDataCache: liveAppDataCache
         )
-        liveRegistrationService = LiveRegistrationService(localStorage: liveLocalDataService)
-        liveCurrenciesService = LiveCurrenciesService(
+        let liveCurrenciesService = LiveCurrenciesService(
             networkController: LiveCurrenciesNetworkController(networkModule: liveNetworkModule),
             localDataService: liveLocalDataService
         )
-    }
+        register(liveLocalDataService, for: LocalDataService.self)
+        register(liveAppDataCache, for: AppDataCache.self)
+        register(liveAuthenticationService, for: AuthenticationService.self)
+        register(LiveRegistrationService(localStorage: liveLocalDataService), for: RegistrationService.self)
+        register(liveCurrenciesService, for: CurrenciesService.self)
 
-    /// Sets up the provider with data that cannot be obtained at app start.
-    ///
-    /// - Parameter windowController: an application main window controller.
-    func setup(windowController: WindowController) {
-        self.windowController = windowController
-        livePresentableHUD = LivePresentableHud(viewProvider: windowController)
-        liveInfoAlert = LiveInfoAlert(viewControllerProvider: windowController)
-        liveAcceptanceAlert = LiveAcceptanceAlert(viewControllerProvider: windowController)
+        //  UI handlers:
+        register(LivePresentableHud(viewProvider: windowController), for: PresentableHud.self)
+        register(LiveInfoAlert(viewControllerProvider: windowController), for: InfoAlert.self)
+        register(LiveAcceptanceAlert(viewControllerProvider: windowController), for: AcceptanceAlert.self)
     }
 }
 
@@ -99,39 +78,19 @@ final class LiveDependencyProvider {
 
 extension LiveDependencyProvider: DependencyProvider {
 
-    var permanentStorage: LocalDataService {
-        liveLocalDataService
+    /// - SeeAlso: DependencyProvider.register(dependency:type:)
+    func register<T>(_ dependency: T, for type: T.Type) {
+        let id = String(describing: type)
+        dependencies[id] = dependency
     }
 
-    var temporaryStorage: AppDataCache {
-        liveAppDataCache
-    }
-
-    var authenticationService: AuthenticationService {
-        liveAuthenticationService
-    }
-
-    var registrationService: RegistrationService {
-        liveRegistrationService
-    }
-
-    var presentableHUD: PresentableHud {
-        livePresentableHUD!
-    }
-
-    var currenciesService: CurrenciesService {
-        liveCurrenciesService
-    }
-
-    var infoAlert: InfoAlert {
-        liveInfoAlert!
-    }
-
-    var acceptanceAlert: AcceptanceAlert {
-        liveAcceptanceAlert!
-    }
-
-    var authenticationTokenProvider: AuthenticationTokenProvider {
-        liveAuthenticationTokenProvider
+    /// - SeeAlso: DependencyProvider.resolve()
+    func resolve<T>() -> T {
+        let id = String(describing: T.self)
+        if let dependency = dependencies[id] as? T {
+            return dependency
+        } else {
+            fatalError("No dependency found for \(id)! must register a dependency before resolve.")
+        }
     }
 }

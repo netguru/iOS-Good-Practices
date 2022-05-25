@@ -27,7 +27,7 @@ class LiveCurrencyDetailsViewModel: ObservableObject, CurrencyDetailsViewModel {
     // MARK: Initializers
 
     /// A default CurrencyDetailsViewModel initializer.
-    /// 
+    ///
     /// - Parameter details: currency details.
     init(details: CurrencyDetails) {
         let url = URL(string: details.logo)
