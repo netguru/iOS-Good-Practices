@@ -45,13 +45,3 @@ extension UIView: VisibleViewProvider {
         self
     }
 }
-
-// MARK: AppDelegate
-
-extension AppDelegate: VisibleViewProvider {
-
-    /// SeeAlso: VisibleViewProvider.visibleView
-    var visibleView: UIView {
-        windowController.visibleView
-    }
-}

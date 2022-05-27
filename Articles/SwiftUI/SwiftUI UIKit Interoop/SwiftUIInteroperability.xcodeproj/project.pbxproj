@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DFF77716ACAF777BAB4DDF4 /* Pods_SwiftUIInteroperability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F83E7C211DB01353B17B90F4 /* Pods_SwiftUIInteroperability.framework */; };
+		1E5F6023929462BE97279054 /* FakeWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6688209AEEA6170BE19F /* FakeWindowController.swift */; };
 		1E5F602834AFE7FD5BAF6839 /* CurrenciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6AC2F661FE3B94AC512C /* CurrenciesView.swift */; };
 		1E5F602AD055E91C32BFE286 /* OnboardingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6A3E3881E5C2DC353B14 /* OnboardingViewModelTests.swift */; };
 		1E5F60453DE37FBAD997EDC4 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6A86BFC73609A7209FBB /* TextInput.swift */; };
@@ -49,6 +50,7 @@
 		1E5F657E7CC53B03DE2D9F9C /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F66818A3C0A4166BE0E89 /* TagsView.swift */; };
 		1E5F6581EF26B74AB81B6A00 /* UserAuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6F8722B839957217C9C6 /* UserAuthenticationError.swift */; };
 		1E5F658B57D82237CDBE2AE7 /* FakeAppDataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6C466E1A658237813355 /* FakeAppDataCache.swift */; };
+		1E5F659649A0E5309EF6D5F5 /* DependencyProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6D36627D7BC54E77F4F7 /* DependencyProviderTests.swift */; };
 		1E5F65C7A767030D53F1F252 /* DashboardFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62900CE71E6236CC7CEB /* DashboardFlowCoordinator.swift */; };
 		1E5F65D1D2D5E7A9B8EFF744 /* RootFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F6D02D1B04E88CD040B85 /* RootFlowCoordinator.swift */; };
 		1E5F65FA0EBDB0EB011F92BF /* CurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F62BFE6AF945D7FD6B6A5 /* CurrenciesViewModel.swift */; };
@@ -224,6 +226,7 @@
 		1E5F6672CCC230DF46882F38 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		1E5F6677213BA96BD79046D5 /* CurrenciesViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesViewState.swift; sourceTree = "<group>"; };
 		1E5F66818A3C0A4166BE0E89 /* TagsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		1E5F6688209AEEA6170BE19F /* FakeWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeWindowController.swift; sourceTree = "<group>"; };
 		1E5F669B1FF127E882729DA6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		1E5F66AB260626FBC91F0E26 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		1E5F66DBB51B0D4B90B4463C /* LocalizableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableError.swift; sourceTree = "<group>"; };
@@ -280,6 +283,7 @@
 		1E5F6D0B5F3450A7C8BEA4F5 /* RegistrationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationFlowCoordinator.swift; sourceTree = "<group>"; };
 		1E5F6D1C0BAF00D62F7D72F8 /* CurrenciesListCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesListCellView.swift; sourceTree = "<group>"; };
 		1E5F6D35960B908ACFFF621A /* NetworkModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
+		1E5F6D36627D7BC54E77F4F7 /* DependencyProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyProviderTests.swift; sourceTree = "<group>"; };
 		1E5F6D477F573E65BF6F1AD8 /* FakeAcceptanceAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAcceptanceAlert.swift; sourceTree = "<group>"; };
 		1E5F6D4D87B753A9B77344A9 /* PasswordValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidationError.swift; sourceTree = "<group>"; };
 		1E5F6D4FA4C73FB15C91F8B1 /* WelcomeViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewModelTests.swift; sourceTree = "<group>"; };
@@ -573,6 +577,7 @@
 				1E5F63F94F76CA2BD9757697 /* Alert */,
 				1E5F6B8B0F9A08EA46999767 /* Authorized User Root Flow */,
 				1E5F6F2971C2D8AECAAA2174 /* Services */,
+				1E5F6E07DA55B30B40EC3E9D /* Dependency Management */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -849,6 +854,7 @@
 			isa = PBXGroup;
 			children = (
 				1E5F66FFA6C3671C0FB5217B /* FakeUINavigationController.swift */,
+				1E5F6688209AEEA6170BE19F /* FakeWindowController.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -1047,6 +1053,14 @@
 				1E5F6306B8D29C26985D74F1 /* NetworkSession.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1E5F6E07DA55B30B40EC3E9D /* Dependency Management */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F6D36627D7BC54E77F4F7 /* DependencyProviderTests.swift */,
+			);
+			path = "Dependency Management";
 			sourceTree = "<group>";
 		};
 		1E5F6E117735BAF8271E497C /* Views */ = {
@@ -1698,6 +1712,8 @@
 				1E5F6E965B8DA336CD30D83F /* FakeAuthenticationTokenProvider.swift in Sources */,
 				1E5F632CFFA40F05C07E6505 /* CurrenciesServiceTests.swift in Sources */,
 				1E5F6818AACA43DFFDF6C8D5 /* FakeCurrenciesNetworkController.swift in Sources */,
+				1E5F659649A0E5309EF6D5F5 /* DependencyProviderTests.swift in Sources */,
+				1E5F6023929462BE97279054 /* FakeWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
