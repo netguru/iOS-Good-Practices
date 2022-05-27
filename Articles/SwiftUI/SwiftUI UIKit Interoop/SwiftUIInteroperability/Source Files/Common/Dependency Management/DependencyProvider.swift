@@ -90,7 +90,7 @@ extension LiveDependencyProvider: DependencyProvider {
         if let dependency = dependencies[id] as? T {
             return dependency
         } else {
-            fatalError("No dependency found for \(id)! must register a dependency before resolve.")
+            fatalError("No dependency found for \(id)! You have to register that dependency first!")
         }
     }
 }

@@ -11,8 +11,8 @@ class AppDelegate: UIResponder {
 
     // MARK: Properties
 
-    /// Main app window controller
-    let windowController: WindowController
+    private let windowController: WindowController
+    private let dependencyProvider: DependencyProvider
 
     // MARK: Initializers
 
@@ -30,6 +30,7 @@ class AppDelegate: UIResponder {
             rootViewController: rootViewController
         )
         dependencyProvider.setup(windowController: windowController)
+        self.dependencyProvider = dependencyProvider
     }
 }
 
@@ -42,14 +43,5 @@ extension AppDelegate: UIApplicationDelegate {
         windowController.makeAndPresentInitialViewController()
         windowController.startInitialApplicationFlow()
         return true
-    }
-}
-
-// MARK: Implementation details
-
-private extension AppDelegate {
-
-    var dependencyProvider: DependencyProvider {
-        windowController.dependencyProvider
     }
 }
