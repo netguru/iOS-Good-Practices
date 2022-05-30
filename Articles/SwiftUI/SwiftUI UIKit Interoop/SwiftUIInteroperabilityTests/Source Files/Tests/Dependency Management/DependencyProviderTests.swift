@@ -46,7 +46,7 @@ final class DependencyProviderTest: XCTestCase {
         //  then:
         let alertController = (infoAlert as? LiveInfoAlert)?.alertController
         XCTAssert(alertController === fakePresentingViewController.presentedViewController, "Should use presenting view controller provided by Window Controller")
-        
+
         //
         // TODO: We could add tests for other critical dependencies here, but the app would crash if these are not properly added so...
         //
