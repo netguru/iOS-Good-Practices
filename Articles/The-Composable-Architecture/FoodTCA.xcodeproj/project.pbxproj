@@ -21,6 +21,7 @@
 		15F4437D2869D1AD0048B3B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15F443802869D1AD0048B3B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		15F4438A2869D44C0048B3B8 /* HomeFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HomeFeature; sourceTree = "<group>"; };
+		15F4438B2869DD430048B3B8 /* NetworkClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkClient; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +39,7 @@
 		15F4436D2869D1A80048B3B8 = {
 			isa = PBXGroup;
 			children = (
+				15F4438B2869DD430048B3B8 /* NetworkClient */,
 				15F4438A2869D44C0048B3B8 /* HomeFeature */,
 				15F443782869D1A80048B3B8 /* FoodTCA */,
 				15F443772869D1A80048B3B8 /* Products */,
