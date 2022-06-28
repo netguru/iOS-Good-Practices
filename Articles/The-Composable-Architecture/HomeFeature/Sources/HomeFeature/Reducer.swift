@@ -7,6 +7,7 @@
 
 import Foundation
 import ComposableArchitecture
+import NetworkClient
 
 struct Food: Equatable {
     let name: String

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import NetworkClient
 
 struct HomeScreen: View {
     let store: Store<HomeScreenState, HomeScreenAction>
@@ -55,19 +56,24 @@ struct HomeScreen: View {
         }
     }
 }
-
-struct HomeScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeScreen(
-            store: .init(
-                initialState: .init(),
-                reducer: homeScreenReducer,
-                environment: .init(
-                    networkClient: .successful,
-                    mainQueue: .main
-                )
-            )
-        )
-    }
-}
-
+//
+//struct HomeScreen_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeScreen(
+//            store: .init(
+//                initialState: .init(),
+//                reducer: homeScreenReducer,
+//                environment: .init(
+//                    networkClient: .successful,
+//                    mainQueue: .main
+//                )
+//            ), detailsScreen: { _ in FakeDetailsScreen() }
+//        )
+//    }
+//}
+//
+//fileprivate struct FakeDetailsScreen: View {
+//    var body: some View {
+//        Text("FakeDetailsScreen")
+//    }
+//}

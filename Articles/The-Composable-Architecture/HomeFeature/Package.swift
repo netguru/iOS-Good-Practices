@@ -13,7 +13,8 @@ let package = Package(
             targets: ["HomeFeature"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "0.38.1")
+        .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "0.38.1"),
+        .package(name: "NetworkClient", path: "NetworkClient")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -21,7 +22,8 @@ let package = Package(
         .target(
             name: "HomeFeature",
             dependencies: [
-                .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+                .product(name: "NetworkClient", package: "NetworkClient")
             ]),
         .testTarget(
             name: "HomeFeatureTests",
