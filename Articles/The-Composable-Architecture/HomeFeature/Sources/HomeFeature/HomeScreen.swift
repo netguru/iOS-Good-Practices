@@ -9,9 +9,14 @@ import SwiftUI
 import ComposableArchitecture
 import NetworkClient
 
-struct HomeScreen: View {
+struct HomeScreen<DetailsScreen: View>: View {
     let store: Store<HomeScreenState, HomeScreenAction>
-    let detailsScreen: (Food) -> AnyView
+    let detailsScreen: (Food) -> DetailsScreen
+    
+    init(store: Store<HomeScreenState, HomeScreenAction>, @ViewBuilder detailsBuilder: @escaping (Food) -> DetailsScreen) {
+        self.store = store
+        self.detailsScreen = detailsBuilder
+    }
     
     var body: some View {
         WithViewStore(store) { viewStore in
@@ -52,28 +57,22 @@ struct HomeScreen: View {
             .onReceive(NotificationCenter.default.publisher(for: UIDevice.deviceDidShakeNotification)) { _ in
                 viewStore.send(.download)
             }
-            .alert(self.store.scope(state: \.alert), dismiss: .alertDismissed)
+            .alert(store.scope(state: \.alert), dismiss: .alertDismissed)
         }
     }
 }
-//
-//struct HomeScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomeScreen(
-//            store: .init(
-//                initialState: .init(),
-//                reducer: homeScreenReducer,
-//                environment: .init(
-//                    networkClient: .successful,
-//                    mainQueue: .main
-//                )
-//            ), detailsScreen: { _ in FakeDetailsScreen() }
-//        )
-//    }
-//}
-//
-//fileprivate struct FakeDetailsScreen: View {
-//    var body: some View {
-//        Text("FakeDetailsScreen")
-//    }
-//}
+
+struct HomeScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeScreen(
+            store: .init(
+                initialState: .init(),
+                reducer: homeScreenReducer,
+                environment: .init(
+                    networkClient: .successful,
+                    mainQueue: .main
+                )
+            ), detailsBuilder: { _ in EmptyView() }
+        )
+    }
+}
