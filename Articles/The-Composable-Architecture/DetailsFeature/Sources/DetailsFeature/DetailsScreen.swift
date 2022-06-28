@@ -8,10 +8,14 @@
 import SwiftUI
 import NetworkClient
 
-struct DetailsScreen: View {
+public struct DetailsScreen: View {
     let food: Food
     
-    var body: some View {
+    public init(food: Food) {
+        self.food = food
+    }
+    
+    public var body: some View {
         VStack(spacing: 50) {
             Spacer()
             

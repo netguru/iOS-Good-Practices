@@ -10,12 +10,12 @@ import ComposableArchitecture
 import NetworkClient
 
 public struct Food: Equatable {
-    let name: String
-    let calories: Int
-    let carbs: Int
-    let protein: Int
-    let fat: Int
-    let details: FoodDetails
+    public let name: String
+    public let calories: Int
+    public let carbs: Int
+    public let protein: Int
+    public let fat: Int
+    public let details: FoodDetails
     
     static func map(from nutrition: Nutrition) -> Self {
         .init(
@@ -37,14 +37,14 @@ public struct Food: Equatable {
     }
 }
 
-struct FoodDetails: Equatable {
-    let fiber: Double
-    let cholesterol: Double
-    let sugar: Double
-    let sodium: Double
-    let potassium: Double
-    let unsaturatedFat: Double
-    let saturatedFat: Double
+public struct FoodDetails: Equatable {
+    public let fiber: Double
+    public let cholesterol: Double
+    public let sugar: Double
+    public let sodium: Double
+    public let potassium: Double
+    public let unsaturatedFat: Double
+    public let saturatedFat: Double
 }
 
 public struct HomeScreenState: Equatable {
