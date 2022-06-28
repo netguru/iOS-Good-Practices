@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import HomeFeature
+import DetailsFeature
 
 @main
 struct FoodTCAApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen(
+                store: .init(
+                    initialState: .init(),
+                    reducer: homeScreenReducer,
+                    environment: .live
+                ),
+                detailsBuilder: { _ in
+                    EmptyView()
+                }
+            )
         }
     }
 }

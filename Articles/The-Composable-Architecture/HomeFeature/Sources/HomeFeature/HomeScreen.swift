@@ -9,16 +9,16 @@ import SwiftUI
 import ComposableArchitecture
 import NetworkClient
 
-struct HomeScreen<DetailsScreen: View>: View {
-    let store: Store<HomeScreenState, HomeScreenAction>
-    let detailsScreen: (Food) -> DetailsScreen
+public struct HomeScreen<DetailsScreen: View>: View {
+    public let store: Store<HomeScreenState, HomeScreenAction>
+    public let detailsScreen: (Food) -> DetailsScreen
     
-    init(store: Store<HomeScreenState, HomeScreenAction>, @ViewBuilder detailsBuilder: @escaping (Food) -> DetailsScreen) {
+    public init(store: Store<HomeScreenState, HomeScreenAction>, @ViewBuilder detailsBuilder: @escaping (Food) -> DetailsScreen) {
         self.store = store
         self.detailsScreen = detailsBuilder
     }
     
-    var body: some View {
+    public var body: some View {
         WithViewStore(store) { viewStore in
             VStack(spacing: 0) {
                 switch viewStore.nutritionFacts {

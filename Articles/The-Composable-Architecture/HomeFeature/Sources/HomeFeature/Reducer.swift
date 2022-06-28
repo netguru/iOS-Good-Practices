@@ -9,7 +9,7 @@ import Foundation
 import ComposableArchitecture
 import NetworkClient
 
-struct Food: Equatable {
+public struct Food: Equatable {
     let name: String
     let calories: Int
     let carbs: Int
@@ -47,14 +47,21 @@ struct FoodDetails: Equatable {
     let saturatedFat: Double
 }
 
-struct HomeScreenState: Equatable {
-    var downloadingInProgress: Bool = false
+public struct HomeScreenState: Equatable {
+    var downloadingInProgress: Bool
     var nutritionFacts: Food?
-    var presentingDetails = false
+    var presentingDetails: Bool
     var alert: AlertState<HomeScreenAction>?
+    
+    public init(downloadingInProgress: Bool = false, nutritionFacts: Food? = nil, presentingDetails: Bool = false, alert: AlertState<HomeScreenAction>? = nil) {
+        self.downloadingInProgress = downloadingInProgress
+        self.nutritionFacts = nutritionFacts
+        self.presentingDetails = presentingDetails
+        self.alert = alert
+    }
 }
 
-enum HomeScreenAction: Equatable {
+public enum HomeScreenAction: Equatable {
     case download
     case receivedResponse(Result<Food, HomeScreenError>)
     case showDetails
@@ -62,11 +69,11 @@ enum HomeScreenAction: Equatable {
     case alertDismissed
 }
 
-enum HomeScreenError: Error, Equatable {
+public enum HomeScreenError: Error, Equatable {
     case networkIssue(String)
 }
 
-struct HomeScreenEnvironment {
+public struct HomeScreenEnvironment {
     var networkClient: NetworkClient
     var mainQueue: AnySchedulerOf<DispatchQueue>
     
@@ -79,7 +86,7 @@ struct HomeScreenEnvironment {
     }
 }
 
-extension HomeScreenEnvironment {
+public extension HomeScreenEnvironment {
     static let live = HomeScreenEnvironment(
         networkClient: .live(),
         mainQueue: .main
@@ -91,7 +98,7 @@ extension HomeScreenEnvironment {
     )
 }
 
-let homeScreenReducer = Reducer<HomeScreenState, HomeScreenAction, HomeScreenEnvironment> { state, action, environment in
+public let homeScreenReducer = Reducer<HomeScreenState, HomeScreenAction, HomeScreenEnvironment> { state, action, environment in
     switch action {
     case .download:
         state.downloadingInProgress = true
