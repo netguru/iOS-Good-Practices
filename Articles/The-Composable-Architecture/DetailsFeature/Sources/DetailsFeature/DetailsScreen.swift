@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import NetworkClient
 
 public struct DetailsScreen: View {
     let food: Food
