@@ -1,0 +1,30 @@
+{
+    "request": {
+      "method": "GET",
+      "url": "/nutrition1"
+    },
+    "response": {
+      "status": 200,
+      "jsonBody": {
+          "meta": {
+              "code": 200
+          },
+          "response": {
+              "carbs": 3.04,
+              "fiber": 0.0,
+              "title": "Ricotta cheese",
+              "pcstext": "Whole cheese",
+              "potassium": 0.105,
+              "sodium": 0.084,
+              "calories": 174,
+              "fat": 12.98,
+              "sugar": 0.27,
+              "gramsperserving": 20.0,
+              "cholesterol": 0.051,
+              "protein": 11.26,
+              "unsaturatedfat": 4.012,
+              "saturatedfat": 8.295
+          }
+     }
+    }
+  }
