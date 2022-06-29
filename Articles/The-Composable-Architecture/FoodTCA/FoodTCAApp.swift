@@ -19,8 +19,8 @@ struct FoodTCAApp: App {
                     reducer: homeScreenReducer,
                     environment: .live
                 ),
-                detailsBuilder: { food in
-                    DetailsScreen(food: DetailsFeature.Food.map(from: food))
+                detailsBuilder: {
+                    DetailsScreen(food: DetailsFeature.Food.map(from: $0))
                 }
             )
         }
