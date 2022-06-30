@@ -1,6 +1,6 @@
 //
 //  DetailsScreen.swift
-//  LifesumLite
+//  FoodTCA
 //
 //  Created by Bartosz Dolewski on 05/06/2022.
 //
