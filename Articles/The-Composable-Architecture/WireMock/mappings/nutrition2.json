@@ -1,0 +1,30 @@
+{
+    "request": {
+      "method": "GET",
+      "url": "/nutrition2"
+    },
+    "response": {
+      "status": 200,
+      "jsonBody": {
+          "meta": {
+              "code": 200
+          },
+          "response": {
+              "carbs": 2.0,
+              "fiber": 0.0,
+              "title": "Roquefort cheese",
+              "pcstext": "Package,  (3 oz)",
+              "potassium": 0.091,
+              "sodium": 1.809,
+              "calories": 369,
+              "fat": 30.64,
+              "sugar": 0.0,
+              "gramsperserving": 15.0,
+              "cholesterol": 0.09,
+              "protein": 21.54,
+              "unsaturatedfat": 9.794,
+              "saturatedfat": 19.263
+          }
+     }
+    }
+  }

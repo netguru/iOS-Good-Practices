@@ -1,0 +1,30 @@
+{
+    "request": {
+      "method": "GET",
+      "url": "/nutrition3"
+    },
+    "response": {
+      "status": 200,
+      "jsonBody": {
+          "meta": {
+              "code": 200
+          },
+          "response": {
+              "carbs": 0.28,
+              "fiber": 0.1,
+              "title": "Pork frankfurter",
+              "pcstext": "Whole frankfurter",
+              "potassium": 0.264,
+              "sodium": 0.816,
+              "calories": 269,
+              "fat": 23.68,
+              "sugar": 0.0,
+              "gramsperserving": 76,
+              "cholesterol": 0.066,
+              "protein": 12.81,
+              "unsaturatedfat": 13.123,
+              "saturatedfat": 8.719
+          }
+     }
+    }
+  }
