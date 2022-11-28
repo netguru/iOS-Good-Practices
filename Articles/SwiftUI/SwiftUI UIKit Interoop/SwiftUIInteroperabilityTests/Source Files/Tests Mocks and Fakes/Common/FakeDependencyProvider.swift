@@ -17,32 +17,29 @@ final class FakeDependencyProvider: DependencyProvider, Mock {
     let fakePresentableHud = FakePresentableHud()
     let fakeInfoAlert = FakeInfoAlert()
     let fakeAcceptanceAlert = FakeAcceptanceAlert()
+    let fakeAuthenticationTokenProvider = FakeAuthenticationTokenProvider()
+    let fakeCurrenciesService = FakeCurrenciesService()
 
-    var permanentStorage: LocalDataService {
-        fakeLocalDataService
+    private var simulatedInjectedDependencies = [String: Any]()
+
+    init() {
+        register(fakeLocalDataService, for: LocalDataService.self)
+        register(fakeAppDataCache, for: AppDataCache.self)
+        register(fakeAuthenticationService, for: AuthenticationService.self)
+        register(fakeRegistrationService, for: RegistrationService.self)
+        register(fakePresentableHud, for: PresentableHud.self)
+        register(fakeInfoAlert, for: InfoAlert.self)
+        register(fakeAcceptanceAlert, for: AcceptanceAlert.self)
+        register(fakeAuthenticationTokenProvider, for: AuthenticationTokenProvider.self)
+        register(fakeCurrenciesService, for: CurrenciesService.self)
     }
 
-    var temporaryStorage: AppDataCache {
-        fakeAppDataCache
+    func register<T>(_ dependency: T, for type: T.Type) {
+        recordCall(withIdentifier: "register", arguments: [String(describing: type)])
+        simulatedInjectedDependencies[String(describing: type.self)] = dependency
     }
 
-    var authenticationService: AuthenticationService {
-        fakeAuthenticationService
-    }
-
-    var registrationService: RegistrationService {
-        fakeRegistrationService
-    }
-
-    var presentableHUD: PresentableHud {
-        fakePresentableHud
-    }
-
-    var infoAlert: InfoAlert {
-        fakeInfoAlert
-    }
-
-    var acceptanceAlert: AcceptanceAlert {
-        fakeAcceptanceAlert
+    func resolve<T>() -> T {
+        simulatedInjectedDependencies[String(describing: T.self)] as! T
     }
 }

@@ -68,7 +68,7 @@ private extension PasswordRegistrationViewController {
         viewModel.onNavigationAwayFromViewRequested = { [unowned self] in
             delegate?.passwordRegistrationViewControllerDidFinish(self)
         }
-        viewModel.onGoBackRequested = { [unowned self] in
+        viewModel.onBackwardNavigationRequested = { [unowned self] in
             delegate?.passwordRegistrationViewControllerDidRequestBackwardsNavigation(self)
         }
     }

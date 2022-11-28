@@ -9,9 +9,6 @@ import SwiftUI
 /// Describes an object handling main application Window.
 protocol WindowController: VisibleViewControllerProvider {
 
-    /// App Dependencies Provider
-    var dependencyProvider: DependencyProvider { get }
-
     /// Creates the main UIWindow of the application.
     func makeAndPresentInitialViewController()
 

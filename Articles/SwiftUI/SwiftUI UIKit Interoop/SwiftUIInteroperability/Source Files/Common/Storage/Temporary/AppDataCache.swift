@@ -12,7 +12,7 @@ enum CacheKey: String, Equatable {
 }
 
 /// An abstraction defining data cache for the app.
-protocol AppDataCache {
+protocol AppDataCache: AnyObject {
 
     /// Stores given object under a given key.
     ///

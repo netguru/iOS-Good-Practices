@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 extension UIColor {
 
@@ -25,6 +26,10 @@ extension UIColor {
 }
 
 extension UIColor {
+
+    var swiftUIColor: Color {
+        Color(self)
+    }
 
     /// Initializes a color with a red, green and blue values.
     ///

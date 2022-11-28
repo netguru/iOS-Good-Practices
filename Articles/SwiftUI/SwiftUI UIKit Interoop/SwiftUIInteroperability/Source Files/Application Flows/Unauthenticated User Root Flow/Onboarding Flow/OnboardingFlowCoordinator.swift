@@ -62,7 +62,8 @@ final class OnboardingFlowCoordinator: FlowCoordinator {
 
     /// SeeAlso: FlowCoordinator.finish()
     func finish() {
-        guard let selectedFlow = dependencyProvider.temporaryStorage.retrieveObject(forKey: .selectedAuthenticationFlow) as? AuthenticationFlow else {
+        let storage: AppDataCache = dependencyProvider.resolve()
+        guard let selectedFlow = storage.retrieveObject(forKey: .selectedAuthenticationFlow) as? AuthenticationFlow else {
             fatalError("Authentication flow not selected! This should never occur!")
         }
         switch selectedFlow {
@@ -97,7 +98,8 @@ extension OnboardingFlowCoordinator: WelcomeViewControllerDelegate {
 private extension OnboardingFlowCoordinator {
 
     func showInitialViewController(animated: Bool = true) {
-        if dependencyProvider.permanentStorage.hasFinishedOnboarding {
+        let storage: LocalDataService = dependencyProvider.resolve()
+        if storage.hasFinishedOnboarding {
             showWelcomeScreen(animated: false)
         } else {
             showOnboardingScreen(animated: false)
@@ -112,7 +114,7 @@ private extension OnboardingFlowCoordinator {
         ]
         let viewModel = LiveOnboardingViewModel(
             slides: slides,
-            localDataService: dependencyProvider.permanentStorage
+            localDataService: dependencyProvider.resolve()
         )
         let view = OnboardingView(viewModel: viewModel)
         let viewController = OnboardingViewController(view: view, viewModel: viewModel)
@@ -122,7 +124,7 @@ private extension OnboardingFlowCoordinator {
 
     func showWelcomeScreen(animated: Bool) {
         let viewModel = LiveWelcomeViewModel(
-            temporaryStorage: dependencyProvider.temporaryStorage
+            temporaryStorage: dependencyProvider.resolve()
         )
         let view = WelcomeView(viewModel: viewModel)
         let viewController = WelcomeViewController(view: view, viewModel: viewModel)
